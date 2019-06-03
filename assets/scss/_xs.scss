@@ -12,5 +12,7 @@ html, body {
         @include box-shadow(0px, 0px, 10px, 0, rgba(0,0,0,0.1));
 }
 .main-index-wrapper .logo {width: 150px;margin-bottom: 30px;}
-.admin-button {background-color:#f71d2b}
-.executive-button {background-color:#333333;}
+.red-button {background-color:#f71d2b}
+.red-button:hover {background-color:#333333;}
+.black-button {background-color:#333333;}
+.black-button:hover {background-color:#f71d2b}

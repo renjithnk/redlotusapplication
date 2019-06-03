@@ -17106,13 +17106,23 @@ html, body {
 }
 
 /* line 15, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
-.admin-button {
+.red-button {
   background-color: #f71d2b;
 }
 
 /* line 16, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
-.executive-button {
+.red-button:hover {
   background-color: #333333;
+}
+
+/* line 17, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+.black-button {
+  background-color: #333333;
+}
+
+/* line 18, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+.black-button:hover {
+  background-color: #f71d2b;
 }
 
 /*# sourceMappingURL=../css/style.map */
