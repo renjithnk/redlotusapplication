@@ -5,7 +5,7 @@
 <div class="row">
 <div class="col-lg-12">
 <div class="main-index-data">
-<img class="logo img-fluid" src="../../assets/images/logo.png" alt="" width="200" height="121">
+<img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121">
 <form>
 <div class="form-group">
 <label for="exampleInputEmail1">Email address</label>
