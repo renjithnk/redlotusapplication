@@ -17125,4 +17125,11 @@ html, body {
   background-color: #f71d2b;
 }
 
+@media only screen and (min-width: 576px) {
+  /* line 3, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_sm.scss */
+  .main-index-data {
+    width: 390px;
+  }
+}
+
 /*# sourceMappingURL=../css/style.map */
