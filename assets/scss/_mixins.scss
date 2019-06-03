@@ -1,0 +1,407 @@
+/* transition shorthand method  */
+@mixin transitionsm ( $property, $duration, $timing-function, $delay ) {
+     -webkit-transition:$property $duration $timing-function $delay;
+      -moz-transition:$property $duration $timing-function $delay;
+       -o-transition:$property $duration $timing-function $delay;
+           transition:$property $duration $timing-function $delay;
+}
+
+
+/* transition extended method  */
+@mixin transitionem( $property, $duration, $timing-function, $delay ) {
+-webkit-transition-property:$property;
+-moz-transition-property:$property;
+-ms-transition-property:$property;
+-o-transition-property:$property;
+transition-property:$property;
+
+-webkit-transition-duration:$duration;
+-moz-transition-duration:$duration;
+-ms-transition-duration:$duration;
+-o-transition-duration:$duration;
+transition-duration:$duration;
+
+-webkit-transition-timing-function:$timing-function;
+-moz-transition-timing-function:$timing-function;
+-ms-transition-timing-function:$timing-function;
+-o-transition-timing-function:$timing-function;
+transition-timing-function:$timing-function;
+
+-webkit-transition-delay:$delay;
+-moz-transition-delay:$delay;
+-ms-transition-delay:$delay;
+-o-transition-delay:$delay;
+transition-delay:$delay;
+}
+
+/* Border Radius */
+
+@mixin border-radius($radius) {
+-webkit-border-radius:$radius;
+-moz-border-radius:$radius;
+-ms-border-radius:$radius;
+-o-border-radius:$radius;
+border-radius:$radius;
+}
+
+
+/* Opacity */
+
+@mixin opacity($x) {
+	-webkit-opacity:$x;
+	-moz-opacity:$x;
+	-ms-opacity:$x;
+	-o-opacity:$x;
+	opacity:$x;
+}
+
+
+/* Box Shadow */
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+-webkit-box-shadow:$top $left $blur $color #{$inset};
+-moz-box-shadow:$top $left $blur $color #{$inset};
+-ms-box-shadow:$top $left $blur $color #{$inset};
+-o-box-shadow:$top $left $blur $color #{$inset};
+box-shadow:$top $left $blur $color #{$inset};
+}
+
+
+/* Note: even if we don't declare 'inset' it will work */
+
+/* 2D Transform (Extended Method) */
+
+/* Translate: */
+
+@mixin translate($x,$y) {
+-webkit-transform:translate($x,$y);
+-moz-transform:translate($x,$y);
+-ms-transform:translate($x,$y);
+-o-transform:translate($x,$y);
+transform:translate($x,$y);	
+}
+
+@mixin translates($x,$y) {
+-webkit-transform:translateX($x) translateY($y);
+-moz-transform:translateX($x) translateY($y);
+-ms-transform:translateX($x) translateY($y);
+-o-transform:translateX($x) translateY($y);
+transform:translateX($x) translateY($y);	
+}
+
+@mixin translateY($x) {
+-webkit-transform:translateY($x);
+-moz-transform:translateY($x);
+-ms-transform:translateY($x);
+-o-transform:translateY($x);
+transform:translateY($x);	
+}
+
+@mixin translateY($y) {
+-webkit-transform:translateY($y);
+-moz-transform:translateY($y);
+-ms-transform:translateY($y);
+-o-transform:translateY($y);
+transform:translateY($y);	
+}
+
+@mixin translate3ds($x, $y, $z) {
+-webkit-transform:translate3d($x, $y, $z);
+-moz-transform:translate3d($x, $y, $z);
+-ms-transform:translate3d($x, $y, $z);
+-o-transform:translate3d($x, $y, $z);
+transform:translate3d($x, $y, $z);
+}
+
+/* Scale: */
+
+@mixin scale($x) {
+-webkit-transform:scale($x);
+-moz-transform:scale($x);
+-ms-transform:scale($x);
+-o-transform:scale($x);
+transform:scale($x);
+}
+
+
+/* Rotate: */
+
+@mixin rotate($x) {
+	-webkit-transform:rotate($x);
+	-moz-transform:rotate($x);
+	-ms-transform:rotate($x);
+	-o-transform:rotate($x);
+	transform:rotate($x);	
+}
+
+/* 2D Transform (Short Cut Method) */
+
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+/* Rotate */
+@mixin rotate ($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+/* Scale */
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+/* Translate */
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+/* Skew */
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+/* Transform Origin */
+@mixin transform-origin ($origin) {
+    	-webkit-transform-origin: $origin;
+    	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+
+/* CSS3 Animation Mixin Implementation Example */
+
+@mixin globalanimixin($name) {
+
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @-o-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+/* Method:1 (Shorthand Method) */
+
+@mixin animixpropertysm ( $name, $duration, $timing, $delay, $direction, $iteration, $fillmode, $playstate )  {
+	-webkit-animation: $name $duration $timing $delay $direction $iteration $fillmode $playstate;
+	-moz-animation: $name $duration $timing $delay $direction $iteration $fillmode $playstate;
+	-o-animation: $name $duration $timing $delay $direction $iteration $fillmode $playstate;
+	animation: $name $duration $timing $delay $direction $iteration $fillmode $playstate;
+}
+
+/* Method:2 (Extended Method) */
+
+@mixin animixpropertyem ( $name, $duration, $timing, $delay, $fillmode )  {	
+	
+-webkit-animation-name: $name;
+-moz-animation-name: $name;
+-o-animation-name: $name;
+-ms-animation-name: $name;
+animation-name: $name;
+	
+-webkit-animation-duration: $duration;
+-moz-animation-duration: $duration;
+-o-animation-duration: $duration;
+-ms-animation-duration: $duration;
+animation-duration: $duration;
+	
+-webkit-animation-timing-function: $timing;
+-moz-animation-timing-function: $timing;
+-o-animation-timing-function: $timing;
+-ms-animation-timing-function: $timing;
+animation-timing-function: $timing;
+										
+-webkit-animation-delay: $delay;
+-moz-animation-delay: $delay;
+-o-animation-delay: $delay;
+-ms-animation-delay: $delay;
+animation-delay: $delay;										
+										
+-webkit-animation-fill-mode: $fillmode;
+-moz-animation-fill-mode: $fillmode;
+-o-animation-fill-mode: $fillmode;
+-ms-animation-fill-mode: $fillmode;
+animation-fill-mode: $fillmode;									
+
+}
+
+/* Flexbox SASS mixins */
+
+/* Flexbox display */
+
+@mixin displayflex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+  	  -ms-flex: $values;
+  	      flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+     -moz-box-ordinal-group: $val;     
+  	     -ms-flex-order: $val;     
+  	      -webkit-order: $val;  
+  		      order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+     -moz-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number> 
+
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+     -moz-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width> 
+
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around 
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch 
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch 
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch 
+
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}
+
+/*  gradient */
+
+
+/* linear gradient base */
+@mixin linear-gradient( $colorone, $colortwo) { 
+  background: -webkit-linear-gradient($colorone, $colortwo);
+  background: -moz-linear-gradient($colorone, $colortwo);
+  background: -o-linear-gradient($colorone, $colortwo);
+  background: linear-gradient($colorone, $colortwo);  
+}
+
+/* linear gradient left to right */
+@mixin linear-gradient-left-to-right ( $lefttoright, $colorone, $colortwo) { 
+  background: -webkit-linear-gradient($lefttoright, $colorone, $colortwo);
+  background: -moz-linear-gradient($lefttoright, $colorone, $colortwo);
+  background: -o-linear-gradient($lefttoright, $colorone, $colortwo);
+  background: linear-gradient($lefttoright, $colorone, $colortwo);  
+}
+

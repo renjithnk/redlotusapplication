@@ -1,0 +1,40 @@
+@import 'mixins';
+
+/* preloader starts */
+  
+.preloader-container.enable-preloader .preloader {
+background-color: #c8ff32;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 100;
+@include transitionsm(all,0.5s,cubic-bezier(0.190, 1.000, 0.220, 1.000),0.1s);
+@include displayflex;
+@include justify-content(center);
+@include align-items(center); 
+} 
+ 
+.preloader-container .preloader  {
+height: 0;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+z-index: 30;
+background-color: #c8ff32;
+@include transitionsm(all,0.6s,cubic-bezier(0.190, 1.000, 0.220, 1.000),0.1s);  
+}
+ 
+.preloader-container .preloader img { 
+@include opacity(0);
+@include animixpropertysm(preloaderfadein,1.5s,linear,0.1s,1,normal,backwards,running);
+}
+
+
+
+
+
+
+/* preloader ends */

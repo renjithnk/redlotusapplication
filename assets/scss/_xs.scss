@@ -1,0 +1,16 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.main-index-wrapper {@include displayflex; @include justify-content(center); @include align-items(center); height: 100%;background-color: #f7f7f7;}
+.main-index-data {
+	@include displayflex;
+        @include flex-direction(column);
+        background-color: #fff;
+        padding:40px;
+        @include box-shadow(0px, 0px, 10px, 0, rgba(0,0,0,0.1));
+}
+.main-index-wrapper .logo {width: 150px;margin-bottom: 30px;}
+.admin-button {background-color:#f71d2b}
+.executive-button {background-color:#333333;}
