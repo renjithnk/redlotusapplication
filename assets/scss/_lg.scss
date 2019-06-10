@@ -1,5 +1,41 @@
 @media only screen and (min-width:1200px) {
+.site-header {padding: 25px;
+.search-box {width: 805px;position: absolute;right: 95px;top: 15px;}   
+.session-name {left: 285px;font-weight: normal;font-size: 15px;color: #777;padding: 7px 10px;}
+.session-logout {right: 10px;font-size: 14px;height: 40px;line-height: 40px;padding-left: 15px;padding-right: 15px;}
+}
 
+
+
+.main-content-wrapper {@include displayflex; @include flex-basis(80%);padding-right: 0;}
+.add-products-wrapper {@include align-items(center);}
+.add-product-form {width:700px}
+
+/* product view  */
+    
+.product-list-wrapper {
+    @include flex-basis(100%);
+    padding-right: 0;
+> ul {
+margin-bottom:0;
+padding-bottom:0;
+.product-list {
+  margin-bottom: 10px;   
+padding: 33px;
+@include flex-basis(32.37%)    
+.product-details-wrapper {
+.col1 {@include flex-basis(45%);}    
+.col2 {@include flex-basis(50%);}  
+.size-stock-table li {
+    margin-bottom: 10px;
+}      
+    }    
+
+}  
+}
+        
+}
+   
     
     
     
@@ -9,12 +45,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
+
     
     
     

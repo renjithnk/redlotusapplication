@@ -56,7 +56,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #555;
   text-align: left;
   background-color: #fff;
 }
@@ -173,8 +173,8 @@ a {
 
 /* line 13, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/mixins/_hover.scss */
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #333;
+  text-decoration: none;
 }
 
 /* line 198, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
@@ -298,9 +298,10 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  border: none;
 }
 
-/* line 357, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 358, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -308,7 +309,7 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-/* line 364, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 365, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -317,14 +318,14 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
-/* line 372, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 373, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 379, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 380, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
@@ -332,13 +333,13 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
-/* line 391, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 392, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 textarea {
   overflow: auto;
   resize: vertical;
 }
 
-/* line 397, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 398, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 fieldset {
   min-width: 0;
   padding: 0;
@@ -346,7 +347,7 @@ fieldset {
   border: 0;
 }
 
-/* line 412, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 413, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 legend {
   display: block;
   width: 100%;
@@ -359,51 +360,51 @@ legend {
   white-space: normal;
 }
 
-/* line 424, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 425, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 progress {
   vertical-align: baseline;
 }
 
-/* line 429, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 430, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 434, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 435, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-/* line 447, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 448, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 456, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 457, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
 }
 
-/* line 465, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 466, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 output {
   display: inline-block;
 }
 
-/* line 469, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 470, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 summary {
   display: list-item;
   cursor: pointer;
 }
 
-/* line 474, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 475, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 template {
   display: none;
 }
 
-/* line 480, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 481, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [hidden] {
   display: none !important;
 }
@@ -2076,7 +2077,7 @@ pre code {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  /*  @include border-radius($input-border-radius, 0);*/
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -2087,47 +2088,38 @@ pre code {
   }
 }
 
-/* line 28, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 27, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control::-ms-expand {
   background-color: transparent;
   border: 0;
 }
 
-/* line 14, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/mixins/_forms.scss */
-.form-control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-/* line 37, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 36, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control::placeholder {
   color: #6c757d;
   opacity: 1;
 }
 
-/* line 48, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 47, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control:disabled, .form-control[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
 
-/* line 57, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 56, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 select.form-control:focus::-ms-value {
   color: #495057;
   background-color: #fff;
 }
 
-/* line 69, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 68, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control-file,
 .form-control-range {
   display: block;
   width: 100%;
 }
 
-/* line 82, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 81, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .col-form-label {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
@@ -2136,7 +2128,7 @@ select.form-control:focus::-ms-value {
   line-height: 1.5;
 }
 
-/* line 90, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 89, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
@@ -2144,7 +2136,7 @@ select.form-control:focus::-ms-value {
   line-height: 1.5;
 }
 
-/* line 97, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 96, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
@@ -2152,7 +2144,7 @@ select.form-control:focus::-ms-value {
   line-height: 1.5;
 }
 
-/* line 110, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 109, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control-plaintext {
   display: block;
   width: 100%;
@@ -2166,13 +2158,13 @@ select.form-control:focus::-ms-value {
   border-width: 1px 0;
 }
 
-/* line 122, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 121, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
   padding-right: 0;
   padding-left: 0;
 }
 
-/* line 137, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 136, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
@@ -2181,7 +2173,7 @@ select.form-control:focus::-ms-value {
   border-radius: 0.2rem;
 }
 
-/* line 145, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 144, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
@@ -2190,28 +2182,28 @@ select.form-control:focus::-ms-value {
   border-radius: 0.3rem;
 }
 
-/* line 155, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 154, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 select.form-control[size], select.form-control[multiple] {
   height: auto;
 }
 
-/* line 161, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 160, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 textarea.form-control {
   height: auto;
 }
 
-/* line 170, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 169, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-group {
   margin-bottom: 1rem;
 }
 
-/* line 174, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 173, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-text {
   display: block;
   margin-top: 0.25rem;
 }
 
-/* line 184, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 183, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-row {
   display: flex;
   flex-wrap: wrap;
@@ -2219,38 +2211,38 @@ textarea.form-control {
   margin-left: -5px;
 }
 
-/* line 190, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 189, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-row > .col,
 .form-row > [class*="col-"] {
   padding-right: 5px;
   padding-left: 5px;
 }
 
-/* line 202, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 201, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check {
   position: relative;
   display: block;
   padding-left: 1.25rem;
 }
 
-/* line 208, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 207, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check-input {
   position: absolute;
   margin-top: 0.3rem;
   margin-left: -1.25rem;
 }
 
-/* line 213, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 212, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check-input:disabled ~ .form-check-label {
   color: #6c757d;
 }
 
-/* line 218, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 217, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check-label {
   margin-bottom: 0;
 }
 
-/* line 222, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 221, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check-inline {
   display: inline-flex;
   align-items: center;
@@ -2258,7 +2250,7 @@ textarea.form-control {
   margin-right: 0.75rem;
 }
 
-/* line 229, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 228, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-check-inline .form-check-input {
   position: static;
   margin-top: 0;
@@ -2554,27 +2546,27 @@ textarea.form-control {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
-/* line 258, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 257, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-inline {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
 
-/* line 266, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+/* line 265, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
 .form-inline .form-check {
   width: 100%;
 }
 
 @media (min-width: 576px) {
-  /* line 272, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 271, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline label {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
   }
-  /* line 280, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 279, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .form-group {
     display: flex;
     flex: 0 0 auto;
@@ -2582,22 +2574,22 @@ textarea.form-control {
     align-items: center;
     margin-bottom: 0;
   }
-  /* line 289, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 288, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
   }
-  /* line 296, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 295, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .form-control-plaintext {
     display: inline-block;
   }
-  /* line 300, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 299, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .input-group,
   .form-inline .custom-select {
     width: auto;
   }
-  /* line 307, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 306, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .form-check {
     display: flex;
     align-items: center;
@@ -2605,7 +2597,7 @@ textarea.form-control {
     width: auto;
     padding-left: 0;
   }
-  /* line 314, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 313, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .form-check-input {
     position: relative;
     flex-shrink: 0;
@@ -2613,12 +2605,12 @@ textarea.form-control {
     margin-right: 0.25rem;
     margin-left: 0;
   }
-  /* line 322, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 321, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .custom-control {
     align-items: center;
     justify-content: center;
   }
-  /* line 326, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
+  /* line 325, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_forms.scss */
   .form-inline .custom-control-label {
     margin-bottom: 0;
   }
@@ -2637,7 +2629,6 @@ textarea.form-control {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -3325,7 +3316,6 @@ fieldset:disabled a.btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem;
 }
 
 /* line 111, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_buttons.scss */
@@ -3333,7 +3323,6 @@ fieldset:disabled a.btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
 }
 
 /* line 120, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_buttons.scss */
@@ -15757,7 +15746,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #555;
   text-align: left;
   background-color: #fff;
 }
@@ -15874,8 +15863,8 @@ a {
 
 /* line 13, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/mixins/_hover.scss */
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: #333;
+  text-decoration: none;
 }
 
 /* line 198, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
@@ -15999,9 +15988,10 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  border: none;
 }
 
-/* line 357, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 358, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -16009,7 +15999,7 @@ button:not(:disabled),
   cursor: pointer;
 }
 
-/* line 364, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 365, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -16018,14 +16008,14 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
-/* line 372, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 373, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 379, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 380, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
@@ -16033,13 +16023,13 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
-/* line 391, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 392, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 textarea {
   overflow: auto;
   resize: vertical;
 }
 
-/* line 397, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 398, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 fieldset {
   min-width: 0;
   padding: 0;
@@ -16047,7 +16037,7 @@ fieldset {
   border: 0;
 }
 
-/* line 412, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 413, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 legend {
   display: block;
   width: 100%;
@@ -16060,51 +16050,51 @@ legend {
   white-space: normal;
 }
 
-/* line 424, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 425, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 progress {
   vertical-align: baseline;
 }
 
-/* line 429, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 430, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 434, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 435, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
 
-/* line 447, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 448, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 456, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 457, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
 }
 
-/* line 465, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 466, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 output {
   display: inline-block;
 }
 
-/* line 469, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 470, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 summary {
   display: list-item;
   cursor: pointer;
 }
 
-/* line 474, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 475, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 template {
   display: none;
 }
 
-/* line 480, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
+/* line 481, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_reboot.scss */
 [hidden] {
   display: none !important;
 }

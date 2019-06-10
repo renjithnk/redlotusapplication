@@ -48,7 +48,7 @@ body {
   @include font-size($font-size-base);
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  color: $body-color;
+  color: #555;
   text-align: left; // 3
   background-color: $body-bg; // 2
 }
@@ -180,12 +180,12 @@ sup { top: -.5em; }
 
 a {
   color: $link-color;
-  text-decoration: $link-decoration;
+  text-decoration: none;
   background-color: transparent; // Remove the gray background on active links in IE 10.
 
   @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: #333;
+    text-decoration: none;
   }
 }
 
@@ -346,6 +346,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; // 2
+  border:none;
 }
 
 // Opinionated: add "hand" cursor to non-disabled button elements.

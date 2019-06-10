@@ -1,10 +1,28 @@
 @media only screen and (min-width:576px) {
   
+/* admin */    
 .main-index-data {width: 390px;}   
     
     
+/* product view  */
     
+.product-list-wrapper {
+    padding-top:0;
+    > ul {
+        @include displayflex;
+        @include flex-basis(100%);
+        @include justify-content(left);
+        @include flex-wrap(wrap);
+        .product-list {
+            @include flex-basis(48%);
+            padding: 23px;
+            margin-right: 10px;
+/*        &:nth-child(4) {margin-right:0;}*/
+        }
+        
+    }
     
+}    
     
     
     

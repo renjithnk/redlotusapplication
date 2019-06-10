@@ -1,11 +1,13 @@
 <?php include('includes/header-common.php'); ?>
 
 
-<div class="container-fluid main-index-wrapper">
-<div class="row">
-<div class="col-lg-12">
-<div class="main-index-data">
+
+
+
+<div class="login-box-wrapper">
+<div class="login-box">
 <img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121">
+<h3 class="application-name">Inventory Management Application</h3>
 <form>
 <div class="form-group">
 <label for="exampleInputEmail1">Email address</label>
@@ -16,14 +18,12 @@
 <label for="exampleInputPassword1">Password</label>
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>
-<button type="submit" class="btn btn-primary red-button">Submit</button>
-</form>
+<a href="admin-dashboard.php" class="btn btn-primary btn-lg red-button">Submit</a>
+</form>       
+</div>
+</div> 
 
-        
-</div>
-</div>
-</div> 
-</div> 
+
 
 
 

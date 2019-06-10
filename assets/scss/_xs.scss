@@ -1,18 +1,253 @@
-html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+html, body {height: 100%;margin: 0;padding: 0;}
+
+/* globals */
+.site-header {padding:15px;}
+.site-header .logo-container {width: 80px;}
+.site-header .session-name {position: absolute;top: 30px;left: 120px;font-size: 11px;background-color: #efefef;
+padding: 5px 10px;border: 1px solid #ededed;}
+.site-header .search-box {margin-bottom: 0;}
+.application-name {font-size: 20px;margin-bottom: 30px;/* font-weight: normal; */}
+.session-logout {position: absolute;top: 30px;right: 61px;font-size: 11px;padding: 5px 10px;background-color: #efefef; border: 1px solid #ededed; color: #777; padding-top: 0;}
+
+/* admin login */
+
+.login-box-wrapper {@include displayflex; @include justify-content(center); @include align-items(center);padding: 20px;background-color: #f5f5f5; height: 100%;}
+.login-box {background-color:#fff;padding: 30px; @include box-shadow(1px,0px,5px,3px,rgba(9,9,9,0.1));width:300px;}
+.login-box .logo {width: 130px;margin-bottom: 20px;}
+
+/* content section  */
+
+.content-wrapper { @include displayflex; @include flex-wrap(wrap); height:100%;}
+.product-list-wrapper {
+padding: 15px;    
+padding-top: 0;
+@include displayflex;
+> ul {@include flex-basis(100%);}
+.product-list {background-color: #eee;padding: 15px;margin-bottom: 15px;
+
+.product-details-wrapper { @include displayflex; @include justify-content(space-between);
+.col1 { @include flex-basis(35%);
+.product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
+.article-number {font-size: 16px;text-align: center;font-weight: bold;}
+.stock-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);
+.stock-number {color: #0eb90e;}
 }
+.pending-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);margin-bottom: 10px;
+.pending-number {color: #f71d2b;}
+}
+}
+.col2 { @include flex-basis(55%);
+.size-stock-table-wrapper {
+.size-stock-table {
+    @include displayflex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    margin-top: 15px;
+li { margin-bottom: 15px;text-align: center;
+    @include flex-basis(33%);
+    &:nth-child(3n+1) input {border-left: 1px solid #ddd !important;}
+    input[type="text"] {width: 100%;border: 1px solid #ddd;padding: 5px;height: 30px;border-left: 0;text-align: center;}
+    label {font-weight: bold;margin-bottom: 3px;font-size: 14px;display:block;}
+    .stock-number {color: #0eb90e;}
+    .stock-number.pending {color: #f71d2b;}
+    
+}
+}
+}    
+}
+}  
+
+}
+
+
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+/* admin view product */
+ 
+ 
+
+
+
 .main-index-wrapper {@include displayflex; @include justify-content(center); @include align-items(center); height: 100%;background-color: #f7f7f7;}
-.main-index-data {
-	@include displayflex;
-        @include flex-direction(column);
-        background-color: #fff;
-        padding:40px;
-        @include box-shadow(0px, 0px, 10px, 0, rgba(0,0,0,0.1));
-}
+.main-index-data {@include displayflex; @include flex-direction(column); background-color: #fff; padding:40px; @include box-shadow(0px, 0px, 10px, 0, rgba(0,0,0,0.1));}
 .main-index-wrapper .logo {width: 150px;margin-bottom: 30px;}
 .red-button {background-color:#f71d2b}
 .red-button:hover {background-color:#333333;}
 .black-button {background-color:#333333;}
 .black-button:hover {background-color:#f71d2b}
+
+
+.admin-dashboard {height: 100%;}
+
+.main-index-wrapper .logo {width: 150px;margin-bottom: 30px;}
+
+.search-box {
+margin-top: 15px;    
+.form-control-feedback {
+    position: absolute;
+    z-index: 20;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.form-control {padding-left: 40px;}
+.search-button {background-color:#f71d2b;}    
+}
+
+
+
+/* add products  */
+
+.add-products-wrapper {background: #efefef;padding: 20px;}
+
+
+
+
+/* inner page globals  */
+
+.inner-pages {}
+element {
+	width: 110px;
+	height: auto;
+}
+
+
+.main-content-wrapper {
+	@include displayflex;
+        @include flex-basis(100%);
+	padding-left: 15px;
+	padding-right: 15px;
+        
+        .add-products-wrapper {
+        @include displayflex;
+        @include flex-basis(100%);
+        @include flex-direction(column);
+        @include justify-content(center);
+        }        
+}
+
+.add-product-upload {
+	font-size: 12px;
+	padding-bottom: 30px;
+	padding-left: 6px;
+	display: block;
+	height: 25px;
+}
+
+/* main navigation starts  */
+
+
+/* dropdown menu styles starts */
+/* menu trigger animation starts */
+.bar1, .bar2, .bar3 {
+width: 30px;
+height: 3px;
+background-color: #333;
+margin: 5px 0;
+transition: 0.4s;
+}
+.change .bar1 {
+-webkit-transform: rotate(-45deg) translate(-6px, 8px) ;
+transform: rotate(-45deg) translate(-6px, 8px) ;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+-webkit-transform: rotate(45deg) translate(-3px, -5px) ;
+transform: rotate(45deg) translate(-3px, -5px) ;
+}
+/* menu trigger animation ends */
+
+.menutrigger {display:inline-block;padding:0px 5px;float:right;font-size:15px;cursor:pointer;z-index: 1000;top: 30px;
+position: absolute;right: 10px;}
+.main-navigation {background: #51c255; height: auto;display:none;z-index: 5;position:relative;@include flex-basis(100%);}
+.main-navigation ul {margin:0;padding:0;}
+/*.main-navigation .extra a:after { content: '+'; }
+.main-navigation .extra a:only-child:after { content: '+'; }*/
+.main-navigation li {position:relative;}
+.main-navigation li.active a {background:#f9f9f9;}
+.main-navigation li:first-child a {padding-top:0; height:60px; line-height: 60px;}
+.main-navigation li:first-child a i {display:none;}
+.main-navigation li a {background-color:#333;color:#fff;height:53px;line-height:53px;font-size:14px;padding:0 35px;box-sizing: border-box;display: block;border-bottom: 1px solid #282828;font-weight:400; font-style: normal; letter-spacing: -0.05px;}
+
+.main-navigation li a svg {display:none;}
+.main-navigation li a:hover {background:#f71d2b;text-decoration: none;}
+.main-navigation .extra i {
+width: 53px;
+text-align: center;
+right: 13px;	background: transparent;
+height: 53px;
+position: absolute;
+z-index: 1000;
+top: 0;
+cursor: pointer;
+line-height: 53px;
+color: white;
+}
+.main-navigation .extra i.down::after {
+content:'\e114';
+font-family: 'Glyphicons Halflings';
+font-style: normal;	
+}
+.main-navigation .extra i.up::after {
+content:'\e113';
+font-family: 'Glyphicons Halflings';
+font-style: normal;	
+}
+.main-navigation .extra .lg-plus {display:none;}
+.main-navigation .extra ul li a {text-indent: 20px;background:#51c255;height:45px; line-height:45px;}
+.main-navigation .extra ul li a::before {
+content:'\f054';
+font-family: 'FontAwesome';
+font-style: normal;
+position: absolute;
+left: 13px;
+font-size: 7px;
+}
+
+.admin-dashboard .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
+
+
+@media only screen and (min-width:1199px) {
+.main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;}
+.main-navigation li {float:none; height:60px; line-height:1;width:auto;}
+.main-navigation li:first-child a { height:60px; line-height: 60px;}
+.main-navigation li a {height: 60px; line-height: 60px;text-align: left; background-color: #3e3e3e;color:#fff;}
+.main-navigation li a span {display:block;font-weight: 900; text-transform: uppercase;}
+/* second level <li> tag changed to 'position:relative' to get its child <ul> equal to top of it */
+.main-navigation ul li ul li {float:left; position:relative; clear:left; width:100%;height:auto;}
+.main-navigation ul li ul {opacity:0; visibility:hidden; position:absolute; transition:all 0.5s ease;z-index: 10;width:270px;box-shadow: 2px 2px 3px rgba(0,0,0,0.5);}
+.main-navigation ul li:hover > ul {opacity:1; visibility:visible; position:absolute;}
+.main-navigation ul ul ul {left:100%;top:0;}
+.main-navigation .extra ul li a {text-indent: 0; line-height: normal; height: auto; padding:15px 0 15px 20px;text-align: left;
+&:hover {background:#3fb751;}}
+.main-navigation .extra ul li a {padding-right:15px;}
+.main-navigation > ul li ul li .down {height:35px; line-height: 35px;}
+.main-navigation li:first-child a i {display: block;	height: 20px;	position: absolute;	left: 0;	right: 0;	margin: auto;	text-align: center;	top: 23px;}
+.main-navigation .extra i {right: 9px;width: auto;border: none; height:85px; line-height: 85px;font-size:10px;top:6px;}
+.main-navigation .extra .lg-plus {display:block;}
+.main-navigation .extra .xs-plus, .main-navigation .extra ul li a::before {display:none;}
+.menutrigger {display:none;}
+}
+/* hided menu */
+/* dropdown menu styles ends */
+
+
+
+/* add products wrapper  */
+
+.add-products-wrapper {}
