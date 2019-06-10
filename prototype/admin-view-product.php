@@ -12,15 +12,14 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="http://localhost/mypresources/">Dashboard</a></li>
-<li><a href="index.html">Add Product</a></li>
-<li><a href="index.html">View Product</a></li>		
+<li><a href="index.php">Dashboard</a></li>
+<li><a href="admin-add-product.php">Add Product</a></li>
+<li><a href="admin-view-product.php">View Product</a></li>		
 </ul>
 </nav>    
     
     
-    
-    
+<div class="main-content-wrapper">
 <div class="product-list-wrapper">
 <ul class="list-unstyled">
 
@@ -185,6 +184,9 @@
 </ul> 
 
 </div>
+</div>    
+    
+
 </div>    
 
  
