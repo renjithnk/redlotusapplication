@@ -17971,6 +17971,11 @@ element {
   background-color: #f71d2b;
 }
 
+/* line 222, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+.admin-add-product .main-navigation li:nth-child(2) a {
+  background-color: #f71d2b;
+}
+
 @media only screen and (min-width: 1199px) {
   /* line 225, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation {

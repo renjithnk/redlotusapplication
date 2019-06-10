@@ -542,6 +542,7 @@ $('.main-navigation ul li ul').show();
 /* navigation active state */
 $(function(){
 $('.admin-dashboard').parent('body').addClass('admin-dashboard');    
+$('.admin-add-product').parent('body').addClass('admin-add-product');  
 });
 
 

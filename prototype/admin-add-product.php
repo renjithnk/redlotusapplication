@@ -39,12 +39,12 @@
     
 <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">E-mail</label>
-      <input type="text" class="form-control" id="email" placeholder="Article No">
+      <label for="inputEmail4">Price</label>
+      <input type="text" class="form-control" id="email" placeholder="Price">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">No of Stock</label>
-      <input type="text" class="form-control" id="numberofstock" placeholder="Size">
+      <input type="text" class="form-control" id="numberofstock" placeholder="No of Stock">
     </div>
 </div>     
 
