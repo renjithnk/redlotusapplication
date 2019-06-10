@@ -17976,8 +17976,13 @@ element {
   background-color: #f71d2b;
 }
 
+/* line 223, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+.admin-view-product .main-navigation li:nth-child(3) a {
+  background-color: #f71d2b;
+}
+
 @media only screen and (min-width: 1199px) {
-  /* line 225, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 227, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation {
     display: block !important;
     -webkit-flex-basis: 20%;
@@ -17987,19 +17992,19 @@ element {
     float: left;
     background-color: #333;
   }
-  /* line 226, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 228, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li {
     float: none;
     height: 60px;
     line-height: 1;
     width: auto;
   }
-  /* line 227, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 229, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li:first-child a {
     height: 60px;
     line-height: 60px;
   }
-  /* line 228, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 230, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li a {
     height: 60px;
     line-height: 60px;
@@ -18007,14 +18012,14 @@ element {
     background-color: #3e3e3e;
     color: #fff;
   }
-  /* line 229, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 231, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li a span {
     display: block;
     font-weight: 900;
     text-transform: uppercase;
   }
   /* second level <li> tag changed to 'position:relative' to get its child <ul> equal to top of it */
-  /* line 231, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 233, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li ul li {
     float: left;
     position: relative;
@@ -18022,7 +18027,7 @@ element {
     width: 100%;
     height: auto;
   }
-  /* line 232, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 234, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li ul {
     opacity: 0;
     visibility: hidden;
@@ -18032,18 +18037,18 @@ element {
     width: 270px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
-  /* line 233, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 235, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li:hover > ul {
     opacity: 1;
     visibility: visible;
     position: absolute;
   }
-  /* line 234, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 236, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul ul ul {
     left: 100%;
     top: 0;
   }
-  /* line 235, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 237, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a {
     text-indent: 0;
     line-height: normal;
@@ -18051,20 +18056,20 @@ element {
     padding: 15px 0 15px 20px;
     text-align: left;
   }
-  /* line 236, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 238, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a:hover {
     background: #3fb751;
   }
-  /* line 237, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 239, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a {
     padding-right: 15px;
   }
-  /* line 238, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 240, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation > ul li ul li .down {
     height: 35px;
     line-height: 35px;
   }
-  /* line 239, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 241, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li:first-child a i {
     display: block;
     height: 20px;
@@ -18075,7 +18080,7 @@ element {
     text-align: center;
     top: 23px;
   }
-  /* line 240, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 242, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra i {
     right: 9px;
     width: auto;
@@ -18085,15 +18090,15 @@ element {
     font-size: 10px;
     top: 6px;
   }
-  /* line 241, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 243, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra .lg-plus {
     display: block;
   }
-  /* line 242, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 244, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra .xs-plus, .main-navigation .extra ul li a::before {
     display: none;
   }
-  /* line 243, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 245, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .menutrigger {
     display: none;
   }

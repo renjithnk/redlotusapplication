@@ -2,7 +2,7 @@
 
  
 
-<div class="content-wrapper admin-add-product clearfix">
+<div class="content-wrapper admin-view-product clearfix">
     
     
 <div class="menutrigger">

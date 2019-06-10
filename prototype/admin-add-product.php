@@ -5,7 +5,7 @@
 
  
 
-<div class="content-wrapper clearfix">
+<div class="content-wrapper admin-add-product clearfix">
     
     
 <div class="menutrigger">

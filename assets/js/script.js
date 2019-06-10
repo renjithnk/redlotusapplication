@@ -543,6 +543,7 @@ $('.main-navigation ul li ul').show();
 $(function(){
 $('.admin-dashboard').parent('body').addClass('admin-dashboard');    
 $('.admin-add-product').parent('body').addClass('admin-add-product');  
+$('.admin-view-product').parent('body').addClass('admin-view-product');
 });
 
 

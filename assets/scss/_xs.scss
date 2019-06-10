@@ -220,6 +220,8 @@ font-size: 7px;
 
 .admin-dashboard .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 .admin-add-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
+.admin-view-product .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
+
 
 @media only screen and (min-width:1199px) {
 .main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;}
