@@ -1,6 +1,12 @@
 html, body {height: 100%;margin: 0;padding: 0;}
 
 /* globals */
+
+
+.update-button {height: 40px;margin-top: 6px;}
+
+
+
 .site-header {padding:15px;}
 .site-header .logo-container {width: 80px;}
 .site-header .session-name {position: absolute;top: 30px;left: 120px;font-size: 11px;background-color: #efefef;
@@ -24,16 +30,14 @@ padding-top: 0;
 > ul {@include flex-basis(100%);}
 .product-list {background-color: #eee;padding: 15px;margin-bottom: 15px;
 
-.product-details-wrapper { @include displayflex; @include justify-content(space-between);
+.product-details-wrapper { 
+    @include displayflex; 
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
 .col1 { @include flex-basis(35%);
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
-.article-number {font-size: 16px;text-align: center;font-weight: bold;}
-.stock-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);
-.stock-number {color: #0eb90e;}
-}
-.pending-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);margin-bottom: 10px;
-.pending-number {color: #f71d2b;}
-}
+.article-number {font-size: 18px;text-align: center;font-weight: bold;}
+
 }
 .col2 { @include flex-basis(55%);
 .size-stock-table-wrapper {
@@ -42,7 +46,7 @@ padding-top: 0;
     @include flex-wrap(wrap);
     @include justify-content(space-between);
     margin-top: 15px;
-li { margin-bottom: 15px;text-align: center;
+li { margin-bottom: 10px;text-align: center;
     @include flex-basis(33%);
     &:nth-child(3n+1) input {border-left: 1px solid #ddd !important;}
     input[type="text"] {width: 100%;border: 1px solid #ddd;padding: 5px;height: 30px;border-left: 0;text-align: center;}
@@ -54,6 +58,20 @@ li { margin-bottom: 15px;text-align: center;
 }
 }    
 }
+
+.stock-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);
+.stock-number {color: #0eb90e;}
+}
+.pending-status {font-weight: bold;font-size: 16px; @include displayflex; @include justify-content(space-between);
+.pending-number {color: #f71d2b;}
+}
+
+.stock-and-pending-status {
+	flex-basis: 45%;
+	margin-top: 5px;
+}
+
+
 }  
 
 }

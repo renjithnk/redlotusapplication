@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  
 <div class="container-fluid inner-pages pickupboy-session"> <!-- administrator session starts  -->
 <div class="app-header">
 <div class="logo-container">

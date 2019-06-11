@@ -52,15 +52,15 @@
 </li>
 </ul>        
 </div>
-
-
+</div>
 
 
 </div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
+    
+    
+    
+    
+    
 <div class="col2">
 <div class="size-stock-table-wrapper">
 <ul class="list-unstyled size-stock-table">
@@ -75,6 +75,14 @@
 </ul>    
 </div>                        
 </div>
+    
+<div class="stock-and-pending-status">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
+</div>    
+
+<button class="update-button btn btn-primary red-button" type="submit">Update</button>    
+    
 </div>
 </li>
 
