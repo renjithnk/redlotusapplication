@@ -50,8 +50,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |   my-controller/my-method -> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
+$route['admin-login'] = 'welcome/admin_login'; 
+$route['admin-add-product'] = 'admin/admin_add_product';
+$route['admin-view-product'] = 'admin/admin_view_product';
+$route['insert-product'] = 'admin/insert_product'; 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
+
+/*
+| -------------------------------------------------------------------------
+| Routes form javascript
+| -------------------------------------------------------------------------
+*/ 
+
+$route['admin-login-check'] = 'admin/admin_login';
+$route['admin-dashboard'] = 'admin/dashboard';
+$route['images-upload']='admin/images_upload'; 
+$route['images-remove']='admin/images_remove';
+$route['images-list_files']='admin/images_list_files';
+$route['admin-product-check']='admin/admin_product_check';
 
 /*
 | -------------------------------------------------------------------------

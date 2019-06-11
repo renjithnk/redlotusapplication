@@ -21,7 +21,18 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('url');
+		$this->load->view('includes/header-common');
+		$this->load->view('home');
+	}
 
-		$this->load->view('welcome_message');
+	public function admin_login()
+	{
+		$this->load->view('includes/header-common');
+		$this->load->view('admin/admin-login');
+	}
+
+	public function admin_login_check()
+	{
+		echo "waef";
 	}
 }
