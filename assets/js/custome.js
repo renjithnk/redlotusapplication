@@ -1,4 +1,4 @@
-var base_url='http://localhost/redlotus/index.php/';
+var base_url='http://localhost/redlotusapplication/index.php/';
 
 function adminLoginCheck()
 {

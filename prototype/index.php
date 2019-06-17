@@ -1,7 +1,5 @@
 <?php include('includes/header-common.php'); ?>
 
-
-
 <div class="container-fluid main-index-wrapper">
 <div class="row">
 <div class="col-lg-12">
@@ -19,7 +17,5 @@
 </div> 
 </div> 
 
-
-
-
+<?php include('includes/footer-common.php'); ?>
 

@@ -1,9 +1,6 @@
 <?php include('includes/header-administrator.php'); ?>
 
- 
-
 <div class="content-wrapper admin-view-product clearfix">
-    
     
 <div class="menutrigger">
 <div class="bar1"></div>
@@ -17,7 +14,6 @@
 <li><a href="admin-view-product.php">View Product</a></li>		
 </ul>
 </nav>    
-    
     
 <div class="main-content-wrapper">
 <div class="product-list-wrapper">
@@ -180,18 +176,12 @@
 </div>
 </div>
 </li>
-
 </ul> 
-
 </div>
 </div>    
-    
-
 </div>    
 
- 
 
 
 
-
-
+<?php include('includes/footer-common.php'); ?>

@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">  
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />   
-<script src="../assets/js/script.js"></script>
 </head>
 
 <body>
