@@ -28,37 +28,35 @@
 <h2 class="article-number">A101</h2>    
 <div class="product-image clearfix">
     
+    
 <div class="photo-gallery">
-<ul>
-<li>
-<a href="images/product1/p1.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product1/p1.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product1/p2.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product1/p2.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product1/p3.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product1/p3.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product1/p4.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product1/p4.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product1/p5.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product1/p5.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-</ul>        
+<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+    <div class="popupclose"><span class="one"></span><span class="two"></span></div>
 </div>
+</div>        
+</div>   
+    
+   
+    
+    
+    
+    
 
-
 </div>
-    
-    
-    
+</div>
     
     
 <div class="col2">
@@ -93,29 +91,24 @@
 <div class="product-image clearfix">
 
 <div class="photo-gallery">
-<ul>
-<li>
-<a href="images/product2/p1.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product2/p1.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product2/p2.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product2/p2.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product2/p3.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product2/p3.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product2/p4.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product2/p4.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-<li>
-<a href="images/product2/p5.jpg" data-lightbox="example-set" data-title="">
-<img src="images/product2/p5.jpg" alt="image"  class="img-fluid" /></a>       
-</li>
-</ul>        
+<div class="popup-clicker"><img src="images/product2/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product2/p2.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product2/p3.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product2/p4.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+<div class="popupclose">X</div>
+</div>
+</div>        
+</div> 
     
 </div>
 <div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>

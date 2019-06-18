@@ -34,7 +34,7 @@ padding-top: 0;
     @include displayflex; 
     @include justify-content(space-between);
     @include flex-wrap(wrap);
-.col1 { @include flex-basis(35%);
+.col1 { @include flex-basis(40%);
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
 .article-number {font-size: 18px;text-align: center;font-weight: bold;}
 
@@ -110,7 +110,9 @@ li { margin-bottom: 10px;text-align: center;
 .main-index-wrapper .logo {width: 150px;margin-bottom: 30px;}
 
 .search-box {
-margin-top: 15px;    
+margin-top: 15px; 
+position: relative;
+z-index: 0;
 .form-control-feedback {
     position: absolute;
     z-index: 20;
@@ -189,7 +191,7 @@ transform: rotate(45deg) translate(-3px, -5px) ;
 }
 /* menu trigger animation ends */
 
-.menutrigger {display:inline-block;padding:0px 5px;float:right;font-size:15px;cursor:pointer;z-index: 1000;top: 30px;
+.menutrigger {display:inline-block;padding:0px 5px;float:right;font-size:15px;cursor:pointer;z-index: 0;top: 30px;
 position: absolute;right: 10px;}
 .main-navigation {background: #51c255; height: auto;display:none;z-index: 5;position:relative;@include flex-basis(100%);}
 .main-navigation ul {margin:0;padding:0;}
