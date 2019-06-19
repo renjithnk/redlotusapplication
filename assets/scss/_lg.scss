@@ -7,9 +7,16 @@
 
 
 
-.main-content-wrapper {@include displayflex; @include flex-basis(80%);}
-.add-products-wrapper {@include align-items(center);}
+.main-content-wrapper {@include flex-basis(80%);}
+.add-products-wrapper {@include align-items(center);min-height: 520px;}
 .add-product-form {width:700px}
+
+
+
+
+
+.content-wrapper {min-height: 520px;}
+
 
 /* product view  */
     
@@ -20,7 +27,7 @@
 margin-bottom:0;
 padding-bottom:0;
 .product-list {
-  margin-bottom: 10px;   
+  margin-bottom: 0;   
 padding: 33px;
 @include flex-basis(32.37%)    
 .product-details-wrapper {
@@ -38,12 +45,13 @@ padding: 33px;
    
     
     
+/*  view orders */    
     
     
-    
-    
-    
-    
+.view-order-wrapper .view-order-th {grid-template-columns:10% 30% 20% 20% 20%; font-size:14px;} 
+.view-order-wrapper .view-order-th > div {width:inherit;}
+.view-order-wrapper .view-order-tbody {grid-template-columns:10% 30% 20% 20% 20%; padding:20px; font-size:14px;}        
+.view-order-wrapper .view-order-tbody > div {width:inherit;}    
     
 
     

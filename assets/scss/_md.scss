@@ -1,6 +1,15 @@
 @media only screen and (min-width:768px) {
 
-.login-box {width: 420px;padding: 40px;}    
+.login-box {width: 420px;padding: 40px;}  
+
+
+
+.product-list-wrapper {
+    > ul {
+        grid-template-columns:auto auto auto;
+    }
+    
+}
     
     
     

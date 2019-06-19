@@ -9,24 +9,41 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="admin-dashboard.php">Dashboard</a></li>
+<li><a href="admin-view-product.php">View Product</a></li>		    
 <li><a href="admin-add-product.php">Add Product</a></li>
-<li><a href="admin-view-product.php">View Product</a></li>		
+<li><a href="admin-view-orders.php">View Orders</a></li>
 </ul>
-</nav>    
+</nav>   
     
 <div class="main-content-wrapper">
+<h2 class="heading">Products</h2>
 <div class="product-list-wrapper">
 <ul class="list-unstyled">
-
 <li class="product-list">
 <div class="product-details-wrapper">
 <div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
+<h2 class="article-number">A101</h2>    
+<div class="product-image clearfix">
+<div class="photo-gallery">
+<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+</div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+<div class="popupclose"><span class="one"></span><span class="two"></span></div>
+</div>
+</div>        
+</div>   
+</div>
 </div>
 <div class="col2">
 <div class="size-stock-table-wrapper">
@@ -41,144 +58,170 @@
 <li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
 </ul>    
 </div>                        
-</div>
-</div>
-</li>
-
-<li class="product-list">
-<div class="product-details-wrapper">
-<div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
-<div class="col2">
-<div class="size-stock-table-wrapper">
-<ul class="list-unstyled size-stock-table">
-<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
-<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-</ul>    
-</div>                        
-</div>
-</div>
-</li>
-
-
-<li class="product-list">
-<div class="product-details-wrapper">
-<div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
-<div class="col2">
-<div class="size-stock-table-wrapper">
-<ul class="list-unstyled size-stock-table">
-<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
-<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-</ul>    
-</div>                        
-</div>
-</div>
-</li>
-
-<li class="product-list">
-<div class="product-details-wrapper">
-<div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
-<div class="col2">
-<div class="size-stock-table-wrapper">
-<ul class="list-unstyled size-stock-table">
-<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
-<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-</ul>    
-</div>                        
-</div>
-</div>
-</li>
-
-
-<li class="product-list">
-<div class="product-details-wrapper">
-<div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
-<div class="col2">
-<div class="size-stock-table-wrapper">
-<ul class="list-unstyled size-stock-table">
-<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
-<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-</ul>    
-</div>                        
-</div>
-</div>
-</li>
-
-<li class="product-list">
-<div class="product-details-wrapper">
-<div class="col1">
-<h2 class="article-number">A102</h2>    
-<div class="product-image"><img src="../assets/images/product1.jpg" alt="product1" class="img-fluid" /></div>
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>
-</div>
-<div class="col2">
-<div class="size-stock-table-wrapper">
-<ul class="list-unstyled size-stock-table">
-<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
-<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
-</ul>    
-</div>                        
-</div>
-</div>
-</li>
-</ul> 
-</div>
 </div>    
+<div class="stock-and-pending-status">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
+</div>    
+<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+</div>
+</li>
+
+<li class="product-list">
+<div class="product-details-wrapper">
+<div class="col1">
+<h2 class="article-number">A101</h2>    
+<div class="product-image clearfix">
+<div class="photo-gallery">
+<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+</div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+<div class="popupclose"><span class="one"></span><span class="two"></span></div>
+</div>
+</div>        
+</div>   
+</div>
+</div>
+<div class="col2">
+<div class="size-stock-table-wrapper">
+<ul class="list-unstyled size-stock-table">
+<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
+<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+</ul>    
+</div>                        
+</div>    
+<div class="stock-and-pending-status">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
+</div>    
+<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+</div>
+</li>
+
+<li class="product-list">
+<div class="product-details-wrapper">
+<div class="col1">
+<h2 class="article-number">A101</h2>    
+<div class="product-image clearfix">
+<div class="photo-gallery">
+<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+</div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+<div class="popupclose"><span class="one"></span><span class="two"></span></div>
+</div>
+</div>        
+</div>   
+</div>
+</div>
+<div class="col2">
+<div class="size-stock-table-wrapper">
+<ul class="list-unstyled size-stock-table">
+<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
+<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+</ul>    
+</div>                        
+</div>    
+<div class="stock-and-pending-status">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
+</div>    
+<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+</div>
+</li>
+
+
+<li class="product-list">
+<div class="product-details-wrapper">
+<div class="col1">
+<h2 class="article-number">A101</h2>    
+<div class="product-image clearfix">
+<div class="photo-gallery">
+<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup">
+<div class="popup-content">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+</div>
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<!--<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>-->
+</div>   
+<div class="popupclose"><span class="one"></span><span class="two"></span></div>
+</div>
+</div>        
+</div>   
+</div>
+</div>
+<div class="col2">
+<div class="size-stock-table-wrapper">
+<ul class="list-unstyled size-stock-table">
+<li><label><span class="size">6</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li>  <li><label><span class="size">7</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">8</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">9</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">10</span><span class="spliter">-</span><span class="stock-number pending">10</span></label><input type="text"></li> 
+<li><label><span class="size">11</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">12</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">13</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+<li><label><span class="size">14</span><span class="spliter">-</span><span class="stock-number">10</span></label><input type="text"></li> 
+</ul>    
+</div>                        
+</div>    
+<div class="stock-and-pending-status">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
+</div>    
+<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+</div>
+</li>
+
+
+
+
+
+</ul> 
+</div>        
+</div>
+
+
+    
 </div>    
 
 

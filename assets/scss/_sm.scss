@@ -9,7 +9,8 @@
 .product-list-wrapper {
     padding-top:0;
     > ul {
-
+        display:grid;
+        grid-template-columns:auto auto;
         .product-list {
 
         }

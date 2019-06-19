@@ -14,7 +14,7 @@
 <label for="exampleInputPassword1">Password</label>
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>
-<a href="admin-dashboard.php" class="btn btn-primary btn-lg red-button">Submit</a>
+    <a href="admin-view-product.php" class="btn btn-primary btn-lg red-button">Submit</a>
 </form>       
 </div>
 </div> 

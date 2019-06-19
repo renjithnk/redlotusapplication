@@ -12,7 +12,7 @@
   
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="admin-dashboard.php">
+<a href="admin-view-product.php">
 <img class="img-fluid logo" src="../assets/images/logo.png" alt="" width="200" height="64" />        
 </a>    
 </div> 
