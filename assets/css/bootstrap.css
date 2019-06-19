@@ -637,34 +637,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 1140px;
-  }
+  /*    @include make-container-max-widths();*/
 }
 
 /* line 18, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
@@ -11464,34 +11437,7 @@ html {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 6, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */
-  .container {
-    max-width: 1140px;
-  }
+  /*    @include make-container-max-widths();*/
 }
 
 /* line 18, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_grid.scss */

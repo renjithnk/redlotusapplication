@@ -26,15 +26,18 @@ padding: 5px 10px;border: 1px solid #ededed;}
 .content-wrapper { @include displayflex; @include flex-wrap(wrap); height:100%;}
 .product-list-wrapper {   
 padding-top: 0;
-@include displayflex;
-> ul {@include flex-basis(100%);}
+> ul {
+display: grid;
+grid-template-columns:auto auto auto;
+grid-gap:10px;
+}
 .product-list {background-color: #eee;padding: 15px;margin-bottom: 15px;
 
 .product-details-wrapper { 
     @include displayflex; 
     @include justify-content(space-between);
     @include flex-wrap(wrap);
-.col1 { @include flex-basis(40%);
+.col1 { @include flex-basis(35%);
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
 .article-number {font-size: 18px;text-align: center;font-weight: bold;}
 
@@ -150,7 +153,7 @@ element {
 	@include displayflex;
         @include flex-basis(100%);
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 10px;
         
         .add-products-wrapper {
         @include displayflex;
