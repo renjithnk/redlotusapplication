@@ -46,7 +46,19 @@
       <input type="text" class="form-control" id="numberofstock" placeholder="No of Stock">
     </div>
 </div>     
-
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Category</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Select</option>
+      <option>Formal</option>
+      <option>Casual</option>
+      <option>Sandel</option>
+      <option>Sleeper</option>
+      <option>Loffer</option>
+      <option>Roman bandu</option>
+      <option>Bandu</option>   
+    </select>
+  </div>
 <div class="form-group">
 <label for="exampleInputEmail1">Upload</label>
 <input type="file" class="form-control add-product-upload" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">

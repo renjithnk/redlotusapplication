@@ -16,28 +16,31 @@
     
     
     
+/* user categories */    
+    
+.category-list-wrapper ul {grid-template-columns:auto auto auto auto;}    
     
     
     
     
     
     
+/* user order view */    
+    
+.user-view-orders-table {font-size: 14px;}    
+.user-view-orders-table thead th {padding: 20px;}    
+.user-view-orders-table tbody td {padding: 20px;}     
     
     
     
     
+/* user order view */    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+.user-order-checkout-table {font-size: 14px;}    
+.user-order-checkout-table thead th {padding: 20px;}    
+.user-order-checkout-table tbody td {padding: 20px;}       
+.user-order-checkout-table tfoot .total-label {padding: 20px;}    
+.user-order-checkout-table tfoot .total-value {padding: 20px;}       
     
     
     

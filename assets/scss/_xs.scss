@@ -270,9 +270,9 @@ font-size: 7px;
 .admin-add-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
 .admin-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 .admin-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
-.user-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
-.user-view-orders .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
-
+.user-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
+.user-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
+.user-categories .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 
 
 @media only screen and (min-width:1199px) {
@@ -317,17 +317,35 @@ font-size: 7px;
 
 
 
+/* user categories */
+
+.category-list-wrapper ul {display:grid;grid-template-columns: auto auto;grid-gap: 10px;margin-bottom: 0;}
+.category-list-wrapper ul li a {padding: 0;margin: 0;text-align: center;border: 1px solid #ddd;display: block;}
+.category-list-wrapper ul li a .category-name {font-size: 20px;padding: 20px 0 0 0;margin: 0;color: #333;}
+.category-list-wrapper ul li a .category-image {width:170px; height: 170px;}
+
 /* user view order */
 
-.view-order-tfoot {@include displayflex;}
-.view-order-tfoot .total {@include flex-basis(59%)}
+.user-view-orders-table {width:100%;font-size: 12px;}
+.user-view-orders-table thead th {padding:5px;}
+.user-view-orders-table thead .article-number {width:15%;}
+.user-view-orders-table thead .customer-details {width:40%;}
+.user-view-orders-table thead .size {width:10%;text-align: center;}
+.user-view-orders-table thead .quantity {width:15%;text-align: center;}
+.user-view-orders-table thead .price {width:20%;text-align: right;}
 
-.user-view-orders .view-order-wrapper .view-order-th {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
-.user-view-orders .view-order-wrapper .view-order-th > div {width:20%;}
-.user-view-orders .view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;background: #f1f1f1;padding: 6px;border-bottom: 1px solid #ddd;}
-.user-view-orders .view-order-wrapper .view-order-tbody > div {width:20%;}
+.user-view-orders-table tbody tr {border-bottom: 1px solid #ddd;}
+.user-view-orders-table tbody td {padding:5px;background-color:#f7f7f7;}
+.user-view-orders-table tbody .article-number {width:15%;}
+.user-view-orders-table tbody .customer-details {width:40%;}
+.user-view-orders-table tbody .size {width:10%;text-align: center;}
+.user-view-orders-table tbody .quantity {width:15%;text-align: center;}
+.user-view-orders-table tbody .price {width:20%;text-align: right;}
 
 
+
+
+/* user order checkout */
 
 .user-order-checkout-table {width:100%;font-size: 12px;}
 .user-order-checkout-table thead th {padding:5px;}
@@ -337,6 +355,7 @@ font-size: 7px;
 .user-order-checkout-table thead .price {width:25%;text-align: right;}
 .user-order-checkout-table thead .action {width:15%}
 
+.user-order-checkout-table tbody tr {border-bottom: 1px solid #ddd;}
 .user-order-checkout-table tbody td {padding:5px;}
 .user-order-checkout-table tbody .article-number {width:30%;}
 .user-order-checkout-table tbody .size {width:15%;text-align: center;}
@@ -348,7 +367,7 @@ font-size: 7px;
 .user-order-checkout-table tfoot .total-label {padding:5px;}
 .user-order-checkout-table tfoot .total-value {padding:5px;text-align: right;}
 
-.user-order-checkout-table tbody td {background:#efefef;}
+.user-order-checkout-table tbody td {background:#f7f7f7;}
 .user-order-checkout-table tbody td .remove {cursor:pointer;}
 
 

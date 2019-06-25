@@ -9,6 +9,7 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
+<li><a href="user-categories.php">Categories</a></li>    
 <li><a href="user-view-product.php">View Product</a></li>		    
 <li><a href="user-view-orders.php">View Orders</a></li>
 </ul>
@@ -30,8 +31,8 @@
 <div class="swiper-container">
 <div class="swiper-wrapper">
 <div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p2.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product1/p3.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
 <div class="swiper-pagination"></div>
 <!-- Add Arrows -->
@@ -69,17 +70,17 @@
 <li class="product-list">
 <div class="product-details-wrapper">
 <div class="col1">
-<h2 class="article-number">A101</h2>    
+<h2 class="article-number">A102</h2>    
 <div class="product-image clearfix">
 <div class="photo-gallery">
-<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup-clicker"><img src="images/product2/p1.jpg" class="img-fluid"/></div>
 <div class="popup">
 <div class="popup-content">
 <div class="swiper-container">
 <div class="swiper-wrapper">
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product2/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product2/p2.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product2/p3.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
 <div class="swiper-pagination"></div>
 <!-- Add Arrows -->
@@ -117,17 +118,17 @@
 <li class="product-list">
 <div class="product-details-wrapper">
 <div class="col1">
-<h2 class="article-number">A101</h2>    
+<h2 class="article-number">A103</h2>    
 <div class="product-image clearfix">
 <div class="photo-gallery">
-<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup-clicker"><img src="images/product3/p1.jpg" class="img-fluid"/></div>
 <div class="popup">
 <div class="popup-content">
 <div class="swiper-container">
 <div class="swiper-wrapper">
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product3/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product3/p2.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product3/p3.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
 <div class="swiper-pagination"></div>
 <!-- Add Arrows -->
@@ -166,17 +167,17 @@
 <li class="product-list">
 <div class="product-details-wrapper">
 <div class="col1">
-<h2 class="article-number">A101</h2>    
+<h2 class="article-number">A104</h2>    
 <div class="product-image clearfix">
 <div class="photo-gallery">
-<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
+<div class="popup-clicker"><img src="images/product4/p1.jpg" class="img-fluid"/></div>
 <div class="popup">
 <div class="popup-content">
 <div class="swiper-container">
 <div class="swiper-wrapper">
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product4/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product4/p2.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
+<div class="swiper-slide" style="background-image:url(images/product4/p3.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
 </div>
 <div class="swiper-pagination"></div>
 <!-- Add Arrows -->

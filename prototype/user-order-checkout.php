@@ -10,6 +10,7 @@
     
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
+<li><a href="user-categories.php">Categories</a></li>    
 <li><a href="user-view-product.php">View Product</a></li>		    
 <li><a href="user-view-orders.php">View Orders</a></li>
 </ul>
@@ -56,6 +57,13 @@
     <td class="price">5000</td> 
     <td class="action"><i class="fa fa-close remove"></i></td> 
     </tr>   
+        <tr>
+    <td class="article-number">A101</td> 
+    <td class="size">6</td> 
+    <td class="quantity">12</td> 
+    <td class="price">5000</td> 
+    <td class="action"><i class="fa fa-close remove"></i></td> 
+    </tr> 
     </tbody>
     <tfoot>
     <tr>
