@@ -32,7 +32,7 @@
 </a>
 </div>
 
-<a href="index.php" class="session-logout">
+<a href="user-executive-login.php" class="session-logout">
 Logout
 </a>     
     

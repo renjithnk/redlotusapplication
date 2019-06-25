@@ -3,7 +3,7 @@
 <div class="login-box-wrapper">
 <div class="login-box">
 <img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121">
-<h2>Admin</h2>
+<h2>User Executive</h2>
 <h3 class="application-name">Inventory Management Application</h3>
 <form>
 <div class="form-group">
@@ -15,7 +15,7 @@
 <label for="exampleInputPassword1">Password</label>
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>
-    <a href="admin-view-product.php" class="btn btn-primary btn-lg red-button">Submit</a>
+<a href="user-view-product.php" class="btn btn-primary btn-lg red-button">Submit</a>
 </form>       
 </div>
 </div> 
