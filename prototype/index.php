@@ -10,7 +10,7 @@
     <h3 class="application-name">Stock Management Application</h3>
 <div class="btn-group">
 <a href="admin-login.php" class="btn btn-primary btn-lg admin-button red-button">Admin</a>
-<a href="main-index.php" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
+<a href="user-view-product.php" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
 </div>        
 </div>
 </div>

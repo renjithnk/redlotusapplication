@@ -9,16 +9,13 @@
 </head>
 
 <body>
-  
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="admin-view-product.php">
+<a href="user-view-product.php">
 <img class="img-fluid logo" src="../assets/images/logo.png" alt="" width="200" height="64" />        
 </a>    
 </div> 
-<div class="session-name">
-Administrator
-</div> 
+<div class="session-name">User Executive</div> 
     
 <div class="input-group form-group search-box">
 <span class="fa fa-search form-control-feedback"></span>    
@@ -27,7 +24,14 @@ Administrator
 <button class="btn btn-secondary search-button" type="button"><i class="fa fa-search"></i></button>
 </div>
 </div>
-    
+ 
+<div class="order-header-wrapper">
+<a href="user-order-checkout.php">    
+<div class="order-label">Order</div>    
+<div class="order-total-value">0</div>
+</a>
+</div>
+
 <a href="index.php" class="session-logout">
 Logout
 </a>     

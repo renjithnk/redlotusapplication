@@ -7,13 +7,13 @@ html, body {height: 100%;margin: 0;padding: 0;}
 
 
 
-.site-header {padding:15px;}
+.site-header {padding:10px;}
 .site-header .logo-container {width: 80px;}
-.site-header .session-name {position: absolute;top: 30px;left: 120px;font-size: 11px;background-color: #efefef;
+.site-header .session-name {position: absolute;top: 30px;left: 107px;font-size: 11px;background-color: #efefef;
 padding: 5px 10px;border: 1px solid #ededed;}
-.site-header .search-box {margin-bottom: 0;}
+.site-header .search-box {margin-bottom: 15px;}
 .application-name {font-size: 20px;margin-bottom: 30px;/* font-weight: normal; */}
-.session-logout {position: absolute;top: 30px;right: 61px;font-size: 11px;padding: 5px 10px;background-color: #efefef; border: 1px solid #ededed; color: #777; padding-top: 0;}
+.session-logout {position: absolute;top: 30px;right: 61px;font-size: 11px;padding: 5px 10px;background-color: #efefef; border: 1px solid #ededed; color: #777;}
 
 /* admin login */
 
@@ -128,7 +128,7 @@ z-index: 0;
     pointer-events: none;
     color: #aaa;
 }
-.form-control {padding-left: 40px;}
+.form-control {padding-left: 30px;}
 .search-button {background-color:#f71d2b;}    
 }
 
@@ -270,6 +270,10 @@ font-size: 7px;
 .admin-add-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
 .admin-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 .admin-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
+.user-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
+.user-view-orders .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
+
+
 
 @media only screen and (min-width:1199px) {
 .main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;}
@@ -305,13 +309,80 @@ font-size: 7px;
 
 /* admin view orders */
 
-.view-order-wrapper {}
-.view-order-wrapper .view-order-th {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
-.view-order-wrapper .view-order-th > div {width:20%;}
-.view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;background: #f1f1f1;padding: 6px;margin-bottom:10px;}
-.view-order-wrapper .view-order-tbody > div {width:20%;}
+.admin-view-orders .view-order-wrapper .view-order-th {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
+.admin-view-orders .view-order-wrapper .view-order-th > div {width:20%;}
+.admin-view-orders .view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;background: #f1f1f1;padding: 6px;border-bottom: 1px solid #ddd;}
+.admin-view-orders .view-order-wrapper .view-order-tbody > div {width:20%;}
 
 
+
+
+/* user view order */
+
+.view-order-tfoot {@include displayflex;}
+.view-order-tfoot .total {@include flex-basis(59%)}
+
+.user-view-orders .view-order-wrapper .view-order-th {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
+.user-view-orders .view-order-wrapper .view-order-th > div {width:20%;}
+.user-view-orders .view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;background: #f1f1f1;padding: 6px;border-bottom: 1px solid #ddd;}
+.user-view-orders .view-order-wrapper .view-order-tbody > div {width:20%;}
+
+
+
+.user-order-checkout-table {width:100%;font-size: 12px;}
+.user-order-checkout-table thead th {padding:5px;}
+.user-order-checkout-table thead .article-number {width:30%;}
+.user-order-checkout-table thead .size {width:15%;text-align: center;}
+.user-order-checkout-table thead .quantity {width:15%;text-align: center;}
+.user-order-checkout-table thead .price {width:25%;text-align: right;}
+.user-order-checkout-table thead .action {width:15%}
+
+.user-order-checkout-table tbody td {padding:5px;}
+.user-order-checkout-table tbody .article-number {width:30%;}
+.user-order-checkout-table tbody .size {width:15%;text-align: center;}
+.user-order-checkout-table tbody .quantity {width:15%;text-align: center;}
+.user-order-checkout-table tbody .price {width:25%;text-align: right;}
+.user-order-checkout-table tbody .action {width:15%;text-align: center;}
+
+.user-order-checkout-table tfoot {font-size: 17px;}
+.user-order-checkout-table tfoot .total-label {padding:5px;}
+.user-order-checkout-table tfoot .total-value {padding:5px;text-align: right;}
+
+.user-order-checkout-table tbody td {background:#efefef;}
+.user-order-checkout-table tbody td .remove {cursor:pointer;}
+
+
+
+
+
+
+/* user order checkout */
+
+.customer-details-form {padding:25px;}
+.user-order-checkout .view-order-wrapper .view-order-th {display:grid;grid-template-columns:35% 12% 22% 21%;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
+.user-order-checkout .view-order-wrapper .view-order-th .size, .user-order-checkout .view-order-wrapper .view-order-th .quantity {text-align: center;}
+.user-order-checkout .view-order-wrapper .view-order-th .price {text-align: right;}
+.user-order-checkout .view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:30% 20% 15% 25% 10%;font-size: 12px;background: #f1f1f1;padding: 6px;border-bottom: 1px solid #ddd;}
+.user-order-checkout .view-order-wrapper .view-order-tbody > div {}
+.user-order-checkout .view-order-wrapper .view-order-tbody .price {text-align: right;}
+.user-order-checkout .view-order-wrapper .view-order-tbody .remove {text-align: right;}
+.user-order-checkout .view-order-wrapper .view-order-tbody .remove i {cursor: pointer;}
+.user-order-checkout .view-order-wrapper .view-order-tbody .quantity {text-align: center;}
+.user-order-checkout .view-order-wrapper .view-order-tbody .size {text-align: center;}
+
+
+
+/* user view screens */
+
+.order-header-wrapper a {
+@include displayflex;
+@include justify-content(space-evenly);
+    border: 1px solid #dfdfdf;
+line-height: 40px;
+    font-weight: bold;
+    color:#000;
+    height:40px;
+}
 
 /* footer */
 

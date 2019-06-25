@@ -2,7 +2,7 @@
 .site-header {padding: 25px;
 .search-box {width: 805px;position: absolute;right: 95px;top: 15px;}   
 .session-name {left: 285px;font-weight: normal;font-size: 15px;color: #777;padding: 7px 10px;}
-.session-logout {right: 10px;font-size: 14px;height: 40px;line-height: 40px;padding-left: 15px;padding-right: 15px;}
+.session-logout {right: 10px;font-size: 14px;height: 40px;line-height: 40px;padding-left: 15px;padding-right: 15px;padding-top: 0;padding-bottom: 0;}
 }
 
 
@@ -59,10 +59,11 @@ padding: 33px;
     
     
     
+/* user view product  */    
     
-    
-    
-    
+.site-header .search-box {width: 475px;right: inherit;left: 420px;}    
+.order-header-wrapper {width: 120px;right: 106px;position: absolute;top: 15px;}  
+
     
     
     

@@ -1,8 +1,5 @@
 <?php include('includes/header-administrator.php'); ?>
 
-
-
-
  
 
 <div class="content-wrapper admin-add-product clearfix">

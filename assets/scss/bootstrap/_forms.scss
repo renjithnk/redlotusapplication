@@ -7,8 +7,9 @@
 .form-control {
   display: block;
   width: 100%;
-  height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
@@ -17,6 +18,7 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
+  text-indent: 10px;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
 /*  @include border-radius($input-border-radius, 0);*/
@@ -159,6 +161,7 @@ select.form-control {
 
 textarea.form-control {
   height: auto;
+  padding: 10px 0;
 }
 
 // Form groups

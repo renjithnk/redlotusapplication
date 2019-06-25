@@ -12,28 +12,28 @@
         display:grid;
         grid-template-columns:auto auto;
         .product-list {
-
         }
-        
-    }
+    }    
+}    
     
+    
+/* user view product */    
+    
+.site-header .search-box {width: 300px;float: left;}    
+.order-header-wrapper {
+	width: 230px;float: right;margin-top: 15px;
 }    
     
     
     
     
     
+/* user order checkout  */    
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+.user-order-checkout-table {width:100%;font-size: 14px;}
+.user-order-checkout-table thead th {padding:10px;}
+.user-order-checkout-table tbody td {padding:10px;}    
+.user-order-checkout-table tfoot td {padding:10px;}     
     
     
     
