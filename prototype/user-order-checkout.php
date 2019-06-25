@@ -50,17 +50,17 @@
     </thead>
     <tbody>
     <tr>
-        <td class="article-number">A101</td> 
-        <td class="size">6</td> 
-        <td class="quantity">12</td> 
-        <td class="price">5000</td> 
-        <td class="action"><i class="fa fa-close remove"></i></td> 
+    <td class="article-number">A101</td> 
+    <td class="size">6</td> 
+    <td class="quantity">12</td> 
+    <td class="price">5000</td> 
+    <td class="action"><i class="fa fa-close remove"></i></td> 
     </tr>   
     </tbody>
     <tfoot>
     <tr>
-        <td colspan="3" class="total-label">Total</td>
-        <td class="total-value">5000</td>
+    <td colspan="3" class="total-label">Total</td>
+    <td class="total-value">5000</td>
     </tr>
     </tfoot>
 </table>

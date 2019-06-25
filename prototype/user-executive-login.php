@@ -21,7 +21,3 @@
 </div> 
 
 <?php include('includes/footer-common.php'); ?>
-
-
-
-
