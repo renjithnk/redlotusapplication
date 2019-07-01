@@ -9,9 +9,9 @@
   
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="admin-dashboard.php">Dashboard</a></li>
+<li><a href="admin-view-product">View Product</a></li>		    
 <li><a href="admin-add-product">Add Product</a></li>
-<li><a href="admin-view-product.php">View Product</a></li>		
+<li><a href="admin-view-orders">View Orders</a></li>		
 </ul>
 </nav>    
  

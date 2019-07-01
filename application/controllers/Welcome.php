@@ -23,16 +23,15 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('includes/header-common');
 		$this->load->view('home');
+		$this->load->view('includes/footer-common');
+
 	}
 
 	public function admin_login()
 	{
 		$this->load->view('includes/header-common');
 		$this->load->view('admin/admin-login');
-	}
+		$this->load->view('includes/footer-common');
 
-	public function admin_login_check()
-	{
-		echo "waef";
 	}
 }

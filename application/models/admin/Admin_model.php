@@ -18,6 +18,32 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
     }
   }
 
+  public function update_stock($new_stock,$desc_id)
+  {
+    $where='(description_id="'.$desc_id.' " )';
+    $this->db->set('sku', $new_stock);
+    $this->db->where($where);
+    if($this->db->update('product_desc'))
+    {
+      return 1;
+    }else{
+      return 0;
+    }
+  }
+
+  public function fetch_all_orders()
+  {
+    $this->db->select('or.cart_id,name,address,gst,product_quantity,size,price,article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->order_by('order_id','desc');
+    $query=$this->db->get();
+    if($query->num_rows() > 0)
+    {
+      $result=$query->result();
+      return $result;
+    }else{
+      return 0;
+    }
+  }
+
   public function check_filename($image_name)
   {
     $where='(image="'.$image_name.'")';
@@ -100,7 +126,7 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
     }
   }
 
-  public function inset_product_details($data_array,$size,$price,$sku)
+  public function inset_product_details($data_array,$size,$price,$sku,$category)
   {
     $query = $this->db->get_where('product', $data_array);
     $count = $query->num_rows();
@@ -110,7 +136,7 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
       $query=$this->db->get();
       $result=$query->result();
       $product_id=$result[0]->product_id;
-      $desc_array=array('product_id'=>$product_id,'size'=>$size,'price'=>$price,'sku'=>$sku);
+      $desc_array=array('product_id'=>$product_id,'size'=>$size,'price'=>$price,'sku'=>$sku,'category'=>$category);
       if($this->db->insert('product_desc', $desc_array))
       {
         return $product_id;
@@ -123,7 +149,7 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
       if($this->db->insert('product', $data_array))
       {
         $product_id=$this->db->insert_id();
-        $desc_array=array('product_id'=>$product_id,'size'=>$size,'price'=>$price,'sku'=>$sku);
+        $desc_array=array('product_id'=>$product_id,'size'=>$size,'price'=>$price,'sku'=>$sku,'category'=>$category);
         if($this->db->insert('product_desc', $desc_array))
         {
           return $product_id;
@@ -131,7 +157,6 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
           return 0;
         }
       }else{
-        //echo $this->db->last_query();
         return 0;
       }
     }
@@ -196,6 +221,21 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
     $where='(product_id="'.$product_id.'")';
     $this->db->select('image')->from('product_image')->where($where);
     $query=$this->db->get();
+    if($query->num_rows() > 0)
+    {
+      $result=$query->result();
+      return $result;
+    }else{
+      return 0;
+    }
+  }
+
+  public function fetch_particuler_products($parameter)
+  {
+    $where='(product_category="'.$parameter.'" or article_number="'.$parameter.'")';
+    $this->db->select('product_id,article_number')->from('product')->where($where);
+    $query=$this->db->get();
+
     if($query->num_rows() > 0)
     {
       $result=$query->result();

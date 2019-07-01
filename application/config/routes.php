@@ -55,20 +55,31 @@ $route['admin-add-product'] = 'admin/admin_add_product';
 $route['admin-view-product'] = 'admin/admin_view_product';
 $route['insert-product'] = 'admin/insert_product'; 
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = TRUE;
+$route['translate_uri_dashes'] = TRUE;  
 
+$route['user-view-product']='User_executive';  
+$route['user-login']='User_executive/user_login'; 
+$route['user-view-product/(:any)']='User_executive/particular'; 
+$route['user-order-checkout']='User_executive/order_view';
+$route['user-view-orders']='User_executive/user_order_view';
+$route['user-categories']='User_executive/user_categories';
+$route['user-login-check']='User_executive/user_login_check';
+$route['admin-view-orders']='admin/admin_view_orders';
 /*
 | -------------------------------------------------------------------------
 | Routes form javascript
 | -------------------------------------------------------------------------
 */ 
-
+$route['executive-place-order']='User_executive/place_order';
+$route['executive-delete-cart']='User_executive/delete_cart';
+$route['executive-add-to-cart']='User_executive/add_to_cart';
 $route['admin-login-check'] = 'admin/admin_login';
-$route['admin-dashboard'] = 'admin/dashboard';
+$route['admin-dashboard'] = 'admin/dashboard'; 
 $route['images-upload']='admin/images_upload'; 
 $route['images-remove']='admin/images_remove';
 $route['images-list_files']='admin/images_list_files';
 $route['admin-product-check']='admin/admin_product_check';
+$route['admin-update-sock']='admin/admin_update_sock';
 
 /*
 | -------------------------------------------------------------------------

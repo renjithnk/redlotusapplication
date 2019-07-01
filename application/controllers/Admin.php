@@ -35,6 +35,14 @@ class Admin extends CI_Controller {
 			//redirect(base_url('logged_in'));
 		}
 	}
+
+	public function admin_view_orders()
+	{
+		$result['orders']=$this->Admin_model->fetch_all_orders();
+		$this->load->view('includes/header-administrator');
+		$this->load->view('admin/admin-view-orders',$result);
+		$this->load->view('includes/footer-common');
+	}
     
 	public function dashboard()
 	{
@@ -72,8 +80,9 @@ class Admin extends CI_Controller {
 		$size=$this->input->post('size'); 
 		$price=$this->input->post('price'); 
 		$sku=$this->input->post('sku'); 
-		$data_array=array('article_number'=>$articleno);
-		$result=$this->Admin_model->inset_product_details($data_array,$size,$price,$sku);
+		$category=$this->input->post('category');
+		$data_array=array('article_number'=>$articleno,'product_category'=>$category);
+		$result=$this->Admin_model->inset_product_details($data_array,$size,$price,$sku,$category);
 		if($result!=0)
 		{
 			$this->Admin_model->assign_image_product($result);
@@ -168,6 +177,28 @@ class Admin extends CI_Controller {
 		}
 		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-view-product',$result);
+		$this->load->view('includes/footer-common');
+	}
+
+	public function admin_update_sock()
+	{
+		$hidden_sock=$this->input->post('hidden_sock');
+		$new_sock=$this->input->post('new_sock');
+		$desc_id=$this->input->post('desc_id');
+		if($new_sock=="")
+		{
+			$update_stockng=$hidden_sock;
+			$result=$this->Admin_model->update_stock($update_stockng,$desc_id);
+			echo $update_stockng;
+		}
+		else
+		{
+			$update_stockng=$hidden_sock+$new_sock;
+			$desc_id=$this->input->post('desc_id');
+			$result=$this->Admin_model->update_stock($update_stockng,$desc_id);
+			echo $update_stockng;
+		}
+		
 	}
 	
 }

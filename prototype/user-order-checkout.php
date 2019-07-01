@@ -1,4 +1,3 @@
-<?php include('includes/header-user-executive.php'); ?>
 
 <div class="content-wrapper user-order-checkout clearfix">
     
@@ -82,8 +81,3 @@
 
     
 </div>    
-
-
-
-
-<?php include('includes/footer-common.php'); ?>

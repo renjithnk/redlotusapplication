@@ -10,9 +10,9 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="admin-dashboard.php">Dashboard</a></li>
+<li><a href="admin-view-product">View Product</a></li>        
 <li><a href="admin-add-product">Add Product</a></li>
-<li><a href="admin-view-product">View Product</a></li>		
+<li><a href="admin-view-orders">View Orders</a></li>  		
 </ul>
 </nav>    
     
@@ -43,7 +43,22 @@
       <label for="inputPassword4">No of Stock</label>
       <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock">
     </div>
-</div>     
+</div> 
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Category</label>
+      <select name="category" class="form-control">
+        <option value="Formal">Formal</option>
+        <option value="Casual">Casual</option>
+        <option value="Sandel">Sandel</option>
+        <option value="Sleeper">Sleeper</option>
+        <option value="Loffer">Loffer</option>
+        <option value="Roman Bantu">Roman Bantu</option>
+        <option value="Bantu">Bantu</option>
+      </select>
+    </div>
+</div>      
 
 <div class="form-group">
   <div id="my-dropzone" class="dropzone">
@@ -63,7 +78,7 @@
 </div> 
 
 </head>  
-<script src="<?php echo SERVER; ?>vendor/dropzone/dropzone.min.js"></script> 
+<script src="<?php echo SERVER; ?>assets/js/dropzone.min.js"></script> 
 <script>
         Dropzone.autoDiscover = false;
         var myDropzone = new Dropzone("#my-dropzone", {

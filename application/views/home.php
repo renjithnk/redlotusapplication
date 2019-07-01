@@ -1,3 +1,4 @@
+
 <div class="container-fluid main-index-wrapper">
 <div class="row">
 <div class="col-lg-12">
@@ -7,8 +8,8 @@
 </a>    
     <h3 class="application-name">Stock Management Application</h3>
 <div class="btn-group">
-<a href="index.php/admin-login" class="btn btn-primary btn-lg admin-button red-button">Admin</a>
-<a href="main-index.php" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
+<a href="<?php echo base_url();?>admin-login" class="btn btn-primary btn-lg admin-button red-button">Admin</a>
+<a href="<?php echo base_url();?>user-login" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
 </div>        
 </div>
 </div>

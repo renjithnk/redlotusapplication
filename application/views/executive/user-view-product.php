@@ -1,4 +1,5 @@
-<div class="content-wrapper admin-view-product clearfix">
+
+<div class="content-wrapper user-view-product clearfix">
     
 <div class="menutrigger">
 <div class="bar1"></div>
@@ -7,9 +8,9 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="admin-view-product">View Product</a></li>		    
-<li><a href="admin-add-product">Add Product</a></li>
-<li><a href="admin-view-orders">View Orders</a></li>
+<li><a href="<?php echo base_url();?>user-categories">Categories</a></li>    
+<li><a href="<?php echo base_url();?>user-view-product">View Product</a></li>		    
+<li><a href="<?php echo base_url();?>user-view-orders">View Orders</a></li>
 </ul>
 </nav>   
     
@@ -18,14 +19,15 @@
 <div class="product-list-wrapper">
 <ul class="list-unstyled">
 
+
 <?php 
+if($product!="0")
+{
+
 foreach($product as $key =>$value)
-{ 
-	/*print_r($value->image[1]->image);
-	print_r($product); die();*/
+{
 	$stock=0;
 	$pending=0; ?>
-
 	<li class="product-list">
 	<div class="product-details-wrapper">
 	<div class="col1">
@@ -56,24 +58,6 @@ foreach($product as $key =>$value)
 	</div>
 	<?php } ?>
 
-	<!-- <div class="photo-gallery">
-	<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
-	<div class="popup">
-	<div class="popup-content">
-	<div class="swiper-container">
-	<div class="swiper-wrapper">
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	</div>
-	<div class="swiper-pagination"></div>
-	</div>   
-	<div class="popupclose"><span class="one"></span><span class="two"></span></div>
-	</div>
-	</div>        
-	</div>  -->
-
-
 	</div>
 	</div>
 	<div class="col2">
@@ -90,25 +74,20 @@ foreach($product as $key =>$value)
 		$stock=$stock+$current_stock;
 		}
 	?>
-	<input type="text" id="new_stockss_<?=$value2->description_id;?>" value="<?=$value2->sku?>" style="display: none;">
-	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>"><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock('<?php echo $value2->description_id; ?>')"></li>
+	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup="myFunction(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)"></li>
 	<?php } ?>
 	</ul>    
 </div>                        
 </div>    
 <div class="stock-and-pending-status">
-	<input type="text" id="hidden_full_stock" value="<?=$stock?>" style="display: none;">
 <div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock"><?=$stock;?></span></div>
 <div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>       
 </div>    
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+<button class="update-button btn btn-primary red-button" type="submit">Order</button>      
 </div>
 </li>
 
-<?php } ?>
-
-
-
+<?php } }?>
 
 </ul> 
 </div>        
