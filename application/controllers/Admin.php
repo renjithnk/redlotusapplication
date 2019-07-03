@@ -87,6 +87,7 @@ class Admin extends CI_Controller {
 		{
 			$this->Admin_model->assign_image_product($result);
 		}
+		header('Location: ' . $_SERVER["HTTP_REFERER"] );
 	}
 
 	public function randomkey()
@@ -199,6 +200,33 @@ class Admin extends CI_Controller {
 			echo $update_stockng;
 		}
 		
+	}
+
+	public function particular()
+	{
+		$parameter=$this->uri->segment(2);
+		$result['product']=$this->Admin_model->fetch_particuler_products($parameter);
+		if($result['product']!="0")
+		{
+			foreach ($result['product'] as $key => $value) {
+				$product_id=$value->product_id;
+				$disc=$this->Admin_model->fetch_product_disc($product_id);
+				$result['product'][$key]->disc=$disc;	
+				$image=$this->Admin_model->fetch_product_images($product_id);		
+				$result['product'][$key]->image=$image;		
+			}
+		}
+		//$this->User_model->delete_all_uncarted_products();
+		$this->load->view('includes/header-user-executive');
+		$this->load->view('admin/admin-view-product',$result);
+		$this->load->view('includes/footer-common');
+	}
+
+	public function delete_product()
+	{
+		$product_id=$this->input->post('element');
+		$result=$this->Admin_model->delete_product($product_id);
+		echo $result;
 	}
 	
 }

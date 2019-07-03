@@ -59,7 +59,8 @@ $route['translate_uri_dashes'] = TRUE;
 
 $route['user-view-product']='User_executive';  
 $route['user-login']='User_executive/user_login'; 
-$route['user-view-product/(:any)']='User_executive/particular'; 
+$route['user-view-product/(:any)']='User_executive/particular';
+$route['admin-view-product/(:any)']='admin/particular';  
 $route['user-order-checkout']='User_executive/order_view';
 $route['user-view-orders']='User_executive/user_order_view';
 $route['user-categories']='User_executive/user_categories';
@@ -79,7 +80,8 @@ $route['images-upload']='admin/images_upload';
 $route['images-remove']='admin/images_remove';
 $route['images-list_files']='admin/images_list_files';
 $route['admin-product-check']='admin/admin_product_check';
-$route['admin-update-sock']='admin/admin_update_sock';
+$route['admin-update-sock']='admin/admin_update_sock'; 
+$route['delete-product']='admin/delete_product';  
 
 /*
 | -------------------------------------------------------------------------

@@ -7,9 +7,9 @@
 </div>
 <nav id="main-navigation" class="main-navigation">
 <ul class="list-unstyled">
-<li><a href="admin-view-product">View Product</a></li>		    
-<li><a href="admin-add-product">Add Product</a></li>
-<li><a href="admin-view-orders">View Orders</a></li>
+<li><a href="<?php echo base_url();?>admin-view-product">View Product</a></li>		    
+<li><a href="<?php echo base_url();?>admin-add-product">Add Product</a></li>
+<li><a href="<?php echo base_url();?>admin-view-orders">View Orders</a></li>
 </ul>
 </nav>   
     
@@ -29,7 +29,7 @@ foreach($product as $key =>$value)
 	<li class="product-list">
 	<div class="product-details-wrapper">
 	<div class="col1">
-	<h2 class="article-number">A101</h2>    
+	<h2 class="article-number"><?=$value->article_number;?></h2>    
 	<div class="product-image clearfix">
 	<?php 
 	$i=0;
@@ -101,7 +101,7 @@ foreach($product as $key =>$value)
 <div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock"><?=$stock;?></span></div>
 <div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>       
 </div>    
-<button class="update-button btn btn-primary red-button" type="submit">Update</button>      
+<button class="update-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>      
 </div>
 </li>
 

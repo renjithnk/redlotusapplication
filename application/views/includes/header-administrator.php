@@ -24,9 +24,9 @@ Administrator
     
 <div class="input-group form-group search-box">
 <span class="fa fa-search form-control-feedback"></span>    
-<input type="text" class="form-control" placeholder="Search this blog">
+<input type="text" class="form-control" id="seach_item" placeholder="Search this blog">
 <div class="input-group-append">
-<button class="btn btn-secondary search-button" type="button"><i class="fa fa-search"></i></button>
+<button class="btn btn-secondary search-button" type="button" onclick="searchProducts()"><i class="fa fa-search"></i></button>
 </div>
 </div>
     

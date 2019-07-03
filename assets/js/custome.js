@@ -182,3 +182,28 @@ function searchProduct()
   var name=document.getElementById("seach_item").value;
   window.location = "http://localhost/redlotusapplication/index.php/user-view-product/"+name;
 }
+function searchProducts()
+{
+  var name=document.getElementById("seach_item").value;
+  window.location = "http://localhost/redlotusapplication/index.php/admin-view-product/"+name;
+}
+
+function deleteProduct(element)
+{
+  var request = $.ajax({
+    url: base_url + 'delete-product',
+    type: 'POST',
+    data: { element: element} ,
+    dataType: 'html'
+  });
+  request.done( function ( data ) {
+    if(data==1)
+    {
+       window.location = "http://localhost/redlotusapplication/index.php/admin-view-product";
+    }
+  });
+  request.fail( function ( jqXHR, textStatus) {
+    console.log( 'Sorry: ' + textStatus );
+  });
+  alert(element);
+}
