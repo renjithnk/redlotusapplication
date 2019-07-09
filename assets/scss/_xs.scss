@@ -26,18 +26,20 @@ padding: 5px 10px;border: 1px solid #ededed;}
 .content-wrapper { @include displayflex; @include flex-wrap(wrap);}
 .product-list-wrapper {   
 padding-top: 0;
-> ul {
-display: grid;
-grid-template-columns:auto;
-grid-gap:10px;
-margin-bottom: 0;
+> .container {
+> .row {
+margin-right: -20px;
+margin-left: -20px;   
 }
-.product-list {background-color: #f0f0f0;padding: 15px;
-
+}
+.product-list {background-color: #fff;padding: 5px;padding-top: 0;margin-bottom: 5px;
 .product-details-wrapper { 
     @include displayflex; 
     @include justify-content(space-between);
     @include flex-wrap(wrap);
+    background-color:#f0f0f0;
+    min-height: 325px;
+    padding: 25px;
 .col1 { @include flex-basis(35%);
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
 .article-number {font-size: 18px;text-align: center;font-weight: bold;}
@@ -51,9 +53,9 @@ margin-bottom: 0;
     @include justify-content(space-between);
     margin-top: 15px;
 li { margin-bottom: 10px;text-align: center;
-    @include flex-basis(33%);
+    @include flex-basis(30%);
     &:nth-child(3n+1) input {border-left: 1px solid #ddd !important;}
-    input[type="text"] {width: 100%;border: 1px solid #ddd;padding: 5px;height: 30px;border-left: 0;text-align: center;}
+    input[type="text"] {width: 100%;border: 1px solid #ddd;padding: 5px;height: 30px;text-align: center;}
     label {font-weight: bold;margin-bottom: 3px;font-size: 14px;display:block;}
     .stock-number {color: #0eb90e;}
     .stock-number.pending {color: #f71d2b;}
@@ -409,13 +411,13 @@ line-height: 40px;
 .app-footer .copyright {margin-bottom:0;font-size: 12px;text-align: center;}
 
 
-
+ 
 /* Validation Error */
 
 .error_message {
 	background: #fff;
 	color: #f71d2b;
-	border: 1px solid #f71d2b;
+	border: 2px solid #f71d2b;
 	margin-top: 15px;
 	padding: 10px 15px;
 }

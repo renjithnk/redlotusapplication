@@ -16,7 +16,8 @@
 <div class="main-content-wrapper">
 <h2 class="heading">Products</h2>
 <div class="product-list-wrapper">
-<ul class="list-unstyled">
+<div class="container">    
+<div class="row">
 
 <?php 
 foreach($product as $key =>$value)
@@ -26,7 +27,7 @@ foreach($product as $key =>$value)
 	$stock=0;
 	$pending=0; ?>
 
-	<li class="product-list">
+	<div class="col-lg-4 product-list">
 	<div class="product-details-wrapper">
 	<div class="col1">
 	<h2 class="article-number"><?=$value->article_number;?></h2>    
@@ -103,14 +104,15 @@ foreach($product as $key =>$value)
 </div>    
 <button class="update-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>      
 </div>
-</li>
+</div>
 
 <?php } ?>
 
 
 
 
-</ul> 
+</div>
+</div>      
 </div>        
 </div>
 
