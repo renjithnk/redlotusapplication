@@ -407,3 +407,15 @@ line-height: 40px;
 
 .app-footer {background-color: #eee;margin-top: 10px;height: 60px;line-height: 60px;}
 .app-footer .copyright {margin-bottom:0;font-size: 12px;text-align: center;}
+
+
+
+/* Validation Error */
+
+.error_message {
+	background: #fff;
+	color: #f71d2b;
+	border: 1px solid #f71d2b;
+	margin-top: 15px;
+	padding: 10px 15px;
+}
