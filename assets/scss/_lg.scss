@@ -22,7 +22,8 @@
     
 .product-list-wrapper {
     @include flex-basis(100%);
-    padding-right: 0;
+padding-right: 10px;
+padding-left: 10px;
 > ul {
 margin-bottom:0;
 padding-bottom:0;

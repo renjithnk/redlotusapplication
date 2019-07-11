@@ -17,9 +17,9 @@
     
 <div class="main-content-wrapper">
 <h2 class="heading">Products</h2>
-<div class="product-list-wrapper">
-<ul class="list-unstyled">
-<li class="product-list">
+<div class="product-list-wrapper container">
+<div class="row">
+<div class="product-list col-lg-4">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A101</h2>    
@@ -65,9 +65,9 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Update</button>      
 </div>
-</li>
+</div>
 
-<li class="product-list">
+<div class="product-list col-lg-4">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A101</h2>    
@@ -113,9 +113,9 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Update</button>      
 </div>
-</li>
+</div>
 
-<li class="product-list">
+<div class="product-list col-lg-4">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A101</h2>    
@@ -161,10 +161,10 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Update</button>      
 </div>
-</li>
+</div>
 
 
-<li class="product-list">
+<div class="product-list col-lg-4">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A101</h2>    
@@ -210,7 +210,7 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Update</button>      
 </div>
-</li>
+</div>
 
 
 
