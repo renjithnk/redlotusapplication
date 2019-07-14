@@ -87,7 +87,13 @@ foreach($product as $key =>$value)
 </div>
 </li>
 
-<?php } }?>
+<?php } }
+
+else
+
+{
+	echo "No Relative products where Found";
+}?>
 
 </ul> 
 </div>        

@@ -1,4 +1,4 @@
-<?php
+s<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
@@ -222,7 +222,7 @@ class Admin extends CI_Controller {
 			}
 		}
 		//$this->User_model->delete_all_uncarted_products();
-		$this->load->view('includes/header-user-executive');
+		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-view-product',$result);
 		$this->load->view('includes/footer-common');
 	}

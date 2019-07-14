@@ -20,6 +20,8 @@
 <div class="row">
 
 <?php 
+if($product!=0)
+{
 foreach($product as $key =>$value)
 { 
 	/*print_r($value->image[1]->image);
@@ -57,23 +59,6 @@ foreach($product as $key =>$value)
 	</div>
 	<?php } ?>
 
-	<!-- <div class="photo-gallery">
-	<div class="popup-clicker"><img src="images/product1/p1.jpg" class="img-fluid"/></div>
-	<div class="popup">
-	<div class="popup-content">
-	<div class="swiper-container">
-	<div class="swiper-wrapper">
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	<div class="swiper-slide" style="background-image:url(images/product1/p1.jpg);background-position: center center;background-repeat: no-repeat;background-size:cover;"></div>
-	</div>
-	<div class="swiper-pagination"></div>
-	</div>   
-	<div class="popupclose"><span class="one"></span><span class="two"></span></div>
-	</div>
-	</div>        
-	</div>  -->
-
 
 	</div>
 	</div>
@@ -106,7 +91,11 @@ foreach($product as $key =>$value)
 </div>
 </div>
 
-<?php } ?>
+<?php } } else
+
+{
+	echo "No Relative products where Found";
+}?>
 
 
 
