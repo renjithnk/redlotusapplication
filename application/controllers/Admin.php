@@ -133,6 +133,7 @@ class Admin extends CI_Controller {
             {
               $image_data = $this->upload->data();
               $data = $this->resize_news_image($image_data);
+              echo $data;
             }
 	}
 
@@ -150,6 +151,10 @@ class Admin extends CI_Controller {
     	if(!$this->image_lib->resize())
     	{
       		$is_file_error = TRUE;
+    	}
+    	else
+    	{
+    		return 1;
     	}
 	}
 

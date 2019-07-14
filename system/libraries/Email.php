@@ -974,7 +974,7 @@ class CI_Email {
 	 */
 	protected function _set_date()
 	{
-		$timezone = date('Z');
+		$timezone = date('Asia/Kolkata');
 		$operator = ($timezone[0] === '-') ? '-' : '+';
 		$timezone = abs($timezone);
 		$timezone = floor($timezone/3600) * 100 + ($timezone % 3600) / 60;

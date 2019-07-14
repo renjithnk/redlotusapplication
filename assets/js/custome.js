@@ -15,7 +15,7 @@ function adminLoginCheck()
       window.location = base_url+"admin-view-product";
     }
     else if (data=="false") {
-      $( "#error_message" ).load(window.location.href + " #error_message" );
+      $( ".error_messagess" ).load(window.location.href + " .error_messagess" );
     }
   });
   request.fail( function ( jqXHR, textStatus) {
@@ -27,7 +27,6 @@ function userLoginCheck()
 {
   var user_email = document.getElementById("user_email").value;
   var user_password = document.getElementById("user_password").value;
-  alert("wefa");
   var request = $.ajax({
     url: base_url + 'user-login-check',
     type: 'POST',
@@ -39,7 +38,7 @@ function userLoginCheck()
       window.location = base_url+"user-categories";
     }
     else if (data=="false") {
-      $( "#error_message" ).load(window.location.href + " #error_message" );
+      $( ".error_messagess" ).load(window.location.href + " .error_messagess" );
     }
   });
   request.fail( function ( jqXHR, textStatus) {
@@ -47,7 +46,7 @@ function userLoginCheck()
   });
 }
 
-function updateSock(element) {
+function updateSock(element,product_id) {
   var desc_id=element;
   var new_sock=document.getElementById("new_stock_"+desc_id).value;
   var hidden_sock=document.getElementById("new_stockss_"+desc_id).value;
@@ -68,14 +67,14 @@ function updateSock(element) {
         var data=parseInt(data);
         var new_value=data;
         document.getElementById("stock-number_"+desc_id).innerText=new_value; 
-        var full=parseInt(document.getElementById("hidden_full_stock").value);
+        var full=parseInt(document.getElementById("hidden_full_stock_"+product_id).value);
         var new_socks=parseInt(new_sock);
         var full_new=full+new_socks;
         if(new_sock!="")
-        document.getElementById("full_stock").innerText=full_new;
+        document.getElementById("full_stock_"+product_id).innerText=full_new;
         else
         {
-          document.getElementById("full_stock").innerText=full;
+          document.getElementById("full_stock_"+product_id).innerText=full;
         } 
 
       }

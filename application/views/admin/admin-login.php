@@ -14,7 +14,7 @@
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>
 <input type='submit' name='submit' value='Submit' class="btn btn-lg btn-primary btn-block" >    
-<div id="error_message">
+<div class="error_messagess">
 <?php if($this->session->userdata('invalid_admin_login')){ ?><div class="invalid-credentials" ><?php  echo $this->session->userdata('invalid_admin_login')['title']; $this->session->unset_userdata('invalid_admin_login');?></div> <?php } ?>   
 
 </div>   

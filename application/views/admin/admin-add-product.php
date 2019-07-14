@@ -26,22 +26,22 @@
 
     <div class="form-group col-md-6">
       <label for="inputEmail4">Article No.</label>
-      <input type="text" class="form-control" id="articleno" name="articleno" placeholder="Article No">
+      <input type="text" class="form-control" id="articleno" name="articleno" placeholder="Article No" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Size</label>
-      <input type="text" class="form-control" id="size"  name="size" placeholder="Size">
+      <input type="text" class="form-control" id="size"  name="size" placeholder="Size" required>
     </div>
 </div>    
     
 <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Price</label>
-      <input type="text" class="form-control" id="email"  name="price" placeholder="Price">
+      <input type="text" class="form-control" id="email"  name="price" placeholder="Price" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">No of Stock</label>
-      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock">
+      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock" required>
     </div>
 </div> 
 
@@ -67,7 +67,7 @@
     </div>
   </div>
 </div>    
-<button type="submit" value="submit" class="btn btn-primary">Submit</button>     
+<button type="submit" value="submit" class="btn btn-primary" id="submit_button" style="display: none;">Submit</button>     
    </form>     
 </div>  
 
@@ -84,7 +84,13 @@
         var myDropzone = new Dropzone("#my-dropzone", {
             url: "<?php echo base_url("images-upload") ?>",
             acceptedFiles: "image/*",
-            addRemoveLinks: true,
+            addRemoveLinks: true, 
+            success : function(file, response){
+        		if(response==1)
+        		{
+        			document.getElementById("submit_button").style.display="block";
+        		}
+    		},
             removedfile: function(file) {
                 var name = file.name;
                 var extension=name.split('.').pop();
@@ -130,6 +136,7 @@
       request.done( function ( data ) {
       if (data=="1") {
             document.getElementById("my-dropzone").style.display = "none";
+            document.getElementById("submit_button").style.display="block";
         }
       else {
             document.getElementById("my-dropzone").style.display = "block";

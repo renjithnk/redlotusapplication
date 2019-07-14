@@ -92,14 +92,14 @@ foreach($product as $key =>$value)
 		}
 	?>
 	<input type="text" id="new_stockss_<?=$value2->description_id;?>" value="<?=$value2->sku?>" style="display: none;">
-	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>"><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock('<?php echo $value2->description_id; ?>')"></li>
+	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>"><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)"></li>
 	<?php } ?>
 	</ul>    
 </div>                        
 </div>    
 <div class="stock-and-pending-status">
-	<input type="text" id="hidden_full_stock" value="<?=$stock?>" style="display: none;">
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock"><?=$stock;?></span></div>
+	<input type="text" id="hidden_full_stock_<?=$value2->product_id;?>" value="<?=$stock?>" style="display: none;">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock_<?=$value2->product_id;?>"><?=$stock;?></span></div>
 <div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>       
 </div>    
 <button class="update-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>      

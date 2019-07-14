@@ -31,7 +31,7 @@ foreach($product as $key =>$value)
 	<li class="product-list">
 	<div class="product-details-wrapper">
 	<div class="col1">
-	<h2 class="article-number">A101</h2>    
+	<h2 class="article-number"><?=$value->article_number;?></h2>    
 	<div class="product-image clearfix">
 	<?php 
 	$i=0;

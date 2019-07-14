@@ -14,8 +14,8 @@
   
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="admin-view-product.php">
-<img class="img-fluid logo" src="../assets/images/logo.png" alt="" width="200" height="64" />        
+<a href="<?php echo base_url()?>">
+<img class="img-fluid logo" src="<?php echo SERVER;?>assets/images/logo.png" alt="" width="200" height="64" />        
 </a>    
 </div> 
 <div class="session-name">
@@ -30,7 +30,7 @@ Administrator
 </div>
 </div>
     
-<a href="index.php" class="session-logout">
+<a href="<?php echo base_url();?>" class="session-logout">
 Logout
 </a>     
     
