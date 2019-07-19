@@ -302,28 +302,23 @@ font-size: 7px;
 /* dropdown menu styles ends */
 
 
-
 /* add products wrapper  */
-
 .add-products-wrapper {}
 
 
-
 /* admin view orders */
-
 .admin-view-orders .view-order-wrapper .view-order-th {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;padding:6px;font-weight: bold;margin-bottom:10px;padding-top: 5px;padding-bottom: 5px;}
 .admin-view-orders .view-order-wrapper .view-order-th > div {width:20%;}
 .admin-view-orders .view-order-wrapper .view-order-tbody {display:grid;grid-template-columns:auto auto auto auto auto;font-size: 12px;background: #f1f1f1;padding: 6px;border-bottom: 1px solid #ddd;}
 .admin-view-orders .view-order-wrapper .view-order-tbody > div {width:20%;}
 
 
-.admin-view-orders-table {font-size:12px;}
-
-
+.admin-view-orders-table {font-size:14px;}
+.admin-view-orders-table thead th {border-left: 1px solid #dee2e6;border-right: 1px solid #dee2e6;}
+.admin-view-orders-table tbody td {border-left: 1px solid #dee2e6;border-right: 1px solid #dee2e6;border-bottom: 1px solid #dee2e6}
 
 
 /* user categories */
-
 .category-list-wrapper ul {display:grid;grid-template-columns: auto auto;grid-gap: 10px;margin-bottom: 0;}
 .category-list-wrapper ul li a {padding: 0;margin: 0;text-align: center;border: 1px solid #ddd;display: block;}
 .category-list-wrapper ul li a .category-name {font-size: 20px;padding: 20px 0 0 0;margin: 0;color: #333;}
