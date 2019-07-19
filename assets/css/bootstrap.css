@@ -1635,7 +1635,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #555;
 }
 
 /* line 11, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_tables.scss */
@@ -1649,7 +1649,7 @@ pre code {
 /* line 18, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_tables.scss */
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
 }
 
 /* line 23, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/bootstrap/_tables.scss */

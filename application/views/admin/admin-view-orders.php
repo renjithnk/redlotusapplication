@@ -15,32 +15,42 @@
     
 <div class="main-content-wrapper">
 <h2 class="heading">View Orders</h2>
-<div class="view-order-wrapper">
-<div class="view-order-th">
-    <div>Article No.</div> 
-    <div>Customer Details</div>
-    <div>Size</div>
-    <div>Qty</div>
-    <div>Price</div>
-</div>
 
+
+
+
+<div class="view-order-wrapper">
+<table class="table table-striped admin-view-orders-table">
+    <thead>
+      <tr>
+        <th>Article No.</th>
+        <th>Customer Details</th>
+        <th>Size</th>
+        <th>Qty</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
 <?php if($orders!='0')
 {
     foreach ($orders as $key => $value) { 
         $price=$value->price*$value->product_quantity;
-        ?>
-        <div class="view-order-tbody">
-        <div class="article-number"><?php echo $value->article_number;?></div>        
-        <div class="customer-details">
-            <div class="customer-name"><?php echo $value->name;?></div>
-            <div class="customer-name"><?php echo $value->address;?></div>
-            <div class="gst-number"><?php echo $value->gst;?></div>
-        </div>  
-        <div class="size"><?php echo $value->size;?></div>
-        <div class="quantity"><?php echo $value->product_quantity;?></div>
-        <div class="price"><?php echo $price;?></div>
-        </div>
-    <?php } } ?>
+        ?>        
+      <tr>
+        <td><?php echo $value->article_number;?></td>
+        <td><div class="customer-name"><?php echo $value->name;?></div>
+            <div class="customer-address"><?php echo $value->address;?></div>
+            <div class="gst-number"><?php echo $value->gst;?></div></td>
+        <td><?php echo $value->size;?></td>
+        <td><?php echo $value->product_quantity;?></td>
+        <td><?php echo $price;?></td>
+      </tr>
+    <?php } } ?>      
+
+    </tbody>
+  </table>    
+
+
 </div>        
 </div>
 </div>    

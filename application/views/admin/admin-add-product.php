@@ -18,6 +18,7 @@
     
     
 <div class="main-content-wrapper">
+<h2 class="heading">Add Products</h2>
 <div class="add-products-wrapper">    
     
 <div class="add-product-form">
