@@ -41,7 +41,7 @@ foreach($product as $key =>$value)
 		$i++;
 		?>
 		
-		<div class="photo-gallery">
+        <div class="photo-gallery">
 	<div class="popup-clicker"><img src="<?php echo SERVER;?>assets/images/products/<?=$images;?>" class="img-fluid"/></div>
 	<div class="popup">
 	<div class="popup-content">
@@ -94,7 +94,7 @@ foreach($product as $key =>$value)
 <?php } } else
 
 {
-	echo "No Relative products where Found";
+    echo "<div class='alert-messages'>No Relative products where Found</div>";
 }?>
 
 
