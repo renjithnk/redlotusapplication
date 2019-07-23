@@ -1,18 +1,16 @@
-var base_url='http://localhost/redlotusapplication/index.php/';
-
 function adminLoginCheck()
 {
   var exampleInputEmail1 = document.getElementById("exampleInputEmail1").value;
   var exampleInputPassword1 = document.getElementById("exampleInputPassword1").value;
   var request = $.ajax({
-    url: base_url + 'admin-login-check',
+    url: base_url_js + 'admin-login-check',
     type: 'POST',
     data: { exampleInputEmail1: exampleInputEmail1,exampleInputPassword1:exampleInputPassword1} ,
     dataType: 'html'
   });
   request.done( function ( data ) {
     if (data=="true") {
-      window.location = base_url+"admin-view-product";
+      window.location = base_url_js+"admin-view-product";
     }
     else if (data=="false") {
       $( ".error_messagess" ).load(window.location.href + " .error_messagess" );
@@ -28,14 +26,14 @@ function userLoginCheck()
   var user_email = document.getElementById("user_email").value;
   var user_password = document.getElementById("user_password").value;
   var request = $.ajax({
-    url: base_url + 'user-login-check',
+    url: base_url_js + 'user-login-check',
     type: 'POST',
     data: { user_email: user_email,user_password:user_password} ,
     dataType: 'html'
   });
   request.done( function ( data ) {
     if (data=="true") {
-      window.location = base_url+"user-categories";
+      window.location = base_url_js+"user-categories";
     }
     else if (data=="false") {
       $( ".error_messagess" ).load(window.location.href + " .error_messagess" );
@@ -48,7 +46,7 @@ function userLoginCheck()
 
 function updateSock(element,product_id) {
   var desc_id=element;
-  var new_sock=document.getElementById("new_stock_"+desc_id).value;
+  var new_sock=parseInt(document.getElementById("new_stock_"+desc_id).value);
   var hidden_sock=document.getElementById("new_stockss_"+desc_id).value;
   if (event.keyCode === 10 || event.keyCode === 13) {
         event.preventDefault();
@@ -59,7 +57,7 @@ function updateSock(element,product_id) {
         url: 'admin-update-sock',
       type: 'POST',
       data: {desc_id:desc_id,hidden_sock:hidden_sock,new_sock:new_sock} ,
-      dataType: 'html'
+      dataType: 'json'
     });
     request.done( function ( data ) {
       if (data!="0") {
@@ -69,13 +67,11 @@ function updateSock(element,product_id) {
         document.getElementById("stock-number_"+desc_id).innerText=new_value; 
         var full=parseInt(document.getElementById("hidden_full_stock_"+product_id).value);
         var new_socks=parseInt(new_sock);
-        var full_new=full+new_socks;
-        if(new_sock!="")
+        
+        var full_new = parseInt(full) + parseInt(current) - parseInt(new_value);
+
         document.getElementById("full_stock_"+product_id).innerText=full_new;
-        else
-        {
-          document.getElementById("full_stock_"+product_id).innerText=full;
-        } 
+        document.getElementById("hidden_full_stock_"+product_id).value=full_new;
 
       }
     });
@@ -85,24 +81,82 @@ function updateSock(element,product_id) {
     }
 }
 
-function myFunction(a,b)
+function myFunction(product_id)
 {
+
+  var order_details = '';
+  $("input[name^='new_stock_"+product_id+"']").each(function() {
+    var feild_name = $(this).attr('name');
+    var res = feild_name.split("_");
+    var length = res.length;
+    desc_id = res[length-1];
+
+    var product_quantity=parseInt($(this).val());
+
+    if(isNaN(product_quantity)) {
+      product_quantity = parseInt(0);
+    }
   
-  var desc_id=a;
-  var product_id=b;
-  var product_quantity=document.getElementById("new_stock_"+desc_id).value;
+    order_details = order_details +  desc_id + ":" + product_quantity + "|";
+});
+
   var request = $.ajax({
-    url: base_url + 'executive-add-to-cart',
+    url: base_url_js + 'executive-add-to-cart',
     type: 'POST',
-    data: { desc_id: desc_id,product_id:product_id,product_quantity:product_quantity} ,
-    dataType: 'html'
+    data: { product_id:product_id,order_details:order_details} ,
+    dataType: 'json'
   });
   request.done( function ( data ) {
+
+    var total_order = 0;
+
+    $("input[name^='new_stock_"+product_id+"']").each(function() {
+      var feild_name = $(this).attr('name');
+      var res = feild_name.split("_");
+      var length = res.length;
+      desc_id = res[length-1];
+  
+      var product_quantity=parseInt($(this).val());
+  
+      if(isNaN(product_quantity)) {
+        product_quantity = parseInt(0);
+      }
+    
+      total_order = total_order + product_quantity;
+  });
+  
+
     document.getElementById("cart_item_count").innerText=data;
+    var full=parseInt(document.getElementById("hidden_full_stock_"+product_id).value);
+
+    var full_new = parseInt(full) - parseInt(total_order);
+
+    document.getElementById("full_stock_"+product_id).innerText=full_new;
+
   });
   request.fail( function ( jqXHR, textStatus) {
     console.log( 'Sorry: ' + textStatus );
   });
+
+  
+}
+
+function display_order_qty(product_id, desc_id)
+{
+
+
+  var qty=parseInt(document.getElementById("new_stock_"+product_id + "_" + desc_id).value);
+  var current = parseInt(document.getElementById("current_stock_"+product_id + "_" + desc_id).value);
+
+      if(isNaN(qty)) {
+        qty = parseInt(0);
+      }
+    
+      stock_new = current - qty;
+
+    document.getElementById("stock-number_"+product_id+ "_"+desc_id).innerText=stock_new;
+
+  
 }
 
 function deleteCart(a,price)
@@ -110,7 +164,7 @@ function deleteCart(a,price)
   var cart_id=a;
   document.getElementById(a).style.display = "none";
   var request = $.ajax({
-    url: base_url + 'executive-delete-cart',
+    url: base_url_js + 'executive-delete-cart',
     type: 'POST',
     data: { cart_id: cart_id} ,
     dataType: 'html'
@@ -152,7 +206,7 @@ function placeOrder()
   else
   {
     var request = $.ajax({
-      url: base_url + 'executive-place-order',
+      url: base_url_js + 'executive-place-order',
       type: 'POST',
       data: { name: name,gst:gst,address:address},
       dataType: 'html'
@@ -162,7 +216,7 @@ function placeOrder()
     if(data2 == "1")
     {
       var delay = 1000; 
-      setTimeout(function(){ window.location = "http://localhost/redlotusapplication/index.php/user-view-product"; }, delay);
+      setTimeout(function(){ window.location = base_url_js + "/user-view-product"; }, delay);
       alert('Your Order Placed');
     } 
     else
@@ -179,18 +233,19 @@ function placeOrder()
 function searchProduct()
 {
   var name=document.getElementById("seach_item").value;
-  window.location = "http://localhost/redlotusapplication/index.php/user-view-product/"+name;
+  window.location = base_url_js + "/user-view-product/"+name;
 }
 function searchProducts()
 {
   var name=document.getElementById("seach_item").value;
-  window.location = "http://localhost/redlotusapplication/index.php/admin-view-product/"+name;
+  window.location = base_url_js + "/admin-view-product/"+name;
 }
 
 function deleteProduct(element)
 {
+
   var request = $.ajax({
-    url: base_url + 'delete-product',
+    url: base_url_js + 'delete-product',
     type: 'POST',
     data: { element: element} ,
     dataType: 'html'
@@ -198,11 +253,11 @@ function deleteProduct(element)
   request.done( function ( data ) {
     if(data==1)
     {
-       window.location = "http://localhost/redlotusapplication/index.php/admin-view-product";
+       window.location = base_url_js + "/admin-view-product";
     }
   });
   request.fail( function ( jqXHR, textStatus) {
     console.log( 'Sorry: ' + textStatus );
   });
-  alert(element);
+  
 }

@@ -141,6 +141,8 @@
         }
       else {
             document.getElementById("my-dropzone").style.display = "block";
+            //ADDED BY RAJEEV, NOT SURE WHY SUBMIT BUTTON WAS HIDDEN
+            document.getElementById("submit_button").style.display="block";
         }
       });
       request.fail( function ( jqXHR, textStatus) {

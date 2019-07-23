@@ -74,7 +74,11 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 |
 */
 
-define('SERVER','http://localhost/redlotusapplication/');
+define('SERVER','http://redlotus.local/');
+define( 'ROOT_DIR', dirname(__FILE__) );
+
+define('PRODUCT_IMAGE_PATH' , SERVER . '/assets/images/products/');
+define('PRODUCT_UPLOAD_PATH' , ROOT_DIR . '/../../assets/images/products/');
 
 defined('EXIT_SUCCESS')        OR define('EXIT_SUCCESS', 0); // no errors
 defined('EXIT_ERROR')          OR define('EXIT_ERROR', 1); // generic error
@@ -86,3 +90,4 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+

@@ -20,7 +20,7 @@
 <div class="row">
 
 <?php 
-if($product!=0)
+if(count($product)>0)
 {
 foreach($product as $key =>$value)
 { 
@@ -42,7 +42,7 @@ foreach($product as $key =>$value)
 		?>
 		
 		<div class="photo-gallery">
-	<div class="popup-clicker"><img src="<?php echo SERVER;?>assets/images/products/<?=$images;?>" class="img-fluid"/></div>
+	<div class="popup-clicker"><img src="<?php echo PRODUCT_IMAGE_PATH.$images;?>" class="img-fluid"/></div>
 	<div class="popup">
 	<div class="popup-content">
 	<div class="swiper-container">
@@ -77,7 +77,8 @@ foreach($product as $key =>$value)
 		}
 	?>
 	<input type="text" id="new_stockss_<?=$value2->description_id;?>" value="<?=$value2->sku?>" style="display: none;">
-	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>"><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)"></li>
+	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label>
+	<input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)" value=""></li>
 	<?php } ?>
 	</ul>    
 </div>                        

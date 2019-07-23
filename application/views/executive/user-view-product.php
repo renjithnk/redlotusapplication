@@ -75,16 +75,19 @@ foreach($product as $key =>$value)
 		$stock=$stock+$current_stock;
 		}
 	?>
-	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label><input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup="myFunction(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)"></li>
+	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value->product_id; ?>_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label>
+	<input type="text" name="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" onkeyup="display_order_qty(<?php echo $value->product_id;?>, <?php echo $value2->description_id;?>)"  value=""></li>
+	<input type="hidden" name="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" value="<?=$value2->sku?>"></li>
 	<?php } ?>
 	</ul>    
 </div>                        
 </div>    
 <div class="stock-and-pending-status">
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock"><?=$stock;?></span></div>
+<input type="hidden" id="hidden_full_stock_<?=$value2->product_id;?>" value="<?=$stock?>" style="display: block;">
+<div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock_<?=$value2->product_id;?>"><?=$stock;?></span></div>
 <div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>       
 </div>    
-<button class="update-button btn btn-primary red-button" type="submit">Order</button>      
+<button class="update-button btn btn-primary red-button" onClick="myFunction(<?php echo $value->product_id;?>)" type="submit">Order</button>      
 </div>
 </div>
 

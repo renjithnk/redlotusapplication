@@ -47,6 +47,10 @@ class User_model extends CI_Model {
 
   public function delete_all_uncarted_products()
   {
+
+    $createdby  =   $this->session->userdata('user_id');    
+
+    $this->db->where('executive_id',$createdby);
     $this->db->where('cart_status',"0");
     $this->db->delete("cart_order");
     if ($this->db->affected_rows() > 0)
@@ -61,7 +65,9 @@ class User_model extends CI_Model {
 
   public function select_cart_items()
   {
-    $where='(cart_status="0")';
+    $createdby  =   $this->session->userdata('user_id');    
+
+    $where='(executive_id=' . $createdby . ' AND cart_status="0")';
     $this->db->select('cart_id,article_number,size,price,product_quantity')->from('cart_order co')->join('product p','co.product_id=p.product_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->where($where);
     $query=$this->db->get();
     if($query->num_rows() > 0)
@@ -103,6 +109,7 @@ class User_model extends CI_Model {
   public function insert_to_cart($array,$check_array,$product_quantity)
   {
     $query = $this->db->get_where('cart_order', $check_array);
+  //  print_r($this->db->last_query()); die;
     $count = $query->num_rows();
     if($count)
     {
@@ -131,7 +138,11 @@ class User_model extends CI_Model {
 
   public function find_cart_total()
   {
-    $this->db->select('SUM(product_quantity) as product_quantity')->from('cart_order')->where('cart_status',"0");
+    $createdby  =   $this->session->userdata('user_id');
+
+    $this->db->where('executive_id',$createdby);
+    $this->db->where('cart_status',"0");
+    $this->db->select('SUM(product_quantity) as product_quantity')->from('cart_order');
     $query=$this->db->get();
     if($query->num_rows() > 0)
     {
@@ -160,7 +171,10 @@ class User_model extends CI_Model {
   public function place_order($name,$gst,$address)
   {
     $createdby  =   $this->session->userdata('user_id');
-    $this->db->select('cart_id')->from('cart_order')->where('cart_status',"0");
+
+    $this->db->where('executive_id',$createdby);
+    $this->db->where('cart_status',"0");
+    $this->db->select('cart_id')->from('cart_order');
     $query=$this->db->get();
     if($query->num_rows() > 0)
     {

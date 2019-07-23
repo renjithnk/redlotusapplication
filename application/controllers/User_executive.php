@@ -12,7 +12,7 @@ class User_executive extends CI_Controller {
         $this->load->library('image_lib');
     }
 
-    private $upload_path = './assets/images/products/';
+	private $upload_path = PRODUCT_UPLOAD_PATH;
 
     public function index()
     {
@@ -65,12 +65,22 @@ class User_executive extends CI_Controller {
 
     public function add_to_cart()
     {
-    	$desc_id=$this->input->post('desc_id');
+        $createdby  =   $this->session->userdata('user_id');
+		$od= rtrim($this->input->post('order_details'), '|');
     	$product_id=$this->input->post('product_id');
-    	$product_quantity=$this->input->post('product_quantity');
-    	$array=array('product_disc_id'=>$desc_id,'product_id'=>$product_id,'product_quantity'=>$product_quantity);
-    	$check_array=array('product_id'=>$product_id,'product_disc_id'=>$desc_id,'cart_status'=>"0");
-    	$result=$this->User_model->insert_to_cart($array,$check_array,$product_quantity);
+		
+		$od_1 = explode("|", $od);
+		foreach($od_1 as $value) {
+			$od_2 = explode(":", $value);
+			$desc_id = $od_2[0];
+			$product_quantity=$od_2[1];
+
+			if($product_quantity > 0) {
+				$array=array('product_disc_id'=>$desc_id,'product_id'=>$product_id,'product_quantity'=>$product_quantity,'executive_id'=>$createdby);
+				$check_array=array('product_id'=>$product_id,'product_disc_id'=>$desc_id,'cart_status'=>"0",'executive_id'=>$createdby);
+				$result=$this->User_model->insert_to_cart($array,$check_array,$product_quantity);
+			}
+		}
     	echo $result;
     }
     

@@ -8,6 +8,11 @@
 <link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />  
 <link rel="stylesheet" href="<?php echo SERVER;?>assets/css/dropzone.min.css">
 <script src="<?php echo SERVER;?>assets/js/script.js"></script> 
+
+<script>
+    var base_url_js = "<?php echo SERVER;?>index.php/";
+
+</script>
 </head>
 
 <body>

@@ -11,8 +11,8 @@ class Admin extends CI_Controller {
         $this->load->library('image_lib');
     }
 
-    private $upload_path = './assets/images/products/';
-    
+	private $upload_path = PRODUCT_UPLOAD_PATH;
+
     public function admin_login()
     {
     	$exampleInputPassword1=$this->input->post('exampleInputPassword1');
@@ -105,6 +105,7 @@ class Admin extends CI_Controller {
 
 	public function images_upload()
 	{
+
 		$file_name=$_FILES['file']['name'];
 		$file_type=$_FILES['file']['type'];
 		$extension = substr($file_name, strpos($file_name, ".") + 1);    
@@ -119,7 +120,7 @@ class Admin extends CI_Controller {
 			$data_array=array('image'=>$image_name,'image_name'=>$file_name);
 		}
 			$news_image_id=$this->Admin_model->insert_image_data($data_array);
-			$config["upload_path"]   = $this->upload_path;
+			$config["upload_path"]   = PRODUCT_UPLOAD_PATH;
 			$config["allowed_types"] = "gif|jpg|png";
 			$config['file_name']=$image_name;
 			$this->load->library('upload', $config);
@@ -171,7 +172,7 @@ class Admin extends CI_Controller {
 	public function admin_view_product()
 	{
 		$result['product']=$this->Admin_model->fetch_products();
-		if($result!=0)
+		if(is_array($result['product']))
 		{
 			foreach ($result['product'] as $key => $value) {
 				$product_id=$value->product_id;
@@ -180,6 +181,8 @@ class Admin extends CI_Controller {
 				$image=$this->Admin_model->fetch_product_images($product_id);		
 				$result['product'][$key]->image=$image;		
 			}
+		} else {
+			$result['product'] = array();
 		}
 		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-view-product',$result);

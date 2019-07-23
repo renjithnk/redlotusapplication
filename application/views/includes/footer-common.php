@@ -3,6 +3,6 @@
 </div> 
 
 <script src="<?php echo SERVER;?>assets/js/script.js"></script>
-<script src ="<?php echo SERVER;?>assets/js/Custome.js"></script>
+<script src ="<?php echo SERVER;?>assets/js/custome.js"></script>
 </body>
 </html>

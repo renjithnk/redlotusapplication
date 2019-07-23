@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_model extends CI_Model {
 
+private $upload_path = PRODUCT_UPLOAD_PATH;
 
 public function check_admin($exampleInputPassword1,$exampleInputEmail1)
   {
@@ -21,6 +22,21 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
   public function delete_product($product_id)
   {
     $where='(product_id="'.$product_id.'")';
+    $this->db->select('image')->from('product_image')->where($where);
+    $query=$this->db->get();
+    if($query->num_rows() > 0)
+    {
+      $result=$query->result();
+
+			foreach ($result as $value) {
+        $image_name=$value->image;
+        if ($image_name && file_exists($this->upload_path . "/" . $image_name)) {
+          unlink($this->upload_path . "/" . $image_name);
+        }
+      }
+  
+    }
+
     $this->db->where($where);
     $this->db->delete("product");
     if ($this->db->affected_rows() > 0)

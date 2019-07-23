@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">  
 <link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />   
+
+<script>
+    var base_url_js = "<?php echo SERVER;?>index.php/";
+
+</script>
 </head>
 
 

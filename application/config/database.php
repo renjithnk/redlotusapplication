@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'redlotus.local',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'root',
 	'database' => 'redlotus',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
