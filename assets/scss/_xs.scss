@@ -6,7 +6,6 @@ html, body {height: 100%;margin: 0;padding: 0;}
 .update-button {height: 40px;margin-top: 6px;}
 
 
-
 .site-header {padding:10px;}
 .site-header .logo-container {width: 80px;}
 .site-header .session-name {position: absolute;top: 30px;left: 107px;font-size: 11px;background-color: #efefef;
@@ -418,4 +417,14 @@ line-height: 40px;
 	border: 2px solid #f71d2b;
 	margin-top: 15px;
 	padding: 10px 15px;
+}
+
+.alert-messages {
+padding: 90px;
+background-color: #f9f9f9;
+margin-left: 5px;
+margin-right: 5px;
+color: #666;
+text-align: center;
+width: 100%;
 }

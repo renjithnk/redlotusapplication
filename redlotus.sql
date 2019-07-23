@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 01, 2019 at 02:11 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.14
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jul 22, 2019 at 07:35 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,12 +28,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
-  `admin_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
   `admin_name` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `password` varchar(150) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -48,13 +50,15 @@ INSERT INTO `admin` (`admin_id`, `admin_name`, `email`, `password`) VALUES
 -- Table structure for table `cart_order`
 --
 
-CREATE TABLE `cart_order` (
-  `cart_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `cart_order`;
+CREATE TABLE IF NOT EXISTS `cart_order` (
+  `cart_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_disc_id` varchar(50) NOT NULL,
   `product_id` varchar(10) NOT NULL,
   `product_quantity` varchar(50) NOT NULL,
-  `cart_status` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `cart_status` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cart_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart_order`
@@ -64,7 +68,9 @@ INSERT INTO `cart_order` (`cart_id`, `product_disc_id`, `product_id`, `product_q
 (8, '1', '1', '11', 1),
 (9, '1', '1', '11', 1),
 (10, '2', '1', '10', 1),
-(11, '5', '2', '12', 1);
+(11, '5', '2', '12', 1),
+(13, '14', '6', '4', 1),
+(14, '15', '6', '6', 1);
 
 -- --------------------------------------------------------
 
@@ -72,12 +78,14 @@ INSERT INTO `cart_order` (`cart_id`, `product_disc_id`, `product_id`, `product_q
 -- Table structure for table `executives`
 --
 
-CREATE TABLE `executives` (
-  `ex_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `executives`;
+CREATE TABLE IF NOT EXISTS `executives` (
+  `ex_id` int(11) NOT NULL AUTO_INCREMENT,
   `ex_name` varchar(250) NOT NULL,
   `ex_email` varchar(250) NOT NULL,
-  `ex_password` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ex_password` varchar(250) NOT NULL,
+  PRIMARY KEY (`ex_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `executives`
@@ -92,15 +100,17 @@ INSERT INTO `executives` (`ex_id`, `ex_name`, `ex_email`, `ex_password`) VALUES
 -- Table structure for table `order`
 --
 
-CREATE TABLE `order` (
-  `order_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE IF NOT EXISTS `order` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `gst` varchar(150) NOT NULL,
   `address` varchar(250) NOT NULL,
   `cart_id` varchar(15) NOT NULL,
   `executive_id` varchar(30) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `order`
@@ -108,7 +118,9 @@ CREATE TABLE `order` (
 
 INSERT INTO `order` (`order_id`, `name`, `gst`, `address`, `cart_id`, `executive_id`, `created_at`) VALUES
 (1, 'sebin george', '123456789', 'kaloor , ekmm ', '10', '1', '2019-07-01 07:45:13'),
-(2, 'sebin george', '123456789', 'kaloor , ekmm ', '11', '1', '2019-07-01 07:45:14');
+(2, 'sebin george', '123456789', 'kaloor , ekmm ', '11', '1', '2019-07-01 07:45:14'),
+(3, 'sebin george', '123456789', 'abc abc abc', '13', '1', '2019-07-03 09:39:32'),
+(4, 'sebin george', '123456789', 'abc abc abc', '14', '1', '2019-07-03 09:39:32');
 
 -- --------------------------------------------------------
 
@@ -116,22 +128,25 @@ INSERT INTO `order` (`order_id`, `name`, `gst`, `address`, `cart_id`, `executive
 -- Table structure for table `product`
 --
 
-CREATE TABLE `product` (
-  `product_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE IF NOT EXISTS `product` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `article_number` varchar(50) NOT NULL,
   `product_category` varchar(25) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`product_id`, `article_number`, `product_category`, `created_at`, `updated_at`) VALUES
-(1, 'aaa', 'formal', '2019-06-27 09:28:52', '2019-07-01 04:33:54'),
-(2, 'bbb', '', '2019-06-27 09:31:34', '0000-00-00 00:00:00'),
-(3, 'ccc', '', '2019-06-27 09:33:05', '0000-00-00 00:00:00');
+(4, 'ger', 'Roman Bantu', '2019-07-03 08:23:40', '0000-00-00 00:00:00'),
+(5, 'fewaf', 'Sleeper', '2019-07-03 08:28:17', '0000-00-00 00:00:00'),
+(6, '102', 'Casual', '2019-07-03 09:36:20', '0000-00-00 00:00:00'),
+(7, 'A1', 'Formal', '2019-07-19 10:00:32', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -139,33 +154,33 @@ INSERT INTO `product` (`product_id`, `article_number`, `product_category`, `crea
 -- Table structure for table `product_desc`
 --
 
-CREATE TABLE `product_desc` (
-  `description_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `product_desc`;
+CREATE TABLE IF NOT EXISTS `product_desc` (
+  `description_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` varchar(10) NOT NULL,
   `size` varchar(20) NOT NULL,
   `price` varchar(20) NOT NULL,
   `sku` varchar(20) NOT NULL,
   `category` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`description_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product_desc`
 --
 
 INSERT INTO `product_desc` (`description_id`, `product_id`, `size`, `price`, `sku`, `category`, `created_at`, `updated_at`) VALUES
-(1, '1', '6', '100', '9', '', '2019-06-27 09:28:52', '2019-07-01 12:05:36'),
-(2, '1', '6', '100', '10', 'fiat', '2019-06-27 09:30:03', '2019-07-01 07:45:14'),
-(3, '1', '45', '55', '60', 'audi', '2019-06-27 09:30:23', '0000-00-00 00:00:00'),
-(4, '1', '77', '620', '10', 'volvo', '2019-06-27 09:30:54', '0000-00-00 00:00:00'),
-(5, '2', '50', '12', '20', '', '2019-06-27 09:31:34', '2019-07-01 07:45:14'),
-(6, '2', '5', '320', '5', 'saab', '2019-06-27 09:31:51', '0000-00-00 00:00:00'),
-(7, '2', '9', '800', '40', 'audi', '2019-06-27 09:32:25', '0000-00-00 00:00:00'),
-(8, '2', '11', '1200', '60', 'audi', '2019-06-27 09:32:44', '0000-00-00 00:00:00'),
-(9, '3', '7', '55', '14', '', '2019-06-27 09:33:05', '0000-00-00 00:00:00'),
-(10, '3', '8', '650', '50', 'saab', '2019-06-27 09:33:20', '0000-00-00 00:00:00'),
-(11, '3', '8', '650', '50', 'saab', '2019-06-27 09:33:46', '0000-00-00 00:00:00');
+(12, '4', '9', '520', '100', 'Roman Bantu', '2019-07-03 08:23:40', '2019-07-20 09:37:29'),
+(13, '5', '10', '450', '66', 'Sleeper', '2019-07-03 08:28:17', '2019-07-14 04:22:50'),
+(14, '6', '9', '500', '11', 'Casual', '2019-07-03 09:36:20', '2019-07-03 09:39:32'),
+(15, '6', '8', '600', '4', 'Casual', '2019-07-03 09:38:42', '2019-07-03 09:39:32'),
+(16, '7', '6', '300', '9', 'Formal', '2019-07-19 10:00:32', '2019-07-20 09:40:44'),
+(17, '7', '7', '350', '10', 'Formal', '2019-07-19 10:46:27', '2019-07-20 09:40:05'),
+(18, '7', '8', '250', '9', 'Formal', '2019-07-19 10:54:51', '2019-07-20 09:40:05'),
+(19, '7', '9', '350', '5', 'Formal', '2019-07-19 10:55:11', '0000-00-00 00:00:00'),
+(20, '7', '10', '450', '5', 'Formal', '2019-07-19 10:57:54', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -173,115 +188,35 @@ INSERT INTO `product_desc` (`description_id`, `product_id`, `size`, `price`, `sk
 -- Table structure for table `product_image`
 --
 
-CREATE TABLE `product_image` (
-  `image_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `product_image`;
+CREATE TABLE IF NOT EXISTS `product_image` (
+  `image_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_id` varchar(30) NOT NULL,
   `image` varchar(200) NOT NULL,
   `image_name` varchar(100) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`image_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product_image`
 --
 
 INSERT INTO `product_image` (`image_id`, `product_id`, `image`, `image_name`, `created_at`) VALUES
-(3, '1', 'jxJsWNbbOXBRzxKxsy4P5HRMW.jpg', 'Chrysanthemum.jpg', '2019-06-27 09:28:50'),
-(4, '1', '6GFKlMI5oABxJAtRJkl513wGj.jpg', 'Desert.jpg', '2019-06-27 09:29:59'),
-(5, '2', '380GI8SjoNahF0hbwpYd7UULl.jpg', 'Hydrangeas.jpg', '2019-06-27 09:31:32'),
-(6, '3', 'uipKe6Ct6XgCJtwhnHLTGytBM.jpg', 'Chrysanthemum.jpg', '2019-06-27 09:33:43');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`admin_id`);
-
---
--- Indexes for table `cart_order`
---
-ALTER TABLE `cart_order`
-  ADD PRIMARY KEY (`cart_id`);
-
---
--- Indexes for table `executives`
---
-ALTER TABLE `executives`
-  ADD PRIMARY KEY (`ex_id`);
-
---
--- Indexes for table `order`
---
-ALTER TABLE `order`
-  ADD PRIMARY KEY (`order_id`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `product`
-  ADD PRIMARY KEY (`product_id`);
-
---
--- Indexes for table `product_desc`
---
-ALTER TABLE `product_desc`
-  ADD PRIMARY KEY (`description_id`);
-
---
--- Indexes for table `product_image`
---
-ALTER TABLE `product_image`
-  ADD PRIMARY KEY (`image_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `cart_order`
---
-ALTER TABLE `cart_order`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `executives`
---
-ALTER TABLE `executives`
-  MODIFY `ex_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `order`
---
-ALTER TABLE `order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `product_desc`
---
-ALTER TABLE `product_desc`
-  MODIFY `description_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `product_image`
---
-ALTER TABLE `product_image`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+(7, '4', 'IdbqO2wkeZqGMgs1PRTeZIuLZ.jpg', 'Desert.jpg', '2019-07-03 08:23:38'),
+(8, '5', 'No2YOwbuwIC0upUxTdOeeP5zX.jpg', 'Hydrangeas.jpg', '2019-07-03 08:28:15'),
+(9, '6', 'Pue84jDwhDJ5u3g9qWLrNF8y7.jpg', 'Desert.jpg', '2019-07-03 09:36:17'),
+(10, '6', 'OiJicaJi0Fsel0BCgBLnz3qKk.jpg', 'Chrysanthemum.jpg', '2019-07-03 09:36:17'),
+(11, '6', '2nkd6z6fDEdAP2HU48Q4TSIpA.jpg', 'Hydrangeas.jpg', '2019-07-03 09:36:17'),
+(16, '7', 'HETAf3C0JcGJpT0UXzPB8coCt.jpg', 'Chrysanthemum.jpg', '2019-07-08 06:39:17'),
+(17, '7', 'NsG8is2Y0oLucdhuULwe9e2rp.jpeg', '370793-7-puma-peacoat-blazing-yellow-original-imaffn2jzqcvqtgq.jpeg', '2019-07-10 16:46:33'),
+(18, '7', 'KZAnthBTSjYB119T1bzrQylW9.jpeg', '370793-7-puma-peacoat-blazing-yellow-original-imaffn2jzqcvqtgq.jpeg', '2019-07-10 16:51:21'),
+(19, '7', '2TmXg0qPQAqS25DaxWOtGAMED.jpeg', '370793-7-puma-peacoat-blazing-yellow-original-imaffn2jzqcvqtgq.jpeg', '2019-07-10 16:56:42'),
+(20, '7', '6EbxH7TrXZyy3jI4omKlHWwGp.jpg', 'p1.jpg', '2019-07-19 10:00:11'),
+(21, '7', 'f7xhbg67EKFIMX2L7Hn61kZA8.jpg', 'p2.jpg', '2019-07-19 10:00:18'),
+(22, '7', 'hemKEl2qyiNe65MX5R5BFnhP8.jpg', 'p3.jpg', '2019-07-19 10:00:21'),
+(23, '7', '3LxzYaoYeSwOC8znOl5M3NaQ5.jpg', 'p4.jpg', '2019-07-19 10:00:26'),
+(24, '7', 'RZjMxui514Xfi2P1nPWSPc35p.jpg', 'p5.jpg', '2019-07-19 10:00:29');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
