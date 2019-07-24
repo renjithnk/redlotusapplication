@@ -2,4 +2,4 @@
 vendor
 .idea
 /nbproject/private/
-/application/config/database.php
+application/config/database.php
