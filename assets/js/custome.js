@@ -67,8 +67,11 @@ function updateSock(element,product_id) {
         document.getElementById("stock-number_"+desc_id).innerText=new_value; 
         var full=parseInt(document.getElementById("hidden_full_stock_"+product_id).value);
         var new_socks=parseInt(new_sock);
+
+
+	alert(parseInt(full) + "-" + parseInt(current) + "-" + parseInt(new_value));
         
-        var full_new = parseInt(full) + parseInt(current) - parseInt(new_value);
+        var full_new = parseInt(full) - parseInt(current) + parseInt(new_value);
 
         document.getElementById("full_stock_"+product_id).innerText=full_new;
         document.getElementById("hidden_full_stock_"+product_id).value=full_new;
