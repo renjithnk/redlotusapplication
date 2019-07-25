@@ -242,7 +242,8 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
 
   public function fetch_products()
   {
-    $this->db->select('product_id,article_number ')->from('product');
+    $this->db->select('product_id,article_number,color_name')->from('product');
+    $this->db->join('colors', 'colors.id = product.color_id');
     $query=$this->db->get();
     if($query->num_rows() > 0)
     {
