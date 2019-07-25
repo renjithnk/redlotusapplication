@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->model('admin/Admin_model');
+        $this->load->model('Color_model');
         $this->load->library('form_validation');
         $this->load->helper(array('form'));
         $this->load->library('image_lib');
@@ -63,25 +64,29 @@ class Admin extends CI_Controller {
 			}
 			}
 		}
-		$this->load->view('includes/header-administrator');
+		$data['colors']=$this->Color_model->fetch_colors();
+
+		$this->load->view('includes/header-administrator', $data);
 		$this->load->view('admin/admin-add-product');
 	}
 
 	public function admin_product_check()
 	{
 		$no=$this->input->post('content');
-		$result=$this->Admin_model->check_article_no($no);
+		$color=$this->input->post('color');
+		$result=$this->Admin_model->check_article_no($no, $color);
 		echo $result;
 	}
 
 	public function insert_product()
 	{
 		$articleno=$this->input->post('articleno'); 
+		$color=$this->input->post('color'); 
 		$size=$this->input->post('size'); 
 		$price=$this->input->post('price'); 
 		$sku=$this->input->post('sku'); 
 		$category=$this->input->post('category');
-		$data_array=array('article_number'=>$articleno,'product_category'=>$category);
+		$data_array=array('article_number'=>$articleno,'product_category'=>$category, 'color_id'=>$color);
 		$result=$this->Admin_model->inset_product_details($data_array,$size,$price,$sku,$category);
 		if($result!=0)
 		{

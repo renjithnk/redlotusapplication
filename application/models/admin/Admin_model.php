@@ -162,13 +162,15 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
       return 0;
     }
   }
-  public function check_article_no($no)
+  public function check_article_no($no, $color)
   {
-    $where='(article_number="'.$no.'")';
-    $this->db->select('article_number')->from('product')->where($where)->limit(1);
+    $where='(="'.$no.'")';
+    $this->db->where('article_number',$no);
+    $this->db->where('color_id',$color);
+
+    $this->db->select('article_number')->from('product')->limit(1);
     $query=$this->db->get();
-    if($query->num_rows() > 0)
-    {
+    if($query->num_rows() > 0){
       return 1;
     }else{
       return 0;

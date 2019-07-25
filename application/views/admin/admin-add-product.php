@@ -30,8 +30,15 @@
       <input type="text" class="form-control" id="articleno" name="articleno" placeholder="Article No" required>
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Size</label>
-      <input type="text" class="form-control" id="size"  name="size" placeholder="Size" required>
+      <label for="inputEmail4">Color</label>
+      <select id="color" name="color" class="form-control" required>
+      <?php
+        echo '<option value="">SELECT</option>';
+        foreach($colors as $key =>$value)
+      {
+        echo '<option value="' . $value->id .'">'. $value->color_name .'</option>';
+      } ?>
+      </select>
     </div>
 </div>    
     
@@ -41,8 +48,8 @@
       <input type="text" class="form-control" id="email"  name="price" placeholder="Price" required>
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">No of Stock</label>
-      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock" required>
+      <label for="inputPassword4">Size</label>
+      <input type="text" class="form-control" id="size"  name="size" placeholder="Size" required>
     </div>
 </div> 
 
@@ -59,6 +66,10 @@
         <option value="Bantu">Bantu</option>
       </select>
     </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">No of Stock</label>
+      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock" required>
+    </div>
 </div>      
 
 <div class="form-group">
@@ -68,7 +79,7 @@
     </div>
   </div>
 </div>    
-<button type="submit" value="submit" class="btn btn-primary" id="submit_button" style="display: none;">Submit</button>     
+<button type="submit" value="submit" class="btn btn-primary" id="submit_button" style="display: block;">Submit</button>     
    </form>     
 </div>  
 
@@ -126,12 +137,13 @@
 
     <script>
     $(document).ready(function(){
-      $("#articleno").keyup(function(){
+      $("#color").change(function(){
         var content=document.getElementById("articleno").value;
+        var color=document.getElementById("color").value;
         var request = $.ajax({
         url: 'admin-product-check',
         type: 'POST',
-        data: { content: content} ,
+        data: { content: content, color: color} ,
         dataType: 'html'
         });
       request.done( function ( data ) {
