@@ -146,7 +146,7 @@
 
     <script>
     $(document).ready(function(){
-      $("#articleno").onkeyup(function(){
+      $("#articleno").keyup(function(){
         var content=document.getElementById("articleno").value;
 //        var color=document.getElementById("color").value;
         var request = $.ajax({
