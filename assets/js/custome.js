@@ -69,8 +69,6 @@ function updateSock(element,product_id) {
         var new_socks=parseInt(new_sock);
 
 
-	alert(parseInt(full) + "-" + parseInt(current) + "-" + parseInt(new_value));
-        
         var full_new = parseInt(full) - parseInt(current) + parseInt(new_value);
 
         document.getElementById("full_stock_"+product_id).innerText=full_new;
