@@ -23,8 +23,9 @@
     
 <div class="add-product-form">
   <form method="post" action="insert-product">
-<div class="form-row">
 
+<!--
+<div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Article No.</label>
       <input type="text" class="form-control" id="articleno" name="articleno" placeholder="Article No" required>
@@ -41,6 +42,18 @@
       </select>
     </div>
 </div>    
+-->
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Article No.</label>
+      <input type="text" class="form-control" id="articleno" name="articleno" placeholder="Article No" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Size</label>
+      <input type="text" class="form-control" id="size"  name="size" placeholder="Size" required>
+    </div>
+</div>    
     
 <div class="form-row">
     <div class="form-group col-md-6">
@@ -48,8 +61,8 @@
       <input type="text" class="form-control" id="email"  name="price" placeholder="Price" required>
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Size</label>
-      <input type="text" class="form-control" id="size"  name="size" placeholder="Size" required>
+      <label for="inputPassword4">No of Stock</label>
+      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock" required>
     </div>
 </div> 
 
@@ -65,10 +78,6 @@
         <option value="Roman Bantu">Roman Bantu</option>
         <option value="Bantu">Bantu</option>
       </select>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">No of Stock</label>
-      <input type="text" class="form-control" id="numberofstock"  name="sku" placeholder="No of Stock" required>
     </div>
 </div>      
 
@@ -137,13 +146,13 @@
 
     <script>
     $(document).ready(function(){
-      $("#color").change(function(){
+      $("#articleno").onkeyup(function(){
         var content=document.getElementById("articleno").value;
-        var color=document.getElementById("color").value;
+//        var color=document.getElementById("color").value;
         var request = $.ajax({
         url: 'admin-product-check',
         type: 'POST',
-        data: { content: content, color: color} ,
+        data: { content: content} ,
         dataType: 'html'
         });
       request.done( function ( data ) {

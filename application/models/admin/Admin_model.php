@@ -166,7 +166,7 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
   {
     $where='(="'.$no.'")';
     $this->db->where('article_number',$no);
-    $this->db->where('color_id',$color);
+//    $this->db->where('color_id',$color);
 
     $this->db->select('article_number')->from('product')->limit(1);
     $query=$this->db->get();
@@ -242,7 +242,8 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
 
   public function fetch_products()
   {
-    $this->db->select('product_id,article_number ')->from('product');
+    $this->db->select('product_id,article_number')->from('product');
+//    $this->db->join('colors', 'colors.id = product.color_id');
     $query=$this->db->get();
     if($query->num_rows() > 0)
     {
