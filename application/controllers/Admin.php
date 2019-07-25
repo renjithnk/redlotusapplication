@@ -138,7 +138,7 @@ class Admin extends CI_Controller {
             else
             {
               $image_data = $this->upload->data();
-              $data = $this->resize_news_image($image_data);
+//              $data = $this->resize_news_image($image_data);
               echo $data;
             }
 	}
