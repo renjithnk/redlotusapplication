@@ -84,13 +84,13 @@ foreach($product as $key =>$value)
 </div>                        
 </div>    
 <div class="stock-and-pending-status">
-	<input type="text" id="hidden_full_stock_<?=$value2->product_id;?>" value="<?=$stock?>" style="display: none;">
+<input type="text" id="hidden_full_stock_<?=$value2->product_id;?>" value="<?=$stock?>" style="display: none;">
 <div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock_<?=$value2->product_id;?>"><?=$stock;?></span></div>
 <div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>  
 </div>  
         
 <div class="update-and-delete-wrapper">
-<button class="update-button btn btn-primary red-button">Update</button>            
+<!--<button class="update-button btn btn-primary red-button">Update</button>            -->
 <button class="delete-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>            
 </div>        
       

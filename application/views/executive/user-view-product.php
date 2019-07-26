@@ -19,8 +19,6 @@
 <div class="product-list-wrapper">
 <div class="container">    
 <div class="row">
-
-
 <?php 
 if($product!="0")
 {
@@ -104,7 +102,4 @@ else
 </div>     
 </div>        
 </div>
-
-
-    
-</div>    
+</div>
