@@ -2,9 +2,8 @@ html, body {height: 100%;margin: 0;padding: 0;}
 
 /* globals */
 
-
-.update-button {height: 40px;margin-top: 6px;}
-
+.update-button {height: 40px;margin-top: 6px;background-color:#333 !important;}
+.delete-button {height: 40px;margin-top: 6px;}
 
 .site-header {padding:10px;}
 .site-header .logo-container {width: 80px;}
@@ -32,6 +31,7 @@ margin-left: -20px;
 }
 }
 .product-list {background-color: #fff;padding: 5px;padding-top: 0;margin-bottom: 5px;
+.article-number {font-size: 18px;text-align: left;font-weight: bold;@include flex-basis(100%);}               
 .product-details-wrapper { 
     @include displayflex; 
     @include justify-content(space-between);
@@ -41,7 +41,7 @@ margin-left: -20px;
     padding: 25px;
 .col1 { @include flex-basis(35%);
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
-.article-number {font-size: 18px;text-align: center;font-weight: bold;}
+
 
 }
 .col2 { @include flex-basis(55%);
@@ -50,7 +50,8 @@ margin-left: -20px;
     @include displayflex;
     @include flex-wrap(wrap);
 /*    @include justify-content(space-between);*/
-    margin-top: 15px;
+   margin-top: 0;
+padding-top: 0;
 li { margin-bottom: 10px;text-align: center;
     @include flex-basis(30%);
     &:nth-child(3n+1) input {border-left: 1px solid #ddd !important;}
@@ -72,10 +73,12 @@ li { margin-bottom: 10px;text-align: center;
 }
 
 .stock-and-pending-status {
-	flex-basis: 45%;
-	margin-top: 5px;
+    flex-basis: 35%;
+    margin-top: 5px;
 }
-
+.update-and-delete-wrapper {
+    flex-basis: 55%;  
+}
 
 }  
 

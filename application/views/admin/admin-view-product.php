@@ -31,8 +31,8 @@ foreach($product as $key =>$value)
 
 	<div class="col-lg-4 product-list">
 	<div class="product-details-wrapper">
-	<div class="col1">
-	<h2 class="article-number"><?=$value->article_number;?></h2>    
+        <h2 class="article-number"><?=$value->article_number;?></h2>      
+	<div class="col1">	  
 	<div class="product-image clearfix">
 	<?php 
 	$i=0;
@@ -86,9 +86,14 @@ foreach($product as $key =>$value)
 <div class="stock-and-pending-status">
 	<input type="text" id="hidden_full_stock_<?=$value2->product_id;?>" value="<?=$stock?>" style="display: none;">
 <div class="stock-status"><span class="label">Stock</span><span class="stock-number" id="full_stock_<?=$value2->product_id;?>"><?=$stock;?></span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>       
-</div>    
-<button class="update-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>      
+<div class="pending-status"><span class="label">Pending</span><span class="pending-number"><?=$pending;?></span></div>  
+</div>  
+        
+<div class="update-and-delete-wrapper">
+<button class="update-button btn btn-primary red-button">Update</button>            
+<button class="delete-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>            
+</div>        
+      
 </div>
 </div>
 
