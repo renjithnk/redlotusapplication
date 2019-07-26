@@ -38,9 +38,23 @@
         ?>        
       <tr>
         <td><?php echo $value->article_number;?></td>
-        <td><div class="customer-name"><?php echo $value->name;?></div>
-            <div class="customer-address"><?php echo $value->address;?></div>
-            <div class="gst-number"><?php echo $value->gst;?></div></td>
+        <td>
+            <table class="customer-infos">
+                <tr>
+                    <td>Name</td>
+                    <td><div class="customer-name"><?php echo $value->name;?></div></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><div class="customer-address"><?php echo $value->address;?></div></td>
+                </tr>
+                <tr>
+                    <td>GST</td>
+                    <td><div class="gst-number"><?php echo $value->gst;?></div></td>
+                </tr>
+            </table>
+        
+        </td>
         <td><?php echo $value->size;?></td>
         <td><?php echo $value->product_quantity;?></td>
         <td><?php echo $price;?></td>
