@@ -284,9 +284,11 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
 
   public function fetch_particuler_products($parameter)
   {
-    $where='(product_category="'.$parameter.'" or article_number="'.$parameter.'")';
+    $where='(product_category LIKE "%'.$parameter.'%" or article_number LIKE "%'.$parameter.'%")';
     $this->db->select('product_id,article_number')->from('product')->where($where);
     $query=$this->db->get();
+
+  //  echo $this->db->last_query(); die;
 
     if($query->num_rows() > 0)
     {

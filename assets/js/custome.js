@@ -234,12 +234,12 @@ function placeOrder()
 function searchProduct()
 {
   var name=document.getElementById("seach_item").value;
-  window.location = base_url_js + "/user-view-product/"+name;
+  window.location = base_url_js + "user-view-product/"+name;
 }
 function searchProducts()
 {
   var name=document.getElementById("seach_item").value;
-  window.location = base_url_js + "/admin-view-product/"+name;
+  window.location = base_url_js + "admin-view-product/"+name;
 }
 
 function deleteProduct(element)

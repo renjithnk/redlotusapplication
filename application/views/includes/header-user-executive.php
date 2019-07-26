@@ -31,7 +31,7 @@
 </div>
  
 <div class="order-header-wrapper">
-<a href="user-order-checkout">    
+<a href="<?php echo base_url();?>user-order-checkout">    
 <div class="order-label">Order</div>    
 <div class="order-total-value" id="cart_item_count">0</div>
 </a>

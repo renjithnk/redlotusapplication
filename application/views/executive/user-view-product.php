@@ -74,9 +74,13 @@ foreach($product as $key =>$value)
 		$stock=$stock+$current_stock;
 		}
 	?>
-	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value->product_id; ?>_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label>
-	<input type="text" name="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" onkeyup="display_order_qty(<?php echo $value->product_id;?>, <?php echo $value2->description_id;?>)"  value=""></li>
-	<input type="hidden" name="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" value="<?=$value2->sku?>"></li>
+	<li>
+		<label>
+			<span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value->product_id; ?>_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span>
+		</label>
+		<input type="text" name="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" onkeyup="display_order_qty(<?php echo $value->product_id;?>, <?php echo $value2->description_id;?>)"  value="">
+		<input type="hidden" name="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="current_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" value="<?=$value2->sku?>">
+	</li>
 	<?php } ?>
 	</ul>    
 </div>                        

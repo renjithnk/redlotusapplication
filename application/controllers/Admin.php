@@ -219,7 +219,7 @@ class Admin extends CI_Controller {
 	{
 		$parameter=$this->uri->segment(2);
 		$result['product']=$this->Admin_model->fetch_particuler_products($parameter);
-		if($result['product']!="0")
+		if(is_array($result['product']))
 		{
 			foreach ($result['product'] as $key => $value) {
 				$product_id=$value->product_id;
@@ -228,6 +228,8 @@ class Admin extends CI_Controller {
 				$image=$this->Admin_model->fetch_product_images($product_id);		
 				$result['product'][$key]->image=$image;		
 			}
+		} else {
+			$result['product'] = array();
 		}
 		//$this->User_model->delete_all_uncarted_products();
 		$this->load->view('includes/header-administrator');
