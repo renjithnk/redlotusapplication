@@ -27,7 +27,7 @@
     </div>
     <div class="form-group col-md-4">
       <label for="inputEmail4">GST Number</label>
-      <input type="text" class="form-control" id="gst" placeholder="Customer Name">
+      <input type="text" class="form-control" id="gst" placeholder="GST Number">
     </div>
   </div>
 <div class="form-group">
@@ -40,7 +40,7 @@
 <div class="view-order-wrapper">
 <h2 class="heading">Order Details</h2>    
 
-<table class="user-order-checkout-table">
+<table class="table table-striped view-orders-table user-order-checkout-table">
     <thead>
     <th class="article-number">Article No.</th>
     <th class="size">Size</th>

@@ -19,7 +19,7 @@
 
 
 
-<table class="user-view-orders-table">
+<table class="table table-striped view-orders-table">
     <thead>
     <th class="article-number">Article No.</th>
     <th class="customer-details">Customer Details</th>    

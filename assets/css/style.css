@@ -18102,18 +18102,18 @@ element {
 }
 
 /* line 318, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
-.admin-view-orders-table {
+.view-orders-table {
   font-size: 14px;
 }
 
 /* line 319, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
-.admin-view-orders-table thead th {
+.view-orders-table thead th {
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
 }
 
 /* line 320, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
-.admin-view-orders-table tbody td {
+.view-orders-table tbody td {
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
   border-bottom: 1px solid #dee2e6;

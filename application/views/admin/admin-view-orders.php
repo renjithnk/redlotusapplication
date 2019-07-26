@@ -20,7 +20,7 @@
 
 
 <div class="view-order-wrapper">
-<table class="table table-striped admin-view-orders-table">
+<table class="table table-striped view-orders-table">
     <thead>
       <tr>
         <th>Article No.</th>
