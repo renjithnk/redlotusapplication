@@ -31,8 +31,9 @@ foreach($product as $key =>$value)
 	$pending=0; ?>
 <div class="col-lg-4 product-list">
 	<div class="product-details-wrapper">
+<h2 class="article-number"><?=$value->article_number;?></h2>             
 	<div class="col1">
-	<h2 class="article-number"><?=$value->article_number;?></h2>    
+	   
 	<div class="product-image clearfix">
 	<?php 
 	$i=0;
