@@ -95,7 +95,7 @@ foreach($product as $key =>$value)
 else
 
 {
-	echo "No Relative products where Found";
+	echo "<div class='alert-messages'>No Relative products where Found</div>";
 }?>
 
 </div> 
