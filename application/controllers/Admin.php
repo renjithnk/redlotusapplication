@@ -196,23 +196,23 @@ class Admin extends CI_Controller {
 
 	public function admin_update_sock()
 	{
-		$hidden_sock=$this->input->post('hidden_sock');
-		$new_sock=$this->input->post('new_sock');
-		$desc_id=$this->input->post('desc_id');
-		if($new_sock=="")
-		{
-			$update_stockng=$hidden_sock;
-			$result=$this->Admin_model->update_stock($update_stockng,$desc_id);
-			echo $update_stockng;
+		$result = 0;
+
+		$sd= rtrim($this->input->post('stock_details'), '|');
+    	$product_id=$this->input->post('product_id');
+
+		$sd_1 = explode("|", $sd);
+		foreach($sd_1 as $value) {
+			$sd_2 = explode(":", $value);
+			$desc_id = $sd_2[0];
+			$product_quantity=$sd_2[1];
+
+			if($product_quantity > 0) {
+				$result=$this->Admin_model->update_stock($product_quantity,$desc_id);
+			}
 		}
-		else
-		{
-			$update_stockng=$hidden_sock+$new_sock;
-			$desc_id=$this->input->post('desc_id');
-			$result=$this->Admin_model->update_stock($update_stockng,$desc_id);
-			echo $update_stockng;
-		}
-		
+    	echo $result;
+
 	}
 
 	public function particular()

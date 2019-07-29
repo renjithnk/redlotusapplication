@@ -44,7 +44,7 @@ function userLoginCheck()
   });
 }
 
-function updateSock(element,product_id) {
+function updateSock_old(element,product_id) {
   var desc_id=element;
   var new_sock=parseInt(document.getElementById("new_stock_"+desc_id).value);
   var hidden_sock=document.getElementById("new_stockss_"+desc_id).value;
@@ -81,6 +81,44 @@ function updateSock(element,product_id) {
     });
     }
 }
+
+function updateStock(product_id)
+{
+
+  var stock_details = '';
+  $("input[name^='new_stock_"+product_id+"']").each(function() {
+    var feild_name = $(this).attr('name');
+    var res = feild_name.split("_");
+    var length = res.length;
+    desc_id = res[length-1];
+
+    var product_quantity=parseInt($(this).val());
+
+    if(isNaN(product_quantity)) {
+      product_quantity = parseInt(0);
+    }
+  
+    stock_details = stock_details +  desc_id + ":" + product_quantity + "|";
+});
+
+  var request = $.ajax({
+    url: base_url_js + 'admin-update-sock',
+    type: 'POST',
+    data: { product_id:product_id,stock_details:stock_details} ,
+    dataType: 'json'
+  });
+  request.done( function ( data ) {
+      alert(" Stock Updated ");
+      window.location.href = window.location.href;
+  });
+  
+  request.fail( function ( jqXHR, textStatus) {
+    console.log( 'Sorry: ' + textStatus );
+  });
+
+  
+}
+
 
 function myFunction(product_id)
 {

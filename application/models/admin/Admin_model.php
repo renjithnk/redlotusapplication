@@ -67,13 +67,18 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
     }
   }
 
-  public function update_stock($new_stock,$desc_id)
+  public function update_stock($product_quantity,$desc_id)
   {
-    $where='(description_id="'.$desc_id.' " )';
+    $this->db->where('description_id', $desc_id);
+
+    $ex_stock = $this->db->get('product_desc')->first_row()->sku;
+    $new_stock = $ex_stock + $product_quantity;
+
+    $this->db->where('description_id', $desc_id);
     $this->db->set('sku', $new_stock);
-    $this->db->where($where);
     if($this->db->update('product_desc'))
     {
+//      echo $this->db->last_query(); die;
       return 1;
     }else{
       return 0;
