@@ -90,7 +90,7 @@ foreach($product as $key =>$value)
 </div>  
         
 <div class="update-and-delete-wrapper">
-<!--<button class="update-button btn btn-primary red-button">Update</button>            -->
+<button class="update-button btn btn-primary red-button">Update</button>           
 <button class="delete-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>            
 </div>        
       
