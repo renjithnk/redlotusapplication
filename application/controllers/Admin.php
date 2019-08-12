@@ -10,7 +10,9 @@ class Admin extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->helper(array('form'));
         $this->load->library('image_lib');
-    }
+		$this->load->library('pagination');
+		$this->load->helper('url');
+	}
 
 	private $upload_path = PRODUCT_UPLOAD_PATH;
 
@@ -39,9 +41,41 @@ class Admin extends CI_Controller {
 
 	public function admin_view_orders()
 	{
-		$result['orders']=$this->Admin_model->fetch_all_orders();
+
+
+		$config['base_url'] = base_url() . "admin-view-orders"; 
+		$config['total_rows'] = $this->Admin_model->get_total_orders();
+		$config['per_page'] = 5;
+//		$config['page_query_string'] = TRUE;
+		$config['enable_query_strings'] = TRUE;
+		$config['reuse_query_string'] = TRUE;
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+		$this->pagination->initialize($config);		
+		$result['orders']=$this->Admin_model->fetch_all_orders($config["per_page"], $page);
+	
+        $result["links"] = $this->pagination->create_links();
 		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-view-orders',$result);
+		$this->load->view('includes/footer-common');
+	}
+    
+	public function admin_view_despatched()
+	{
+
+		$config['base_url'] = base_url() . "admin-view-despatched"; 
+		$config['total_rows'] = $this->Admin_model->get_total_despatched();
+		$config['per_page'] = 1;
+//		$config['page_query_string'] = TRUE;
+		$config['enable_query_strings'] = TRUE;
+		$config['reuse_query_string'] = TRUE;
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+		$this->pagination->initialize($config);		
+		$result['orders']=$this->Admin_model->fetch_all_despatched($config["per_page"], $page);
+        $result["links"] = $this->pagination->create_links();
+		$this->load->view('includes/header-administrator');
+		$this->load->view('admin/admin-view-despatched',$result);
 		$this->load->view('includes/footer-common');
 	}
     
@@ -211,6 +245,18 @@ class Admin extends CI_Controller {
 				$result=$this->Admin_model->update_stock($product_quantity,$desc_id);
 			}
 		}
+    	echo $result;
+
+	}
+
+	public function admin_despatch_stock()
+	{
+		$result = 0;
+
+		$despatched_by  =   $this->session->userdata('admin_id');
+    	$order_id=$this->input->post('order_id');
+
+		$result=$this->Admin_model->despatch_stock($order_id,$despatched_by);
     	echo $result;
 
 	}

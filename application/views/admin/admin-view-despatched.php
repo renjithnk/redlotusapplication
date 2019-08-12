@@ -15,7 +15,7 @@
 </nav>   
     
 <div class="main-content-wrapper">
-<h2 class="heading">View Orders</h2>
+<h2 class="heading">View Despatched Orders</h2>
 
 
 
@@ -24,12 +24,12 @@
 <table class="table table-striped view-orders-table">
     <thead>
       <tr>
+        <th>Despatched On</th>
         <th>Article No.</th>
         <th>Customer Details</th>
         <th>Size</th>
         <th>Qty</th>
         <th>Price</th>
-        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -39,6 +39,7 @@
         $price=$value->price*$value->product_quantity;
         ?>        
       <tr>
+        <td><?php echo $value->despatched_on;?></td>
         <td><?php echo $value->article_number;?></td>
         <td>
             <table class="customer-infos">
@@ -60,7 +61,6 @@
         <td><?php echo $value->size;?></td>
         <td><?php echo $value->product_quantity;?></td>
         <td><?php echo $price;?></td>
-        <td> <button class="update-button btn btn-primary red-button" type="button" onclick="despatchStock(<?php echo $value->order_id; ?>)">Despatch</button></td>
       </tr>
     <?php } } ?>      
 

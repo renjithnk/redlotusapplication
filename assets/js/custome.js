@@ -82,6 +82,29 @@ function updateSock_old(element,product_id) {
     }
 }
 
+
+function despatchStock(order_id)
+{
+
+  var request = $.ajax({
+    url: base_url_js + 'admin-despatch-stock',
+    type: 'POST',
+    data: { order_id:order_id} ,
+    dataType: 'json'
+  });
+  request.done( function ( data ) {
+      alert(" Stock Despatched ");
+      window.location.href = window.location.href;
+  });
+  
+  request.fail( function ( jqXHR, textStatus) {
+    console.log( 'Sorry: ' + textStatus );
+  });
+
+  
+}
+
+
 function updateStock(product_id)
 {
 

@@ -65,7 +65,11 @@ $route['user-order-checkout']='User_executive/order_view';
 $route['user-view-orders']='User_executive/user_order_view';
 $route['user-categories']='User_executive/user_categories';
 $route['user-login-check']='User_executive/user_login_check';
+$route['admin-view-orders(/:num)']='admin/admin_view_orders';
 $route['admin-view-orders']='admin/admin_view_orders';
+$route['admin-view-despatched(/:num)']='admin/admin_view_despatched';
+$route['admin-view-despatched']='admin/admin_view_despatched';
+
 /*
 | -------------------------------------------------------------------------
 | Routes form javascript
@@ -81,6 +85,7 @@ $route['images-remove']='admin/images_remove';
 $route['images-list_files']='admin/images_list_files';
 $route['admin-product-check']='admin/admin_product_check';
 $route['admin-update-sock']='admin/admin_update_sock'; 
+$route['admin-despatch-stock']='admin/admin_despatch_stock'; 
 $route['delete-product']='admin/delete_product';  
 
 /*

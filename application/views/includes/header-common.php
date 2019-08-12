@@ -8,7 +8,7 @@
 <link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />   
 
 <script>
-    var base_url_js = "<?php echo SERVER;?>index.php/";
+    var base_url_js = "<?php echo SERVER;?>";
 
 </script>
 </head>
