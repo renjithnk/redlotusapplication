@@ -16,10 +16,7 @@
 <div class="main-content-wrapper">
 <h2 class="heading">View Orders</h2>
 
-
-
-
-<div class="view-order-wrapper">
+<div class="view-order-wrapper"  style="overflow-x:auto;">
 <table class="table table-striped view-orders-table">
     <thead>
       <tr>

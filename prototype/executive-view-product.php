@@ -7,19 +7,17 @@
 <div class="bar2"></div>
 <div class="bar3"></div>
 </div>
-<nav id="main-navigation" class="main-navigation">
-<ul class="list-unstyled">
-<li><a href="user-categories.php">Categories</a></li>    
-<li><a href="user-view-product.php">View Product</a></li>		    
-<li><a href="user-view-orders.php">View Orders</a></li>
-</ul>
-</nav>   
+    
+<?php include('includes/executive-navigation.php'); ?>    
     
 <div class="main-content-wrapper">
 <h2 class="heading">Products</h2>
 <div class="product-list-wrapper">
-<ul class="list-unstyled">
-<li class="product-list">
+
+    
+<div class="container">
+<div class="row">
+<div class="col-lg-4 product-list">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A101</h2>    
@@ -59,15 +57,12 @@
 </ul>    
 </div>                        
 </div>    
-<div class="stock-and-pending-status">
-<div class="stock-status"><span class="label">Stock</span><span class="stock-number">40</span></div>
-<div class="pending-status"><span class="label">Pending</span><span class="pending-number">40</span></div>        
-</div>    
+    
 <button class="update-button btn btn-primary red-button" type="submit">Order</button>      
 </div>
-</li>
-
-<li class="product-list">
+</div>      
+    
+<div class="col-lg-4 product-list">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A102</h2>    
@@ -113,9 +108,9 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Order</button>      
 </div>
-</li>
+</div>
 
-<li class="product-list">
+<div class="col-lg-4 product-list">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A103</h2>    
@@ -161,10 +156,10 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Order</button>      
 </div>
-</li>
+</div>
 
 
-<li class="product-list">
+<div class="col-lg-4 product-list">
 <div class="product-details-wrapper">
 <div class="col1">
 <h2 class="article-number">A104</h2>    
@@ -210,13 +205,13 @@
 </div>    
 <button class="update-button btn btn-primary red-button" type="submit">Order</button>      
 </div>
-</li>
+</div>
 
 
 
 
 
-</ul> 
+</div>
 </div>        
 </div>
 

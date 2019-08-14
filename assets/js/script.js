@@ -129,3 +129,13 @@ $('.popup').click(function(event){
 $(event.target).removeClass('popup-show');
 });
 });
+
+
+
+
+$(function(){
+$('.order-trigger').click(
+function(){
+$(this).next('.col2').slideToggle();    
+});    
+});

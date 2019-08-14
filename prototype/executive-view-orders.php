@@ -7,13 +7,8 @@
 <div class="bar2"></div>
 <div class="bar3"></div>
 </div>
-<nav id="main-navigation" class="main-navigation">
-<ul class="list-unstyled">
-<li><a href="user-categories.php">Categories</a></li>    
-<li><a href="user-view-product.php">View Product</a></li>		    
-<li><a href="user-view-orders.php">View Orders</a></li>
-</ul>
-</nav>   
+    
+<?php include('includes/executive-navigation.php'); ?>   
     
 <div class="main-content-wrapper">
 <h2 class="heading">View Orders</h2>

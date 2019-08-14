@@ -1,7 +1,7 @@
 html, body {height: 100%;margin: 0;padding: 0;}
 
 /* globals */
-
+ 
 .update-button {height: 40px;margin-top: 6px;background-color:#333 !important;}
 .delete-button {height: 40px;margin-top: 6px;}
 
@@ -32,19 +32,38 @@ margin-left: -20px;
 }
 .product-list {background-color: #fff;padding: 5px;padding-top: 0;margin-bottom: 5px;
 .article-number {font-size: 18px;text-align: left;font-weight: bold;@include flex-basis(100%);}               
-.product-details-wrapper { 
+.product-details-wrapper {
+    position:relatie;
     @include displayflex; 
     @include justify-content(space-between);
     @include flex-wrap(wrap);
     background-color:#f0f0f0;
     min-height: 325px;
     padding: 25px;
-.col1 { @include flex-basis(35%);
+.col1 { @include flex-basis(100%);
+.order-trigger {
+	width: 100%;
+	height: auto;
+	background: #dfdfdf;
+	font-size: 12px;
+	padding: 5px;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	font-weight: 600;
+}        
 .product-image {margin-bottom: 10px;border: 1px solid #dfdfdf;}                          
 
 
 }
-.col2 { @include flex-basis(55%);
+.col2 {
+/*position: absolute;
+padding: 25px;
+left: 0;
+right: 0;
+background: #efefef;
+z-index: 10;*/
+@include flex-basis(100%);
 .size-stock-table-wrapper {
 .size-stock-table {
     @include displayflex;
@@ -53,7 +72,7 @@ margin-left: -20px;
    margin-top: 0;
 padding-top: 0;
 li { margin-bottom: 10px;text-align: center;
-    @include flex-basis(30%);
+    @include flex-basis(20%);
     &:nth-child(3n+1) input {border-left: 1px solid #ddd !important;}
     input[type="text"] {width: 100%;border: 1px solid #ddd;padding: 5px;height: 30px;text-align: center;}
     label {font-weight: bold;margin-bottom: 3px;font-size: 14px;display:block;}
@@ -78,6 +97,7 @@ li { margin-bottom: 10px;text-align: center;
 }
 .update-and-delete-wrapper {
     flex-basis: 55%;  
+    button {height:35px;font-size: 12px;}
 }
 
 }  
@@ -164,6 +184,7 @@ margin-bottom: 10px;
 font-weight: 600;}
     
         @include flex-basis(100%);
+        max-width: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
         
@@ -274,7 +295,7 @@ font-size: 7px;
 .admin-add-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
 .admin-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 .admin-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
-.user-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
+/*.user-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}*/
 .user-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
 .user-categories .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 
