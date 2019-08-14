@@ -10,7 +10,7 @@
 <script src="<?php echo SERVER;?>assets/js/script.js"></script> 
 
 <script>
-    var base_url_js = "<?php echo SERVER;?>index.php/";
+    var base_url_js = "<?php echo SERVER;?>";
 
 </script>
 </head>

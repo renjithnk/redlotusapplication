@@ -78,7 +78,10 @@ foreach($product as $key =>$value)
 	?>
 	<input type="text" id="new_stockss_<?=$value2->description_id;?>" value="<?=$value2->sku?>" style="display: none;">
 	<li><label><span class="size"><?=$value2->size?></span><span class="spliter">-</span><span class="stock-number" id="stock-number_<?=$value2->description_id;?>" <?php if($value2->sku<0) { ?> style="color: red;" <?php } ?>><?=$value2->sku?></span></label>
-	<input type="text" id="new_stock_<?=$value2->description_id;?>" onkeyup= "updateSock(<?php echo $value2->description_id;?>,<?php echo $value->product_id;?>)" value=""></li>
+	<!-- <input type="text" id="new_stock_<?=$value2->description_id;?>" value=""> -->
+	<input type="text" name="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>" id="new_stock_<?=$value->product_id; ?>_<?=$value2->description_id;?>"  value="">
+	
+	</li>
 	<?php } ?>
 	</ul>    
 </div>                        
@@ -90,7 +93,7 @@ foreach($product as $key =>$value)
 </div>  
         
 <div class="update-and-delete-wrapper">
-<button class="update-button btn btn-primary red-button">Update</button>           
+<button class="update-button btn btn-primary red-button" type="button" onclick="updateStock(<?php echo $value->product_id;?>)">Update</button>           
 <button class="delete-button btn btn-primary red-button" type="button" onclick="deleteProduct(<?php echo $value->product_id;?>)">Delete</button>            
 </div>        
       

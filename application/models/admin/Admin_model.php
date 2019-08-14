@@ -67,22 +67,77 @@ public function check_admin($exampleInputPassword1,$exampleInputEmail1)
     }
   }
 
-  public function update_stock($new_stock,$desc_id)
+  public function update_stock($product_quantity,$desc_id)
   {
-    $where='(description_id="'.$desc_id.' " )';
+    $this->db->where('description_id', $desc_id);
+
+    $ex_stock = $this->db->get('product_desc')->first_row()->sku;
+    $new_stock = $ex_stock + $product_quantity;
+
+    $this->db->where('description_id', $desc_id);
     $this->db->set('sku', $new_stock);
-    $this->db->where($where);
     if($this->db->update('product_desc'))
     {
+//      echo $this->db->last_query(); die;
       return 1;
     }else{
       return 0;
     }
   }
 
-  public function fetch_all_orders()
+  public function despatch_stock($order_id,$despatched_by)
   {
-    $this->db->select('or.cart_id,name,address,gst,product_quantity,size,price,article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->order_by('order_id','desc');
+    $this->db->select('product_quantity')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->where("or.order_id=$order_id")->order_by('order_id','desc');
+    $query=$this->db->get();
+    $result=$query->row();
+    $qty = $result->product_quantity;
+    
+    
+    $this->db->where('order_id', $order_id);
+    $this->db->set('despatched_by', $despatched_by);
+    $this->db->set('despatched_qty', $qty);
+    $this->db->set('despatched_on', date('Y-m-d H:i:s'));
+    if($this->db->update('order'))
+    {
+//      echo $this->db->last_query(); die;
+      return 1;
+    }else{
+      return 0;
+    }
+  }
+
+  public function get_total_orders()
+  {
+      $this->db->select('or.order_id')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where('or.despatched_by=0');
+      $query=$this->db->get();
+      return $query->num_rows();
+  }
+
+  public function fetch_all_orders($limit, $start)
+  {
+
+    $this->db->select('or.order_id, or.cart_id, name, address, gst, product_quantity, size, price, article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where('or.despatched_by=0')->limit($limit, $start)->order_by('order_id','desc');
+    $query=$this->db->get();
+    if($query->num_rows() > 0)
+    {
+//      echo $this->db->last_query(); die;      
+      $result=$query->result();
+      return $result;
+    }else{
+      return 0;
+    }
+  }
+
+  public function get_total_despatched()
+  {
+      $this->db->select('or.order_id')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where('or.despatched_by>0');
+      $query=$this->db->get();
+      return $query->num_rows();
+  }
+
+  public function fetch_all_despatched($limit, $start)
+  {
+    $this->db->select('or.order_id, or.despatched_on, or.cart_id, name, address, gst, product_quantity, size, price, article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where('or.despatched_by>0')->limit($limit, $start)->order_by('or.despatched_on','desc');
     $query=$this->db->get();
     if($query->num_rows() > 0)
     {
