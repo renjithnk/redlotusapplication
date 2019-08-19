@@ -4,6 +4,7 @@ html, body {height: 100%;margin: 0;padding: 0;}
  
 .update-button {height: 40px;margin-top: 6px;background-color:#333 !important;}
 .delete-button {height: 40px;margin-top: 6px;}
+.copyright {font-size: 12px;text-align: center;padding: 30px 0;margin-bottom: 0;}
 
 .site-header {padding:10px;}
 .site-header .logo-container {width: 80px;}
@@ -15,7 +16,7 @@ padding: 5px 10px;border: 1px solid #ededed;}
 
 /* admin login */
 
-.login-box-wrapper {@include displayflex; @include justify-content(center); @include align-items(center);padding: 20px;background-color: #f5f5f5; height: 100%;}
+.login-box-wrapper {@include displayflex; @include justify-content(center); @include align-items(center);@include flex-direction(column);padding: 20px;background-color: #f5f5f5; height: 100%;}
 .login-box {background-color:#fff;padding: 30px; @include box-shadow(1px,0px,5px,3px,rgba(9,9,9,0.1));width:300px;}
 .login-box .logo {width: 130px;margin-bottom: 20px;}
 
@@ -301,7 +302,7 @@ font-size: 7px;
 
 
 @media only screen and (min-width:1199px) {
-.main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;}
+.main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;margin-bottom: 10px;}
 .main-navigation li {float:none; height:60px; line-height:1;width:auto;}
 .main-navigation li:first-child a { height:60px; line-height: 60px;}
 .main-navigation li a {height: 60px; line-height: 60px;text-align: left; background-color: #3e3e3e;color:#fff;}
@@ -431,8 +432,8 @@ line-height: 40px;
 
 /* footer */
 
-.app-footer {background-color: #eee;margin-top: 10px;height: 60px;line-height: 60px;}
-.app-footer .copyright {margin-bottom:0;font-size: 12px;text-align: center;}
+.app-footer {width: 100%;background-color: #eee;}
+
 
 
  

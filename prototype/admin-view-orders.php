@@ -18,55 +18,52 @@
 <div class="main-content-wrapper">
 <h2 class="heading">View Orders</h2>
 <div class="view-order-wrapper">
-<div class="view-order-th">
-    <div>Article No.</div> 
-    <div>Customer Details</div>
-    <div>Size</div>
-    <div>Qty</div>
-    <div>Price</div>
-</div>
 
-<div class="view-order-tbody">
-<div class="article-number">A102</div>        
-<div class="customer-details">
-    <div class="customer-name">AB Traders</div>
-    <div class="gst-number">GSTINEHN</div>
-</div>  
-<div class="size">6</div>
-<div class="quantity">10 Nos</div>
-<div class="price">50.00</div>
-</div>
+<table class="table table-striped view-orders-table">
+    <thead>
+    <tr><th class="article-number">Article No.</th>
+    <th class="customer-details">Customer Details</th>    
+    <th class="size">Size</th>
+    <th class="quantity">Quantity</th>
+    <th class="price">Price</th>
+    </tr></thead>
+    <tbody>
+                <tr>
+            <td class="article-number"></td> 
+            <td class="customer-details">American Junction</td> 
+            <td class="size"></td> 
+            <td class="quantity">1</td> 
+            <td class="price">0</td> 
+            </tr>
+                    <tr>
+            <td class="article-number"></td> 
+            <td class="customer-details">Trial Address</td> 
+            <td class="size"></td> 
+            <td class="quantity">1</td> 
+            <td class="price">0</td> 
+            </tr>
+                    <tr>
+            <td class="article-number">RL9300-Tan</td> 
+            <td class="customer-details">Infopark</td> 
+            <td class="size">6</td> 
+            <td class="quantity">1</td> 
+            <td class="price">2099</td> 
+            </tr>
+                    <tr>
+            <td class="article-number">Casual-01-Black</td> 
+            <td class="customer-details">Kochi</td> 
+            <td class="size">6</td> 
+            <td class="quantity">1</td> 
+            <td class="price">1000</td> 
+            </tr>
+           
+    </tbody>
+</table>
 
-<div class="view-order-tbody">
-<div class="article-number">A102</div>        
-<div class="customer-details">
-    <div class="customer-name">AB Traders</div>
-    <div class="gst-number">GSTINEHN</div>
-</div>  
-<div class="size">6</div>
-<div class="quantity">10 Nos</div>
-<div class="price">50.00</div>
-</div>
-<div class="view-order-tbody">
-<div class="article-number">A102</div>        
-<div class="customer-details">
-    <div class="customer-name">AB Traders</div>
-    <div class="gst-number">GSTINEHN</div>
-</div>  
-<div class="size">6</div>
-<div class="quantity">10 Nos</div>
-<div class="price">50.00</div>
-</div>
-<div class="view-order-tbody">
-<div class="article-number">A102</div>        
-<div class="customer-details">
-    <div class="customer-name">AB Traders</div>
-    <div class="gst-number">GSTINEHN</div>
-</div>  
-<div class="size">6</div>
-<div class="quantity">10 Nos</div>
-<div class="price">50.00</div>
-</div>    
+
+
+
+   
     
     
 </div>        

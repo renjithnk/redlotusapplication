@@ -1,4 +1,4 @@
-<?php include('includes/header-user-executive.php'); ?>
+<?php include('includes/header-executive.php'); ?>
 
 <div class="content-wrapper user-categories clearfix">
     
@@ -15,7 +15,7 @@
 <div class="category-list-wrapper">
 <ul class="list-unstyled">
 <li class="category-list">
-<a href="executive-sub-categories.php">
+<a href="executive-view-product.php">
 <h2 class="category-name">Formal</h2>
 <img src="images/categories/formal.jpg" class="img-fluid category-image"/>       
 </a>

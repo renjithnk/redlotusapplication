@@ -10,12 +10,13 @@
 <h3 class="application-name">Stock Management Application</h3>
 <div class="btn-group">
 <a href="admin-login.php" class="btn btn-primary btn-lg admin-button red-button">Admin</a>
-<a href="user-executive-login.php" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
+<a href="executive-login.php" class="btn btn-primary btn-lg executive-button black-button">Executive</a>
 </div>        
 </div>
+    <p class="copyright">CopyRight All Reserved@Redlotus 2019</p>
 </div>
 </div> 
 </div> 
 
-<?php include('includes/footer-common.php'); ?>
+
 

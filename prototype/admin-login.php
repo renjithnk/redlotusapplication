@@ -18,9 +18,10 @@
     <a href="admin-view-product.php" class="btn btn-primary btn-lg red-button">Submit</a>
 </form>       
 </div>
+    <p class="copyright">CopyRight All Reserved@Redlotus 2019</p>
 </div> 
 
-<?php include('includes/footer-common.php'); ?>
+
 
 
 

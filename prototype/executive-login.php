@@ -17,9 +17,12 @@
 </div>
 <a href="executive-main-categories.php" class="btn btn-lg btn-primary btn-block" >Submit</a>    
 <div id="error_message">
-</div>   
-</form>              
 </div>
+
+</form>   
+
+</div>
+    <p class="copyright">CopyRight All Reserved@Redlotus 2019</p>
 </div> 
 
-<?php include('includes/footer-common.php'); ?>
+<?php //include('includes/footer-common.php'); ?>

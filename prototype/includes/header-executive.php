@@ -11,7 +11,7 @@
 <body>
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="user-view-product.php">
+<a href="executive-view-product.php">
 <img class="img-fluid logo" src="../assets/images/logo.png" alt="" width="200" height="64" />        
 </a>    
 </div> 
@@ -32,7 +32,7 @@
 </a>
 </div>
 
-<a href="user-executive-login.php" class="session-logout">
+<a href="index.php" class="session-logout">
 Logout
 </a>     
     
