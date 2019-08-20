@@ -27,7 +27,6 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$this->User_model->delete_all_uncarted_products();
     	$this->load->view('includes/header-user-executive');
     	$this->load->view('executive/user-view-product',$result);
     	$this->load->view('includes/footer-common');
@@ -97,7 +96,6 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$this->User_model->delete_all_uncarted_products();
 		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-view-product',$result);
 		$this->load->view('includes/footer-common');
@@ -139,7 +137,7 @@ class User_executive extends CI_Controller {
 	{
 		$this->load->view('includes/header-user-executive');
 		$this->load->view('executive/user-categories');
-		$this->load->view('includes/footer-common');
+//		$this->load->view('includes/footer-common');
 	}
 
 	public function particular()
@@ -156,7 +154,6 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$this->User_model->delete_all_uncarted_products();
 		$this->load->view('includes/header-user-executive');
 		$this->load->view('executive/user-view-product',$result);
 		$this->load->view('includes/footer-common');
