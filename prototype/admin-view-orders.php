@@ -59,7 +59,12 @@
            
     </tbody>
 </table>
-
+<div class="pagination-wrapper">
+    <span class="previous">Previous</span>
+    <span class="page-number active">1</span>
+    <span class="page-number"><a href="#">2</a></span>
+    <span class="next"><a href="#">Next</a></span>        
+</div>
 
 
 
