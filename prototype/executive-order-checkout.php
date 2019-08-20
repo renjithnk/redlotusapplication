@@ -1,3 +1,4 @@
+<?php include('includes/header-executive.php'); ?>
 
 <div class="content-wrapper user-order-checkout clearfix">
     
@@ -15,11 +16,16 @@
 <div class="customer-details-wrapper">
     <form class="customer-details-form">
 <div class="form-row">
-    <div class="form-group col-md-8">
+    <div class="form-group col-md-6">
       <label for="inputEmail4">Customer Name</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Customer Name">
     </div>
-    <div class="form-group col-md-4">
+     <div class="form-group col-md-3">
+      <label for="inputEmail4">Mobile Number</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Customer Name">
+    </div>   
+    
+    <div class="form-group col-md-3">
       <label for="inputEmail4">GST Number</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Customer Name">
     </div>
@@ -75,3 +81,4 @@
 
     
 </div>    
+<?php include('includes/footer-common.php'); ?>
