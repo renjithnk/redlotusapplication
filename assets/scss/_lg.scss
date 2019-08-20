@@ -21,9 +21,8 @@
 /* product view  */
     
 .product-list-wrapper {
-    @include flex-basis(100%);
-padding-right: 0;
-padding-left: 0;
+@include flex-basis(100%);
+
 > ul {
 margin-bottom:0;
 padding-bottom:0;

@@ -54,7 +54,7 @@
 
 <li class="category-list">
 <a href="user-view-product/roman-bantu">
-<h2 class="category-name">Roman bantu</h2>
+<h2 class="category-name">Roman</h2>
 <img src="<?php echo SERVER;?>assets/images/categories/roman-bantu.jpg" class="img-fluid category-image"/>       
 </a>
 </li>

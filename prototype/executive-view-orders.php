@@ -16,36 +16,44 @@
 
 
 
-<table class="user-view-orders-table">
+<table class="table table-striped view-orders-table">
     <thead>
-    <th class="article-number">Article No.</th>
+    <tr><th class="article-number">Article No.</th>
     <th class="customer-details">Customer Details</th>    
     <th class="size">Size</th>
     <th class="quantity">Quantity</th>
     <th class="price">Price</th>
-    </thead>
+    </tr></thead>
     <tbody>
-    <tr>
-    <td class="article-number">A101</td> 
-    <td class="customer-details">AB Traders, Door No.13A, Thekkanath Bldg., Kochi-35</td> 
-    <td class="size">6</td> 
-    <td class="quantity">12</td> 
-    <td class="price">5000</td> 
-    </tr>   
-    <tr>
-    <td class="article-number">A102</td> 
-    <td class="customer-details">Trends, Bldg. No.12, IHB-001, Kochi-17</td> 
-    <td class="size">6</td> 
-    <td class="quantity">12</td> 
-    <td class="price">5000</td> 
-    </tr> 
-    <tr>
-    <td class="article-number">A103</td> 
-    <td class="customer-details">King Shoes, Broadway, Bldg. No.23, Kochi-15</td> 
-    <td class="size">6</td> 
-    <td class="quantity">12</td> 
-    <td class="price">5000</td> 
-    </tr>     
+                <tr>
+            <td class="article-number"></td> 
+            <td class="customer-details">American Junction</td> 
+            <td class="size"></td> 
+            <td class="quantity">1</td> 
+            <td class="price">0</td> 
+            </tr>
+                    <tr>
+            <td class="article-number"></td> 
+            <td class="customer-details">Trial Address</td> 
+            <td class="size"></td> 
+            <td class="quantity">1</td> 
+            <td class="price">0</td> 
+            </tr>
+                    <tr>
+            <td class="article-number">RL9300-Tan</td> 
+            <td class="customer-details">Infopark</td> 
+            <td class="size">6</td> 
+            <td class="quantity">1</td> 
+            <td class="price">2099</td> 
+            </tr>
+                    <tr>
+            <td class="article-number">Casual-01-Black</td> 
+            <td class="customer-details">Kochi</td> 
+            <td class="size">6</td> 
+            <td class="quantity">1</td> 
+            <td class="price">1000</td> 
+            </tr>
+           
     </tbody>
 </table>
 

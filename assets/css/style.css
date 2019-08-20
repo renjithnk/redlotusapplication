@@ -17705,7 +17705,7 @@ element {
   height: auto;
 }
 
-/* line 178, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 176, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-content-wrapper {
   -webkit-flex-basis: 100%;
   -moz-flex-basis: 100%;
@@ -17714,9 +17714,10 @@ element {
   max-width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 10px;
 }
 
-/* line 179, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 182, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-content-wrapper .heading {
   background-color: #f0f0f0;
   height: 50px;
@@ -17727,7 +17728,7 @@ element {
   font-weight: 600;
 }
 
-/* line 192, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 189, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-content-wrapper .add-products-wrapper {
   display: -webkit-flex;
   display: -moz-flex;
@@ -17749,7 +17750,7 @@ element {
   -ms-flex-pack: center;
 }
 
-/* line 200, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 195, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-content-wrapper .pending-items-wrapper {
   -webkit-flex-basis: 100%;
   -moz-flex-basis: 100%;
@@ -17760,7 +17761,7 @@ element {
   grid-gap: 10px;
 }
 
-/* line 205, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 200, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-content-wrapper .pending-items-wrapper .pending-box {
   background-color: #eee;
   border: 1px solid #efefef;
@@ -17777,7 +17778,7 @@ element {
   padding: 20px;
 }
 
-/* line 218, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 213, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .add-product-upload {
   font-size: 12px;
   padding-bottom: 30px;
@@ -17789,7 +17790,7 @@ element {
 /* main navigation starts  */
 /* dropdown menu styles starts */
 /* menu trigger animation starts */
-/* line 231, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 226, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .bar1, .bar2, .bar3 {
   width: 30px;
   height: 3px;
@@ -17798,25 +17799,25 @@ element {
   transition: 0.4s;
 }
 
-/* line 238, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 233, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-6px, 8px);
   transform: rotate(-45deg) translate(-6px, 8px);
 }
 
-/* line 242, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 237, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .change .bar2 {
   opacity: 0;
 }
 
-/* line 243, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 238, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-3px, -5px);
   transform: rotate(45deg) translate(-3px, -5px);
 }
 
 /* menu trigger animation ends */
-/* line 249, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 244, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .menutrigger {
   display: inline-block;
   padding: 0px 5px;
@@ -17829,7 +17830,7 @@ element {
   right: 10px;
 }
 
-/* line 251, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 246, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation {
   background: #51c255;
   height: auto;
@@ -17842,7 +17843,7 @@ element {
   flex-basis: 100%;
 }
 
-/* line 252, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 247, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation ul {
   margin: 0;
   padding: 0;
@@ -17850,29 +17851,29 @@ element {
 
 /*.main-navigation .extra a:after { content: '+'; }
 .main-navigation .extra a:only-child:after { content: '+'; }*/
-/* line 255, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 250, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li {
   position: relative;
 }
 
-/* line 256, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 251, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li.active a {
   background: #f9f9f9;
 }
 
-/* line 257, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 252, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li:first-child a {
   padding-top: 0;
   height: 60px;
   line-height: 60px;
 }
 
-/* line 258, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 253, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li:first-child a i {
   display: none;
 }
 
-/* line 259, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 254, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li a {
   background-color: #333;
   color: #fff;
@@ -17888,18 +17889,18 @@ element {
   letter-spacing: -0.05px;
 }
 
-/* line 261, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 256, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li a svg {
   display: none;
 }
 
-/* line 262, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 257, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation li a:hover {
   background: #f71d2b;
   text-decoration: none;
 }
 
-/* line 263, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 258, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra i {
   width: 53px;
   text-align: center;
@@ -17914,26 +17915,26 @@ element {
   color: white;
 }
 
-/* line 275, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 270, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra i.down::after {
   content: '\e114';
   font-family: 'Glyphicons Halflings';
   font-style: normal;
 }
 
-/* line 280, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 275, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra i.up::after {
   content: '\e113';
   font-family: 'Glyphicons Halflings';
   font-style: normal;
 }
 
-/* line 285, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 280, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra .lg-plus {
   display: none;
 }
 
-/* line 286, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 281, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra ul li a {
   text-indent: 20px;
   background: #51c255;
@@ -17941,7 +17942,7 @@ element {
   line-height: 45px;
 }
 
-/* line 287, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 282, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .main-navigation .extra ul li a::before {
   content: '\f054';
   font-family: 'FontAwesome';
@@ -17951,34 +17952,34 @@ element {
   font-size: 7px;
 }
 
-/* line 296, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 291, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-add-product .main-navigation li:nth-child(2) a {
   background-color: #f71d2b;
 }
 
-/* line 297, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 292, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-product .main-navigation li:nth-child(1) a {
   background-color: #f71d2b;
 }
 
-/* line 298, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 293, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-orders .main-navigation li:nth-child(3) a {
   background-color: #f71d2b;
 }
 
 /*.user-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}*/
-/* line 300, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 295, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders .main-navigation li:nth-child(3) a {
   background-color: #f71d2b;
 }
 
-/* line 301, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 296, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-categories .main-navigation li:nth-child(1) a {
   background-color: #f71d2b;
 }
 
 @media only screen and (min-width: 1199px) {
-  /* line 305, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 300, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation {
     display: block !important;
     -webkit-flex-basis: 20%;
@@ -17989,19 +17990,19 @@ element {
     background-color: #333;
     margin-bottom: 10px;
   }
-  /* line 306, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 301, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li {
     float: none;
     height: 60px;
     line-height: 1;
     width: auto;
   }
-  /* line 307, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 302, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li:first-child a {
     height: 60px;
     line-height: 60px;
   }
-  /* line 308, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 303, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li a {
     height: 60px;
     line-height: 60px;
@@ -18009,14 +18010,14 @@ element {
     background-color: #3e3e3e;
     color: #fff;
   }
-  /* line 309, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 304, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li a span {
     display: block;
     font-weight: 900;
     text-transform: uppercase;
   }
   /* second level <li> tag changed to 'position:relative' to get its child <ul> equal to top of it */
-  /* line 311, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 306, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li ul li {
     float: left;
     position: relative;
@@ -18024,7 +18025,7 @@ element {
     width: 100%;
     height: auto;
   }
-  /* line 312, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 307, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li ul {
     opacity: 0;
     visibility: hidden;
@@ -18034,18 +18035,18 @@ element {
     width: 270px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
-  /* line 313, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 308, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul li:hover > ul {
     opacity: 1;
     visibility: visible;
     position: absolute;
   }
-  /* line 314, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 309, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation ul ul ul {
     left: 100%;
     top: 0;
   }
-  /* line 315, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 310, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a {
     text-indent: 0;
     line-height: normal;
@@ -18053,20 +18054,20 @@ element {
     padding: 15px 0 15px 20px;
     text-align: left;
   }
-  /* line 316, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 311, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a:hover {
     background: #3fb751;
   }
-  /* line 317, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 312, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra ul li a {
     padding-right: 15px;
   }
-  /* line 318, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 313, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation > ul li ul li .down {
     height: 35px;
     line-height: 35px;
   }
-  /* line 319, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 314, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation li:first-child a i {
     display: block;
     height: 20px;
@@ -18077,7 +18078,7 @@ element {
     text-align: center;
     top: 23px;
   }
-  /* line 320, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 315, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra i {
     right: 9px;
     width: auto;
@@ -18087,15 +18088,15 @@ element {
     font-size: 10px;
     top: 6px;
   }
-  /* line 321, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 316, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra .lg-plus {
     display: block;
   }
-  /* line 322, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 317, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .main-navigation .extra .xs-plus, .main-navigation .extra ul li a::before {
     display: none;
   }
-  /* line 323, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+  /* line 318, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
   .menutrigger {
     display: none;
   }
@@ -18105,7 +18106,7 @@ element {
 /* dropdown menu styles ends */
 /* add products wrapper  */
 /* admin view orders */
-/* line 334, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 329, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-orders .view-order-wrapper .view-order-th {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -18117,12 +18118,12 @@ element {
   padding-bottom: 5px;
 }
 
-/* line 335, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 330, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-orders .view-order-wrapper .view-order-th > div {
   width: 20%;
 }
 
-/* line 336, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 331, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-orders .view-order-wrapper .view-order-tbody {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -18132,23 +18133,23 @@ element {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 337, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 332, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .admin-view-orders .view-order-wrapper .view-order-tbody > div {
   width: 20%;
 }
 
-/* line 340, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 335, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .view-orders-table {
   font-size: 14px;
 }
 
-/* line 341, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 336, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .view-orders-table thead th {
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
 }
 
-/* line 342, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 337, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .view-orders-table tbody td {
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
@@ -18156,7 +18157,7 @@ element {
 }
 
 /* user categories */
-/* line 346, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 341, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .category-list-wrapper ul {
   display: grid;
   grid-template-columns: auto auto;
@@ -18164,7 +18165,7 @@ element {
   margin-bottom: 0;
 }
 
-/* line 347, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 342, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .category-list-wrapper ul li {
   border: 1px solid #ddd;
   display: -webkit-flex;
@@ -18183,7 +18184,7 @@ element {
   -ms-flex-pack: center;
 }
 
-/* line 348, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 343, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .category-list-wrapper ul li a {
   padding: 0;
   margin: 0;
@@ -18191,7 +18192,7 @@ element {
   display: block;
 }
 
-/* line 349, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 344, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .category-list-wrapper ul li a .category-name {
   font-size: 20px;
   padding: 20px 0 0 0;
@@ -18199,214 +18200,214 @@ element {
   color: #333;
 }
 
-/* line 350, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 345, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .category-list-wrapper ul li a .category-image {
   width: 170px;
   height: auto;
 }
 
 /* user view order */
-/* line 354, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 349, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table {
   width: 100%;
   font-size: 12px;
 }
 
-/* line 355, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 350, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead th {
   padding: 5px;
 }
 
-/* line 356, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 351, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead .article-number {
   width: 15%;
 }
 
-/* line 357, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 352, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead .customer-details {
   width: 40%;
 }
 
-/* line 358, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 353, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead .size {
   width: 10%;
   text-align: center;
 }
 
-/* line 359, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 354, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead .quantity {
   width: 15%;
   text-align: center;
 }
 
-/* line 360, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 355, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table thead .price {
   width: 20%;
   text-align: right;
 }
 
-/* line 362, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 357, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody tr {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 363, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 358, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody td {
   padding: 5px;
   background-color: #f7f7f7;
 }
 
-/* line 364, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 359, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody .article-number {
   width: 15%;
 }
 
-/* line 365, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 360, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody .customer-details {
   width: 40%;
 }
 
-/* line 366, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 361, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody .size {
   width: 10%;
   text-align: center;
 }
 
-/* line 367, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 362, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody .quantity {
   width: 15%;
   text-align: center;
 }
 
-/* line 368, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 363, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-view-orders-table tbody .price {
   width: 20%;
   text-align: right;
 }
 
-/* line 370, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 365, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .customer-infos tbody td {
   padding: 0px 10px 0px 3px;
   border: none;
 }
 
-/* line 371, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 366, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .customer-infos tbody tr {
   background: none !important;
 }
 
 /* user order checkout */
-/* line 377, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 372, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table {
   width: 100%;
   font-size: 12px;
 }
 
-/* line 378, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 373, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead th {
   padding: 5px;
 }
 
-/* line 379, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 374, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead .article-number {
   width: 30%;
 }
 
-/* line 380, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 375, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead .size {
   width: 15%;
   text-align: center;
 }
 
-/* line 381, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 376, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead .quantity {
   width: 15%;
   text-align: center;
 }
 
-/* line 382, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 377, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead .price {
   width: 25%;
   text-align: right;
 }
 
-/* line 383, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 378, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table thead .action {
   width: 15%;
 }
 
-/* line 385, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 380, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody tr {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 386, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 381, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody td {
   padding: 5px;
 }
 
-/* line 387, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 382, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody .article-number {
   width: 30%;
 }
 
-/* line 388, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 383, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody .size {
   width: 15%;
   text-align: center;
 }
 
-/* line 389, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 384, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody .quantity {
   width: 15%;
   text-align: center;
 }
 
-/* line 390, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 385, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody .price {
   width: 25%;
   text-align: right;
 }
 
-/* line 391, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 386, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody .action {
   width: 15%;
   text-align: center;
 }
 
-/* line 393, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 388, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tfoot {
   font-size: 17px;
 }
 
-/* line 394, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 389, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tfoot .total-label {
   padding: 5px;
 }
 
-/* line 395, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 390, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tfoot .total-value {
   padding: 5px;
   text-align: right;
 }
 
-/* line 397, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 392, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody td {
   background: #f7f7f7;
 }
 
-/* line 398, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 393, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout-table tbody td .remove {
   cursor: pointer;
 }
 
 /* user order checkout */
-/* line 407, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 402, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .customer-details-form {
   padding: 25px;
 }
 
-/* line 408, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 403, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-th {
   display: grid;
   grid-template-columns: 35% 12% 22% 21%;
@@ -18418,17 +18419,17 @@ element {
   padding-bottom: 5px;
 }
 
-/* line 409, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 404, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-th .size, .user-order-checkout .view-order-wrapper .view-order-th .quantity {
   text-align: center;
 }
 
-/* line 410, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 405, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-th .price {
   text-align: right;
 }
 
-/* line 411, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 406, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody {
   display: grid;
   grid-template-columns: 30% 20% 15% 25% 10%;
@@ -18438,33 +18439,33 @@ element {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 413, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 408, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody .price {
   text-align: right;
 }
 
-/* line 414, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 409, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody .remove {
   text-align: right;
 }
 
-/* line 415, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 410, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody .remove i {
   cursor: pointer;
 }
 
-/* line 416, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 411, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody .quantity {
   text-align: center;
 }
 
-/* line 417, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 412, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .user-order-checkout .view-order-wrapper .view-order-tbody .size {
   text-align: center;
 }
 
 /* user view screens */
-/* line 423, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 418, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .order-header-wrapper a {
   display: -webkit-flex;
   display: -moz-flex;
@@ -18484,14 +18485,14 @@ element {
 }
 
 /* footer */
-/* line 435, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 430, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .app-footer {
   width: 100%;
   background-color: #eee;
 }
 
 /* Validation Error */
-/* line 442, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 437, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .error_message {
   background: #fff;
   color: #f71d2b;
@@ -18500,7 +18501,7 @@ element {
   padding: 10px 15px;
 }
 
-/* line 450, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 445, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .alert-messages {
   padding: 90px;
   background-color: #f9f9f9;
@@ -18511,7 +18512,7 @@ element {
   width: 100%;
 }
 
-/* line 460, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+/* line 455, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
 .test {
   color: none;
 }
@@ -18676,15 +18677,13 @@ element {
     -moz-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
-    padding-right: 0;
-    padding-left: 0;
   }
-  /* line 27, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 26, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .product-list-wrapper > ul {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  /* line 30, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 29, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .product-list-wrapper > ul .product-list {
     margin-bottom: 0;
     padding: 33px;
@@ -18693,52 +18692,52 @@ element {
     -ms-flex-basis: 32.37%;
     flex-basis: 32.37%;
   }
-  /* line 35, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 34, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .product-list-wrapper > ul .product-list .product-details-wrapper .col1 {
     -webkit-flex-basis: 45%;
     -moz-flex-basis: 45%;
     -ms-flex-basis: 45%;
     flex-basis: 45%;
   }
-  /* line 36, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 35, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .product-list-wrapper > ul .product-list .product-details-wrapper .col2 {
     -webkit-flex-basis: 50%;
     -moz-flex-basis: 50%;
     -ms-flex-basis: 50%;
     flex-basis: 50%;
   }
-  /* line 37, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 36, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .product-list-wrapper > ul .product-list .product-details-wrapper .size-stock-table li {
     margin-bottom: 10px;
   }
   /*  view orders */
-  /* line 52, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 51, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .view-order-wrapper .view-order-th {
     grid-template-columns: 10% 30% 20% 20% 20%;
     font-size: 14px;
   }
-  /* line 53, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 52, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .view-order-wrapper .view-order-th > div {
     width: inherit;
   }
-  /* line 54, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 53, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .view-order-wrapper .view-order-tbody {
     grid-template-columns: 10% 30% 20% 20% 20%;
     padding: 20px;
     font-size: 14px;
   }
-  /* line 55, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 54, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .view-order-wrapper .view-order-tbody > div {
     width: inherit;
   }
   /* user view product  */
-  /* line 65, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 64, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .site-header .search-box {
     width: 475px;
     right: inherit;
     left: 420px;
   }
-  /* line 66, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
+  /* line 65, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_lg.scss */
   .order-header-wrapper {
     width: 120px;
     right: 106px;

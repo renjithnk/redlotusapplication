@@ -164,18 +164,21 @@ z-index: 0;
 .add-products-wrapper {background: #f1f1f1;padding: 20px;}
 
 
-
+  
 
 /* inner page globals  */
 
 .inner-pages {}
 element {
 	width: 110px;
-	height: auto;
+	height: auto; 
 }
-
-
 .main-content-wrapper {
+@include flex-basis(100%);
+max-width: 100%;
+padding-left: 10px;
+padding-right: 10px; 
+margin-bottom:10px;
 .heading {background-color: #f0f0f0;
 height: 50px;
 line-height: 50px;
@@ -183,32 +186,24 @@ text-indent: 20px;
 font-size: 20px;
 margin-bottom: 10px;
 font-weight: 600;}
-    
-        @include flex-basis(100%);
-        max-width: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
-        
-        .add-products-wrapper {
-        @include displayflex;
-        @include flex-basis(100%);
-        @include flex-direction(column);
-        @include justify-content(center);
-        } 
-        
-        
-        .pending-items-wrapper {
-            @include flex-basis(100%);
-            display:grid;
-            grid-template-columns:auto auto;
-            grid-gap:10px;
-            .pending-box {
-            background-color:#eee;border:1px solid #efefef;
-            @include displayflex;
-            @include justify-content(space-between);
-            padding: 20px;
-            }   
-        }       
+.add-products-wrapper {
+    @include displayflex;
+    @include flex-basis(100%);
+    @include flex-direction(column);
+    @include justify-content(center);
+    } 
+.pending-items-wrapper {
+@include flex-basis(100%);
+display:grid;
+grid-template-columns:auto auto;
+grid-gap:10px;
+.pending-box {
+background-color:#eee;border:1px solid #efefef;
+    @include displayflex;
+    @include justify-content(space-between);
+    padding: 20px;
+    }   
+}       
         
         
         

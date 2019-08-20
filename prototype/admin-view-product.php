@@ -17,7 +17,8 @@
     
 <div class="main-content-wrapper">
 <h2 class="heading">Products</h2>
-<div class="product-list-wrapper container">
+<div class="product-list-wrapper">
+<div class="container">
 <div class="row">
 <div class="product-list col-lg-4">
 <div class="product-details-wrapper">
@@ -212,12 +213,8 @@
 </div>
 </div>
 
-
-
-
-
-</ul> 
-</div>        
+</div>         
+</div>    
 </div>
 
 
