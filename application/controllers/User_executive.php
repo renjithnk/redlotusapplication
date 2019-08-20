@@ -10,12 +10,16 @@ class User_executive extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->helper(array('form'));
         $this->load->library('image_lib');
+		$this->load->library('pagination');
+		$this->load->helper('url');
     }
 
 	private $upload_path = PRODUCT_UPLOAD_PATH;
 
     public function index()
     {
+		$data = array();
+
     	$result['product']=$this->Admin_model->fetch_products();
 		if($result!=0)
 		{
@@ -27,7 +31,10 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-    	$this->load->view('includes/header-user-executive');
+		$cart_total = $this->User_model->find_cart_total();
+		$data['cart_total'] = $cart_total;
+
+    	$this->load->view('includes/header-user-executive', $data);
     	$this->load->view('executive/user-view-product',$result);
     	$this->load->view('includes/footer-common');
     }
@@ -127,17 +134,37 @@ class User_executive extends CI_Controller {
 
 	public function user_order_view()
 	{
-		$result['orders']=$this->User_model->fetch_order();
-		$this->load->view('includes/header-user-executive');
+
+
+		$config['base_url'] = base_url() . "user-view-orders"; 
+		$config['total_rows'] = $this->User_model->get_total_orders();
+		$config['per_page'] = 5;
+//		$config['page_query_string'] = TRUE;
+		$config['enable_query_strings'] = TRUE;
+		$config['reuse_query_string'] = TRUE;
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+
+		$this->pagination->initialize($config);		
+	
+		$result['orders']=$this->User_model->fetch_order($config["per_page"], $page);
+        $result["links"] = $this->pagination->create_links();
+
+		$cart_total = $this->User_model->find_cart_total();
+		$data['cart_total'] = $cart_total;
+
+    	$this->load->view('includes/header-user-executive', $data);
 		$this->load->view('executive/user-view-orders',$result);
 		$this->load->view('includes/footer-common');
 	}
 
 	public function user_categories()
 	{
-		$this->load->view('includes/header-user-executive');
+		$cart_total = $this->User_model->find_cart_total();
+		$data['cart_total'] = $cart_total;
+
+    	$this->load->view('includes/header-user-executive', $data);
 		$this->load->view('executive/user-categories');
-//		$this->load->view('includes/footer-common');
+		$this->load->view('includes/footer-common');
 	}
 
 	public function particular()
@@ -154,9 +181,18 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$this->load->view('includes/header-user-executive');
+		$cart_total = $this->User_model->find_cart_total();
+		$data['cart_total'] = $cart_total;
+
+    	$this->load->view('includes/header-user-executive', $data);
 		$this->load->view('executive/user-view-product',$result);
 		$this->load->view('includes/footer-common');
+	}
+
+	public function clear_orders()
+	{
+		$this->User_model->delete_all_uncarted_products();
+		echo 1;
 	}
 	
 }

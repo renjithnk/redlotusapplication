@@ -62,6 +62,7 @@ $route['user-login']='User_executive/user_login';
 $route['user-view-product/(:any)']='User_executive/particular';
 $route['admin-view-product/(:any)']='admin/particular';  
 $route['user-order-checkout']='User_executive/order_view';
+$route['user-view-orders(/:num)']='User_executive/user_order_view';
 $route['user-view-orders']='User_executive/user_order_view';
 $route['user-categories']='User_executive/user_categories';
 $route['user-login-check']='User_executive/user_login_check';
@@ -87,6 +88,7 @@ $route['admin-product-check']='admin/admin_product_check';
 $route['admin-update-sock']='admin/admin_update_sock'; 
 $route['admin-despatch-stock']='admin/admin_despatch_stock'; 
 $route['delete-product']='admin/delete_product';  
+$route['clear-orders']='User_executive/clear_orders';  
 
 /*
 | -------------------------------------------------------------------------

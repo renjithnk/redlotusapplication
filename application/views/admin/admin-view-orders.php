@@ -63,8 +63,9 @@
 
     </tbody>
   </table>    
-  <p><?php echo $links; ?></p>
-
+  <div class="pagination-wrapper">
+<?php echo $links; ?>   
+</div>
 
 </div>        
 </div>

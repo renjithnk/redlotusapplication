@@ -323,3 +323,21 @@ function deleteProduct(element)
   });
   
 }
+
+function clearOrders()
+{
+
+  var request = $.ajax({
+    url: base_url_js + 'clear-orders',
+  });
+  request.done( function ( data ) {
+    if(data==1)
+    {
+       window.location.href = window.location.href;
+    }
+  });
+  request.fail( function ( jqXHR, textStatus) {
+    console.log( 'Sorry: ' + textStatus );
+  });
+  
+}

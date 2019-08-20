@@ -31,13 +31,13 @@
 </div>
 
 <div class="order-header-wrapper" style="margin-right: 100px;">
-<button class="update-button btn btn-primary red-button" onClick="" type="submit">Clear Order</button>
+<button class="update-button btn btn-primary red-button" onClick="clearOrders()" type="submit">Clear Order</button>
 </div>
 
 <div class="order-header-wrapper">
 <a href="<?php echo base_url();?>user-order-checkout">    
 <div class="order-label">Order</div>    
-<div class="order-total-value" id="cart_item_count">0</div>
+<div class="order-total-value" id="cart_item_count"> <?php echo $cart_total; ?> </div>
 </a>
 </div>
 

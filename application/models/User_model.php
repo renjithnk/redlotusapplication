@@ -79,10 +79,24 @@ class User_model extends CI_Model {
     }
   }
 
-  public function fetch_order()
+  public function get_total_orders()
   {
-    $this->db->select('or.cart_id,name,address,product_quantity,size,price,article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left');
+      $createdby  =   $this->session->userdata('user_id');    
+      $where='(co.executive_id=' . $createdby .')';
+
+      $this->db->select('or.order_id')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where($where);
+      $query=$this->db->get();
+      return $query->num_rows();
+  }
+
+  public function fetch_order($limit, $start)
+  {
+    $createdby  =   $this->session->userdata('user_id');    
+    $where='(co.executive_id=' . $createdby . ' )';
+
+    $this->db->select('or.cart_id,name,address,product_quantity,size,price,article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where($where)->limit($limit, $start)->order_by('order_id','desc');
     $query=$this->db->get();
+//      echo $this->db->last_query(); die;      
     if($query->num_rows() > 0)
     {
       $result=$query->result();
@@ -148,7 +162,11 @@ class User_model extends CI_Model {
     {
       $result=$query->result();
       $product_quantity=$result[0]->product_quantity;
-      return $product_quantity;
+
+      if(is_null($product_quantity))
+        return 0;
+      else 
+        return $product_quantity;
     }else{
       return 0;
   }
