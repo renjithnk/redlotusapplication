@@ -102,6 +102,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('includes/header-administrator');
 		$this->load->view('admin/admin-add-product');
+		$this->load->view('includes/footer-common');
 	}
 
 	public function admin_product_check()

@@ -10,6 +10,7 @@
 <li><a href="<?php echo base_url();?>admin-view-product">View Product</a></li>		    
 <li><a href="<?php echo base_url();?>admin-add-product">Add Product</a></li>
 <li><a href="<?php echo base_url();?>admin-view-orders">View Orders</a></li>
+<li><a href="<?php echo base_url();?>admin-view-despatched">View Despatched Orders</a></li>
 </ul>
 </nav>   
     

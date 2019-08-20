@@ -1,4 +1,4 @@
-<div class="content-wrapper admin-view-orders clearfix">
+<div class="content-wrapper admin-view-despatched clearfix">
     
 <div class="menutrigger">
 <div class="bar1"></div>
