@@ -10,13 +10,9 @@
 <div class="bar2"></div>
 <div class="bar3"></div>
 </div>
-<nav id="main-navigation" class="main-navigation">
-<ul class="list-unstyled">
-<li><a href="admin-view-product.php">View Product</a></li>		    
-<li><a href="admin-add-product.php">Add Product</a></li>
-<li><a href="admin-view-orders.php">View Orders</a></li>
-</ul>
-</nav>     
+    
+    
+<?php include('includes/admin-navigation.php'); ?>      
     
     
 <div class="main-content-wrapper">

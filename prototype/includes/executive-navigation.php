@@ -2,5 +2,6 @@
 <ul class="list-unstyled">
 <li><a href="executive-main-categories.php">Categories</a></li>		    
 <li><a href="executive-view-orders.php">View Orders</a></li>
+<li><a href="executive-login.php">Logout</a></li>
 </ul>
 </nav> 

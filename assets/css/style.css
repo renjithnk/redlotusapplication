@@ -18580,6 +18580,14 @@ element {
   color: none;
 }
 
+/* temp  */
+/* line 480, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_xs.scss */
+.clear-order-wrapper {
+  position: absolute;
+  top: 23px;
+  right: 240px;
+}
+
 @media only screen and (min-width: 576px) {
   /* admin */
   /* line 4, E:/igmts___web__prjct___fls/redlotus/application/assets/scss/_sm.scss */

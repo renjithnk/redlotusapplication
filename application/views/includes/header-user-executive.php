@@ -30,7 +30,7 @@
 </div>
 </div>
 
-<div class="order-header-wrapper" style="margin-right: 100px;">
+<div class="clear-order-wrapper">
 <button class="update-button btn btn-primary red-button" onClick="clearOrders()" type="submit">Clear Order</button>
 </div>
 
