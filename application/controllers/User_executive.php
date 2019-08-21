@@ -138,7 +138,7 @@ class User_executive extends CI_Controller {
 
 		$config['base_url'] = base_url() . "user-view-orders"; 
 		$config['total_rows'] = $this->User_model->get_total_orders();
-		$config['per_page'] = 5;
+		$config['per_page'] = ROWS_PER_PAGE;
 //		$config['page_query_string'] = TRUE;
 		$config['enable_query_strings'] = TRUE;
 		$config['reuse_query_string'] = TRUE;

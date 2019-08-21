@@ -77,6 +77,8 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 define('SERVER','http://redlotus.local/');
 define( 'ROOT_DIR', dirname(__FILE__) );
 
+define( 'ROWS_PER_PAGE', 10);
+
 define('PRODUCT_IMAGE_PATH' , SERVER . '/assets/images/products/');
 define('PRODUCT_UPLOAD_PATH' , ROOT_DIR . '/../../assets/images/products/');
 
