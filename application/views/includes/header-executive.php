@@ -20,7 +20,7 @@
 <img class="img-fluid logo" src="<?php echo SERVER;?>assets/images/logo.png" alt="" width="85" height="50" />        
 </a>    
 </div> 
-<div class="session-name">User Executive</div> 
+<div class="session-name">Executive</div> 
     
 <div class="input-group form-group search-box">
 <span class="fa fa-search form-control-feedback"></span>    
@@ -35,13 +35,13 @@
 </div>
 
 <div class="order-header-wrapper">
-<a href="<?php echo base_url();?>user-order-checkout">    
+<a href="<?php echo base_url();?>executive-order-checkout">    
 <div class="order-label">Order</div>    
 <div class="order-total-value" id="cart_item_count"> <?php echo $cart_total; ?> </div>
 </a>
 </div>
 
-<a href="<?php echo base_url();?>" class="session-logout">
+<a href="<?php echo base_url();?>executive-login" class="session-logout">
 Logout
 </a>     
     

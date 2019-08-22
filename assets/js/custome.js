@@ -26,14 +26,14 @@ function userLoginCheck()
   var user_email = document.getElementById("user_email").value;
   var user_password = document.getElementById("user_password").value;
   var request = $.ajax({
-    url: base_url_js + 'user-login-check',
+    url: base_url_js + 'executive-login-check',
     type: 'POST',
-    data: { user_email: user_email,user_password:user_password} ,
+    data: { executive_email: user_email,executive_password:user_password} ,
     dataType: 'html'
   });
   request.done( function ( data ) {
     if (data=="true") {
-      window.location = base_url_js+"user-categories";
+      window.location = base_url_js+"executive-categories";
     }
     else if (data=="false") {
       $( ".error_messagess" ).load(window.location.href + " .error_messagess" );
@@ -278,7 +278,7 @@ function placeOrder()
     if(data2 == "1")
     {
       var delay = 1000; 
-      setTimeout(function(){ window.location = base_url_js + "/user-view-product"; }, delay);
+      setTimeout(function(){ window.location = base_url_js + "/executive-view-product"; }, delay);
       alert('Your Order Placed');
     } 
     else
@@ -295,7 +295,7 @@ function placeOrder()
 function searchProduct()
 {
   var name=document.getElementById("seach_item").value;
-  window.location = base_url_js + "user-view-product/"+name;
+  window.location = base_url_js + "executive-view-product/"+name;
 }
 function searchProducts()
 {
@@ -333,7 +333,8 @@ function clearOrders()
   request.done( function ( data ) {
     if(data==1)
     {
-       window.location.href = window.location.href;
+ 	    alert('Your Order Cleared');
+        window.location.href = window.location.href;
     }
   });
   request.fail( function ( jqXHR, textStatus) {

@@ -1,7 +1,8 @@
 
 <div class="login-box-wrapper">
 <div class="login-box">
-<img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121">
+<a href="<?php echo base_url();?>">
+<img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121"></a>
 <h3 class="application-name">Inventory Management Application</h3>
 <form method="post" onsubmit="adminLoginCheck();return false">
 <div class="form-group">

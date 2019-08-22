@@ -35,7 +35,7 @@ Administrator
 </div>
 </div>
     
-<a href="<?php echo base_url();?>" class="session-logout">
+<a href="<?php echo base_url();?>admin-login" class="session-logout">
 Logout
 </a>     
     

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_model extends CI_Model {
+class Executive_model extends CI_Model {
 
 
   public function fetch_products()
@@ -17,11 +17,12 @@ class User_model extends CI_Model {
     }
   }
 
-  public function check_user($user_email,$user_password)
+  public function check_executive($user_email,$user_password)
   {
     $where='(ex_email="'.$user_email.'" and ex_password="'.$user_password.'")';
     $this->db->select('ex_id')->from('executives')->where($where)->limit(1);
     $query=$this->db->get();
+
     if($query->num_rows() > 0)
     {
       $result=$query->result();
@@ -48,7 +49,7 @@ class User_model extends CI_Model {
   public function delete_all_uncarted_products()
   {
 
-    $createdby  =   $this->session->userdata('user_id');    
+    $createdby  =   $this->session->userdata('executive_id');    
 
     $this->db->where('executive_id',$createdby);
     $this->db->where('cart_status',"0");
@@ -65,7 +66,7 @@ class User_model extends CI_Model {
 
   public function select_cart_items()
   {
-    $createdby  =   $this->session->userdata('user_id');    
+    $createdby  =   $this->session->userdata('executive_id');    
 
     $where='(executive_id=' . $createdby . ' AND cart_status="0")';
     $this->db->select('cart_id,article_number,size,price,product_quantity')->from('cart_order co')->join('product p','co.product_id=p.product_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->where($where);
@@ -81,7 +82,8 @@ class User_model extends CI_Model {
 
   public function get_total_orders()
   {
-      $createdby  =   $this->session->userdata('user_id');    
+
+      $createdby  =   $this->session->userdata('executive_id');    
       $where='(co.executive_id=' . $createdby .')';
 
       $this->db->select('or.order_id')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where($where);
@@ -91,7 +93,7 @@ class User_model extends CI_Model {
 
   public function fetch_order($limit, $start)
   {
-    $createdby  =   $this->session->userdata('user_id');    
+    $createdby  =   $this->session->userdata('executive_id');    
     $where='(co.executive_id=' . $createdby . ' )';
 
     $this->db->select('or.cart_id,name,address,product_quantity,size,price,article_number')->from('order or')->join('cart_order co','or.cart_id=co.cart_id','left')->join('product_desc pd','co.product_disc_id=pd.description_id','left')->join('product p','co.product_id=p.product_id','left')->where($where)->limit($limit, $start)->order_by('order_id','desc');
@@ -152,7 +154,7 @@ class User_model extends CI_Model {
 
   public function find_cart_total()
   {
-    $createdby  =   $this->session->userdata('user_id');
+    $createdby  =   $this->session->userdata('executive_id');
 
     $this->db->where('executive_id',$createdby);
     $this->db->where('cart_status',"0");
@@ -188,7 +190,7 @@ class User_model extends CI_Model {
 
   public function place_order($name,$gst,$address)
   {
-    $createdby  =   $this->session->userdata('user_id');
+    $createdby  =   $this->session->userdata('executive_id');
 
     $this->db->where('executive_id',$createdby);
     $this->db->where('cart_status',"0");

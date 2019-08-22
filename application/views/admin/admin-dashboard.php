@@ -6,14 +6,8 @@
 <div class="bar2"></div>
 <div class="bar3"></div>
 </div>
-  
-<nav id="main-navigation" class="main-navigation">
-<ul class="list-unstyled">
-<li><a href="<?php echo base_url();?>admin-view-product">View Product</a></li>		    
-<li><a href="<?php echo base_url();?>admin-add-product">Add Product</a></li>
-<li><a href="<?php echo base_url();?>admin-view-orders">View Orders</a></li>		
-</ul>
-</nav>    
+
+<?php $this->view('includes/admin-navigation'); ?>    
  
 <div class="main-content-wrapper">
     

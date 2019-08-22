@@ -17,9 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | so that a different class/function is called than the one
 | corresponding to the URL.
 |
-| Please see the user guide for complete details:
+| Please see the executive guide for complete details:
 |
-| https://codeigniter.com/user_guide/general/routing.html
+| https://codeigniter.com/executive_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
@@ -57,15 +57,15 @@ $route['insert-product'] = 'admin/insert_product';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;  
 
-$route['user-view-product']='User_executive';  
-$route['user-login']='User_executive/user_login'; 
-$route['user-view-product/(:any)']='User_executive/particular';
+$route['executive-view-product']='Executive';  
+$route['executive-login']='Executive/executive_login'; 
+$route['executive-view-product/(:any)']='Executive/particular';
 $route['admin-view-product/(:any)']='admin/particular';  
-$route['user-order-checkout']='User_executive/order_view';
-$route['user-view-orders(/:num)']='User_executive/user_order_view';
-$route['user-view-orders']='User_executive/user_order_view';
-$route['user-categories']='User_executive/user_categories';
-$route['user-login-check']='User_executive/user_login_check';
+$route['executive-order-checkout']='Executive/order_view';
+$route['executive-view-orders(/:num)']='Executive/executive_order_view';
+$route['executive-view-orders']='Executive/executive_order_view';
+$route['executive-categories']='Executive/executive_categories';
+$route['executive-login-check']='Executive/executive_login_check';
 $route['admin-view-orders(/:num)']='admin/admin_view_orders';
 $route['admin-view-orders']='admin/admin_view_orders';
 $route['admin-view-despatched(/:num)']='admin/admin_view_despatched';
@@ -76,9 +76,9 @@ $route['admin-view-despatched']='admin/admin_view_despatched';
 | Routes form javascript
 | -------------------------------------------------------------------------
 */ 
-$route['executive-place-order']='User_executive/place_order';
-$route['executive-delete-cart']='User_executive/delete_cart';
-$route['executive-add-to-cart']='User_executive/add_to_cart';
+$route['executive-place-order']='Executive/place_order';
+$route['executive-delete-cart']='Executive/delete_cart';
+$route['executive-add-to-cart']='Executive/add_to_cart';
 $route['admin-login-check'] = 'admin/admin_login';
 $route['admin-dashboard'] = 'admin/dashboard'; 
 $route['images-upload']='admin/images_upload'; 
@@ -88,12 +88,12 @@ $route['admin-product-check']='admin/admin_product_check';
 $route['admin-update-sock']='admin/admin_update_sock'; 
 $route['admin-despatch-stock']='admin/admin_despatch_stock'; 
 $route['delete-product']='admin/delete_product';  
-$route['clear-orders']='User_executive/clear_orders';  
+$route['clear-orders']='Executive/clear_orders';  
 
 /*
 | -------------------------------------------------------------------------
 | Sample REST API Routes
 | -------------------------------------------------------------------------
 */
-$route['api/example/users/(:num)'] = 'api/example/users/id/$1'; // Example 4
-$route['api/example/users/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/example/users/id/$1/format/$3$4'; // Example 8
+$route['api/example/executives/(:num)'] = 'api/example/executives/id/$1'; // Example 4
+$route['api/example/executives/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/example/executives/id/$1/format/$3$4'; // Example 8

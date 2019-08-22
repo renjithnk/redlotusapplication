@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_executive extends CI_Controller {
+class Executive extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->model('User_model');
+        $this->load->model('Executive_model');
         $this->load->model('admin/Admin_model');
         $this->load->library('form_validation');
         $this->load->helper(array('form'));
@@ -31,30 +31,30 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$cart_total = $this->User_model->find_cart_total();
+		$cart_total = $this->Executive_model->find_cart_total();
 		$data['cart_total'] = $cart_total;
 
-    	$this->load->view('includes/header-user-executive', $data);
-    	$this->load->view('executive/user-view-product',$result);
+    	$this->load->view('includes/header-executive', $data);
+    	$this->load->view('executive/executive-view-product',$result);
     	$this->load->view('includes/footer-common');
     }
 
-    public function user_login()
+    public function executive_login()
     {
     	$this->load->view('includes/header-common');
-    	$this->load->view('executive/user-executive-login');
+    	$this->load->view('executive/executive-login');
     	$this->load->view('includes/footer-common');
     }
 
-    public function user_login_check()
+    public function executive_login_check()
     {
-    	$user_email=$this->input->post('user_email');
-		$user_password=$this->input->post('user_password');
-		$result=$this->User_model->check_user($user_email,$user_password);
+    	$executive_email=$this->input->post('executive_email');
+		$executive_password=$this->input->post('executive_password');
+		$result=$this->Executive_model->check_executive($executive_email,$executive_password);
 		if($result==0)
 		{
 			$message= array(
-    		'title' => 'invalid username or password',
+    		'title' => 'invalid executivename or password',
     		'heading' => 'My Heading',
     		'message' => 'My Message');
     		$this->session->set_userdata('invalid_admin_login',$message);
@@ -63,7 +63,7 @@ class User_executive extends CI_Controller {
 		else
 		{
 			$ex_id=$result[0]->ex_id;
-			$this->session->set_userdata('user_id',$ex_id);
+			$this->session->set_userdata('executive_id',$ex_id);
 			echo "true";
 		}
 	}
@@ -71,7 +71,7 @@ class User_executive extends CI_Controller {
 
     public function add_to_cart()
     {
-        $createdby  =   $this->session->userdata('user_id');
+        $createdby  =   $this->session->userdata('executive_id');
 		$od= rtrim($this->input->post('order_details'), '|');
     	$product_id=$this->input->post('product_id');
 		
@@ -84,13 +84,13 @@ class User_executive extends CI_Controller {
 			if($product_quantity > 0) {
 				$array=array('product_disc_id'=>$desc_id,'product_id'=>$product_id,'product_quantity'=>$product_quantity,'executive_id'=>$createdby);
 				$check_array=array('product_id'=>$product_id,'product_disc_id'=>$desc_id,'cart_status'=>"0",'executive_id'=>$createdby);
-				$result=$this->User_model->insert_to_cart($array,$check_array,$product_quantity);
+				$result=$this->Executive_model->insert_to_cart($array,$check_array,$product_quantity);
 			}
 		}
     	echo $result;
     }
     
-	public function user_view_product()
+	public function executive_view_product()
 	{
 		$result['product']=$this->Admin_model->fetch_products();
 		if($result!=0)
@@ -110,16 +110,20 @@ class User_executive extends CI_Controller {
 
 	public function order_view()
 	{
-		$result['cart_items']=$this->User_model->select_cart_items();
-		$this->load->view('includes/header-administrator');
-		$this->load->view('executive/user-order-checkout',$result);
+		$result['cart_items']=$this->Executive_model->select_cart_items();
+
+		$cart_total = $this->Executive_model->find_cart_total();
+		$data['cart_total'] = $cart_total;
+
+    	$this->load->view('includes/header-executive', $data);
+		$this->load->view('executive/executive-order-checkout',$result);
 		$this->load->view('includes/footer-common');
 	}
 
 	public function delete_cart()
 	{
 		$cart_id=$this->input->post('cart_id');
-		$result=$this->User_model->delete_cart($cart_id);
+		$result=$this->Executive_model->delete_cart($cart_id);
 		echo $result;
 	}
 
@@ -128,16 +132,16 @@ class User_executive extends CI_Controller {
 		$name=$this->input->post('name');
 		$gst=$this->input->post('gst');
 		$address=$this->input->post('address');
-		$result=$this->User_model->place_order($name,$gst,$address);
+		$result=$this->Executive_model->place_order($name,$gst,$address);
 		echo $result;
 	}
 
-	public function user_order_view()
+	public function executive_order_view()
 	{
 
 
-		$config['base_url'] = base_url() . "user-view-orders"; 
-		$config['total_rows'] = $this->User_model->get_total_orders();
+		$config['base_url'] = base_url() . "executive-view-orders"; 
+		$config['total_rows'] = $this->Executive_model->get_total_orders();
 		$config['per_page'] = ROWS_PER_PAGE;
 //		$config['page_query_string'] = TRUE;
 		$config['enable_query_strings'] = TRUE;
@@ -146,24 +150,24 @@ class User_executive extends CI_Controller {
 
 		$this->pagination->initialize($config);		
 	
-		$result['orders']=$this->User_model->fetch_order($config["per_page"], $page);
+		$result['orders']=$this->Executive_model->fetch_order($config["per_page"], $page);
         $result["links"] = $this->pagination->create_links();
 
-		$cart_total = $this->User_model->find_cart_total();
+		$cart_total = $this->Executive_model->find_cart_total();
 		$data['cart_total'] = $cart_total;
 
-    	$this->load->view('includes/header-user-executive', $data);
-		$this->load->view('executive/user-view-orders',$result);
+    	$this->load->view('includes/header-executive', $data);
+		$this->load->view('executive/executive-view-orders',$result);
 		$this->load->view('includes/footer-common');
 	}
 
-	public function user_categories()
+	public function executive_categories()
 	{
-		$cart_total = $this->User_model->find_cart_total();
+		$cart_total = $this->Executive_model->find_cart_total();
 		$data['cart_total'] = $cart_total;
 
-    	$this->load->view('includes/header-user-executive', $data);
-		$this->load->view('executive/user-categories');
+    	$this->load->view('includes/header-executive', $data);
+		$this->load->view('executive/executive-categories');
 		$this->load->view('includes/footer-common');
 	}
 
@@ -181,17 +185,17 @@ class User_executive extends CI_Controller {
 				$result['product'][$key]->image=$image;		
 			}
 		}
-		$cart_total = $this->User_model->find_cart_total();
+		$cart_total = $this->Executive_model->find_cart_total();
 		$data['cart_total'] = $cart_total;
 
-    	$this->load->view('includes/header-user-executive', $data);
-		$this->load->view('executive/user-view-product',$result);
+    	$this->load->view('includes/header-executive', $data);
+		$this->load->view('executive/executive-view-product',$result);
 		$this->load->view('includes/footer-common');
 	}
 
 	public function clear_orders()
 	{
-		$this->User_model->delete_all_uncarted_products();
+		$this->Executive_model->delete_all_uncarted_products();
 		echo 1;
 	}
 	
