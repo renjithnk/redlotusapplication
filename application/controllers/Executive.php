@@ -21,7 +21,8 @@ class Executive extends CI_Controller {
 		$data = array();
 
     	$result['product']=$this->Admin_model->fetch_products();
-		if($result!=0)
+    	
+		if($result['product']!=0)
 		{
 			foreach ($result['product'] as $key => $value) {
 				$product_id=$value->product_id;
