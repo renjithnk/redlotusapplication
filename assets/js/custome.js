@@ -13,8 +13,8 @@ function adminLoginCheck()
       window.location = base_url_js+"admin-view-product";
     }
     else if (data=="false") {
-      $( "#error_messagess" ).css('display', 'block');
-      $( "#error_messagess" ).html('<div id="invalid-credentials">Invalid username or password</div>');
+      $( ".invalid-credentials" ).css('display', 'block');
+      $( ".invalid-credentials" ).html('Invalid username or password');
     }
   });
   request.fail( function ( jqXHR, textStatus) {
@@ -38,8 +38,8 @@ function userLoginCheck()
       window.location = base_url_js+"executive-categories";
     }
     else if (data=="false") {
-      $( "#error_messagess" ).css('display', 'block');
-      $( "#error_messagess" ).html('<div id="invalid-credentials">Invalid username or password</div>');
+      $( ".invalid-credentials" ).css('display', 'block');
+      $( ".invalid-credentials" ).html('Invalid username or password');
     }
   });
   request.fail( function ( jqXHR, textStatus) {

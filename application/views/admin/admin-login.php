@@ -15,7 +15,7 @@
 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 </div>
 <input type='submit' name='submit' value='Submit' class="btn btn-lg btn-primary btn-block" >    
-<div id="error_messagess" style="display:none">
+<div class="invalid-credentials" style="display:none">
 </div>   
 </form>              
 </div>
