@@ -8,8 +8,7 @@
 <link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />   
 
 <script>
-    var base_url_js = "<?php echo SERVER;?>";
-
+var base_url_js = "<?php echo SERVER;?>";
 </script>
 </head>
 
@@ -41,9 +40,9 @@
 </a>
 </div>
 
-<a href="<?php echo base_url();?>executive-login" class="session-logout">
+<!--<a href="<?php echo base_url();?>executive-login" class="session-logout">
 Logout
-</a>     
+</a>     -->
     
 </header>    
     

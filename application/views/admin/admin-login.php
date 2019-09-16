@@ -3,7 +3,7 @@
 <div class="login-box">
 <a href="<?php echo base_url();?>">
 <img class="logo img-fluid" src="../assets/images/logo.png" alt="" width="200" height="121"></a>
-<h3 class="application-name">Inventory Management Application</h3>
+<h2 class="session-name">Admin Login</h2>
 <form method="post" onsubmit="adminLoginCheck();return false">
 <div class="form-group">
 <label for="exampleInputEmail1">Email address</label>
