@@ -11,7 +11,8 @@ html, body {height: 100%;margin: 0;padding: 0;}
 .site-header .session-name {position: absolute;top: 30px;left: 107px;font-size: 11px;background-color: #efefef;
 padding: 5px 10px;border: 1px solid #ededed;}
 .site-header .search-box {margin-bottom: 15px;}
-.application-name {font-size: 20px;margin-bottom: 30px;/* font-weight: normal; */}
+.application-name {font-size: 17px;margin-bottom: 15px;/* font-weight: normal; */}
+.session-name {	margin-bottom: 15px;font-size: 27px;}
 .session-logout {position: absolute;top: 30px;right: 61px;font-size: 11px;padding: 5px 10px;background-color: #efefef; border: 1px solid #ededed; color: #777;}
 .pagination-wrapper {font-size: 14px;}
 .pagination-wrapper .previous {
