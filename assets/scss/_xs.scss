@@ -4,6 +4,13 @@ html, body {height: 100%;margin: 0;padding: 0;}
  
 .update-button {height: 40px;margin-top: 6px;background-color:#333 !important;}
 .delete-button {height: 40px;margin-top: 6px;}
+.invalid-credentials {
+	display: block;
+	background-color: #ffeded;
+	border: 1px solid #ff9f9f;
+	padding: 10px;
+	margin-top: 15px;
+}
 .copyright {font-size: 12px;text-align: center;padding: 30px 0;margin-bottom: 0;}
 .site-header {padding:10px;}
 .site-header .logo-container {width: 80px;}
