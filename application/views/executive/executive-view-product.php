@@ -1,5 +1,5 @@
 
-<div class="content-wrapper user-view-product clearfix">
+<div class="content-wrapper executive-view-product clearfix">
     
 <div class="menutrigger">
 <div class="bar1"></div>

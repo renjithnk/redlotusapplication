@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="alert/dist/sweetalert.css">  
-<link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />  
+<link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" />  
 <link rel="stylesheet" href="<?php echo SERVER;?>assets/css/dropzone.min.css">
 <script src="<?php echo SERVER;?>assets/js/script.js"></script> 
 
@@ -19,7 +19,7 @@
   
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="<?php echo base_url()?>">
+<a href="<?php echo base_url()?>/admin-view-product">
 <img class="img-fluid logo" src="<?php echo SERVER;?>assets/images/logo.png" alt="" width="85" height="50" />        
 </a>    
 </div> 

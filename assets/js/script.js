@@ -98,6 +98,7 @@ $(function(){
 $('.admin-dashboard').parent('body').addClass('admin-dashboard');    
 $('.admin-add-product').parent('body').addClass('admin-add-product');  
 $('.admin-view-product').parent('body').addClass('admin-view-product');
+$('.admin-view-despatched').parent('body').addClass('admin-view-despatched');
 $('.user-view-product').parent('body').addClass('user-view-product');
 $('.user-view-orders').parent('body').addClass('user-view-orders');
 $('.user-categories').parent('body').addClass('user-categories');

@@ -1,8 +1,5 @@
-
-
-<div class="content-wrapper clearfix">
-    
-    
+<div class="content-wrapper admin-add-product clearfix">
+        
 <div class="menutrigger">
 <div class="bar1"></div>
 <div class="bar2"></div>

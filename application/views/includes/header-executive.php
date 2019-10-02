@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="alert/dist/sweetalert.css">   -->
-<link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" type="text/css" />   
+<link href="<?php echo SERVER;?>assets/css/style.css" rel="stylesheet" />   
 
 <script>
 var base_url_js = "<?php echo SERVER;?>";
@@ -15,7 +15,7 @@ var base_url_js = "<?php echo SERVER;?>";
 <body>
 <header class="site-header clearfix">
 <div class="logo-container">
-<a href="<?php echo base_url()?>">
+<a href="<?php echo base_url()?>/executive-categories">
 <img class="img-fluid logo" src="<?php echo SERVER;?>assets/images/logo.png" alt="" width="85" height="50" />        
 </a>    
 </div> 

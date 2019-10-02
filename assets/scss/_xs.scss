@@ -316,10 +316,13 @@ font-size: 7px;
 .admin-add-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
 .admin-view-product .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 .admin-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
+.admin-view-despatched .main-navigation li:nth-child(4) a {background-color:#f71d2b;}
 /*.user-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}*/
 .user-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
 .user-categories .main-navigation li:nth-child(1) a {background-color:#f71d2b;}
 
+.executive-view-product .main-navigation li:nth-child(2) a {background-color:#f71d2b;}
+.executive-view-orders .main-navigation li:nth-child(3) a {background-color:#f71d2b;}
 
 @media only screen and (min-width:1199px) {
 .main-navigation {display:block !important;@include flex-basis(20%);float: left;background-color: #333;margin-bottom: 10px;}
